@@ -1,0 +1,16 @@
+
+# _toc.yml
+format: jb-book
+root: intro
+chapters:
+- file: Chapter_Highlights
+  sections:
+  - file: Bond Pricing
+  - file: Chapter_One_NumPy_And_Pandas
+  - file: Chapter_One_CalcUlating_And_Graphing_The_Term_Structure_Of_Interest_Rates
+  - file: Chapter_One_Summary
+  - file: imported_functions
+    sections:
+    - file: parent_folder_subfolder
+    - file: one_y_axis
+
