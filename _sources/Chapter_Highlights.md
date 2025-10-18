@@ -62,16 +62,20 @@ This chapter uses the Python libraries Pandas and NumPy. The basic usage of thes
 </span>
 
 
-**The Chapter includes the Chapter's notebooks as well as the two functions imported from the custom module of the Volume.**
+**The Chapter includes five sections.**
 
-
-* The Jupyter notebook is *Chapter One Notebook Of Basic Concepts Of Fixed Income*. 
-* The two functions are *parent_folder_subfolder* and *one-y-axis*.
+1. *Introduction to Bond Pricing* covers some  basic concepts. 
+2. The  Jupyter notebook *NumPy and Pandas* intrduces and illustrates the modules. 
+3. The  Jupyter notebook *Calculating And Graphing The Term Structure Of Interest Rates* uses NumPy and Pandas to:
+   * download data from DropBox that is used to calculate and graph the term structure on September 15$^{th}$ 2022.
+   * download data from the U.S. Treasury that is used to calculate and graph the term structure on September 30$^{th}$ 2025
+4. *Python, Pandas, NumPy, and Financial Insights* summarizes the financial concepts and results.
+5. *Functions Imported By Basic Concepts Of Fixed Income* descries the functions imported from DropBox (*module_basic_concepts_fixed_income*)..
 
 
 **Interacting with Jupyter Notebooks**
 
-The Jupyter notebook *Chapter One Notebook Of Basic Concepts Of Fixed Income* can be viewed just as you are viewing this page. The notebook, however, offers deeper interactive capabilities.  When you navigate to *Chapter One Notebook Of Basic Concepts Of Fixed Income* the upper-right corner of the viewing area shows icons for launching and downloading the notebook.  Downloading needs no elaboration.  The launch icon offers three options:
+The Jupyter noteb0oks can be viewed just as you are viewing this page; however, they offer deeper interactive capabilities.  For example the upper-right corner of *Calculating And Graphing The Term Structure Of Interest Rates* shows icons for launching and downloading the notebook.  Downloading needs no elaboration.  The launch icon offers three options:
 
 * **Binder:**
     * Launches in a new browser tab, typically within a minute. 
