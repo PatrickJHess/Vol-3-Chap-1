@@ -75,7 +75,7 @@ This chapter uses the Python libraries Pandas and NumPy. The basic usage of thes
 
 **Interacting with Jupyter Notebooks**
 
-The Jupyter noteb0oks can be viewed just as you are viewing this page; however, they offer deeper interactive capabilities.  For example the upper-right corner of *Calculating And Graphing The Term Structure Of Interest Rates* shows icons for launching and downloading the notebook.  Downloading needs no elaboration.  The launch icon offers three options:
+The Jupyter notebooks can be viewed just as you are viewing this page; however, they offer deeper interactive capabilities.  For example the upper-right corner of *Calculating And Graphing The Term Structure Of Interest Rates* shows icons for launching and downloading the notebook.  Downloading needs no elaboration.  The launch icon offers three options:
 
 * **Binder:**
     * Launches in a new browser tab, typically within a minute. 
