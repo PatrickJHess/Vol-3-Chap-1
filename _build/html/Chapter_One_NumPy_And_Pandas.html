@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -185,7 +185,6 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Highlights.html">Basic Bond Concepts and the Term Structure of Interest Rates</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Bond%20Pricing.html"><span style="font-family:Franklin Gothic Medium', sans-serif;">Introduction to Bond Pricing</span></a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>NumPy And Pandas</strong></a></li>
-
 <li class="toctree-l2"><a class="reference internal" href="Chapter_One_CalcUlating_And_Graphing_The_Term_Structure_Of_Interest_Rates.html"><strong>Calculating And Graphing The Term Structure Of Interest Rates</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter_One_Summary.html"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Python, Pandas, NumPy, and Financial Insights</span></a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="imported_functions.html">Functions Imported By the Volume <em>Basic Concepts Of Fixed Income</em></a><ul>
@@ -425,12 +424,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>NumPy And Pandas</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;"><strong>Preparing the Notebook</strong></span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Importing libraries and functions</span></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-one-notebook-of-basic-concepts-of-fixed-income"><strong>Chapter One Notebook Of Basic Concepts Of Fixed Income</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">NumPy Arrays</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-calculations"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">NumPy Calculations</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-create-a-numpy-array"><font color="green"><em><strong>Application: Create a NumPy Array</strong></em></font></a></li>
@@ -444,9 +439,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-rows-into-columns-and-labeling-the-columns"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Making rows into columns and labeling the columns</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-set-index-method"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">The set_index() method</span></a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -523,10 +515,6 @@ The following cell shows our completed code cell for imports.
           line-height: 1.3;"></p>
 <p><span class="math notranslate nohighlight">\(^{2}\)</span> For more information on <font color='green'>try</font> and <font color='green'>except</font> statements, see “<a href='https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/Control_Statements.html#the-try-and-except'>Control Statements</a>.”
 </span></p>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="chapter-one-notebook-of-basic-concepts-of-fixed-income">
-<h1><strong>Chapter One Notebook Of Basic Concepts Of Fixed Income</strong><a class="headerlink" href="#chapter-one-notebook-of-basic-concepts-of-fixed-income" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
@@ -547,6 +535,7 @@ The following cell shows our completed code cell for imports.
 </div>
 </div>
 </div>
+</section>
 <section id="numpy-arrays">
 <h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">NumPy Arrays</span><a class="headerlink" href="#numpy-arrays" title="Link to this heading">#</a></h2>
 <p><span style="font-family: 'Garamond', serif;
@@ -1063,12 +1052,8 @@ The following cell shows our completed code cell for imports.
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>NumPy And Pandas</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;"><strong>Preparing the Notebook</strong></span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Importing libraries and functions</span></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-one-notebook-of-basic-concepts-of-fixed-income"><strong>Chapter One Notebook Of Basic Concepts Of Fixed Income</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">NumPy Arrays</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-calculations"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">NumPy Calculations</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-create-a-numpy-array"><font color="green"><em><strong>Application: Create a NumPy Array</strong></em></font></a></li>
@@ -1082,9 +1067,6 @@ The following cell shows our completed code cell for imports.
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-rows-into-columns-and-labeling-the-columns"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Making rows into columns and labeling the columns</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-set-index-method"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">The set_index() method</span></a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
