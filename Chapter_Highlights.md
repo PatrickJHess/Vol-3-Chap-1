@@ -15,7 +15,7 @@
 
     * *NumPy arrays*
     * *Python DataFrames*
-    * *Accesing data with a URL address*
+    * *Accessing data with a URL address*
     * *Custom modules*
 
 ## Background
@@ -65,7 +65,7 @@ This chapter uses the Python libraries Pandas and NumPy. The basic usage of thes
 **The Chapter includes five sections.**
 
 1. *Introduction to Bond Pricing* covers some  basic concepts. 
-2. The  Jupyter notebook *NumPy and Pandas* intrduces and illustrates the modules. 
+2. The  Jupyter notebook *NumPy and Pandas* introduces and illustrates the modules. 
 3. The  Jupyter notebook *Calculating And Graphing The Term Structure Of Interest Rates* uses NumPy and Pandas to:
    * download data from DropBox that is used to calculate and graph the term structure on September 15$^{th}$ 2022.
    * download data from the U.S. Treasury that is used to calculate and graph the term structure on September 30$^{th}$ 2025
