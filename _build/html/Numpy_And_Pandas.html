@@ -59,7 +59,7 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter_One_NumPy_And_Pandas';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Numpy_And_Pandas';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Calculating And Graphing The Term Structure Of Interest Rates" href="Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates.html" />
@@ -184,7 +184,7 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Highlights.html">Basic Bond Concepts and the Term Structure of Interest Rates</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Bond%20Pricing.html"><span style="font-family:Franklin Gothic Medium', sans-serif;">Introduction to Bond Pricing</span></a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><span style="font-family:Franklin Gothic Medium', sans-serif;"> NumPy And Pandas</span></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>NumPy And Pandas</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates.html"><strong>Calculating And Graphing The Term Structure Of Interest Rates</strong></a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="Chapter_One_Summary.html"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Python, Pandas, NumPy, and Financial Insights</span></a></li>
@@ -249,7 +249,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/PatrickJHess/Vol-3-Chap-1/master?urlpath=tree/Chapter_One_NumPy_And_Pandas.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/PatrickJHess/Vol-3-Chap-1/master?urlpath=tree/Numpy_And_Pandas.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -267,7 +267,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/PatrickJHess/Vol-3-Chap-1/blob/master/Chapter_One_NumPy_And_Pandas.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/PatrickJHess/Vol-3-Chap-1/blob/master/Numpy_And_Pandas.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -305,7 +305,7 @@
 
 
 
-<a href="https://github.com/PatrickJHess/Vol-3-Chap-1/issues/new?title=Issue%20on%20page%20%2FChapter_One_NumPy_And_Pandas.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/PatrickJHess/Vol-3-Chap-1/issues/new?title=Issue%20on%20page%20%2FNumpy_And_Pandas.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -331,7 +331,7 @@
       
       
       
-      <li><a href="_sources/Chapter_One_NumPy_And_Pandas.ipynb" target="_blank"
+      <li><a href="_sources/Numpy_And_Pandas.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -415,7 +415,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><span style="font-family:Franklin Gothic Medium', sans-serif;"> NumPy And Pandas</span></h1>
+    <h1>NumPy And Pandas</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -425,6 +425,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Preparing the Notebook</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Importing libraries and functions</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">NumPy Arrays</span></a></li>
@@ -451,7 +452,17 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="numpy-and-pandas">
-<h1><span style="font-family:Franklin Gothic Medium', sans-serif;"> NumPy And Pandas</span><a class="headerlink" href="#numpy-and-pandas" title="Link to this heading">#</a></h1>
+<h1><strong>NumPy And Pandas</strong><a class="headerlink" href="#numpy-and-pandas" title="Link to this heading">#</a></h1>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
+<div style="font-family: 'Garamond', serif;
+    font-size: 16px;
+    text-indent: 0.25in;
+    line-height: 1.5;">
+<p>This chapter uses the Python libraries Pandas and NumPy. The basic usage of these libraries is detailed in two Notebooks: “<a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_Pandas.html">A Quick Introduction to Pandas</a>” reviews some basic concepts of Pandas, and “<a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_NumPy.html">A Quick Introduction to NumPy</a>” does the same for NumPy. These Notebooks are part of the introductory volume <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/intro.html">Background Material: An Introduction to Python for Financial Python</a>. Portions of the volume will be cited throughout this chapter. Feel free to consult these materials as needed for greater discussion of Python concepts.</p>
+</div>
+</br>
+</section>
 <section id="preparing-the-notebook">
 <h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Preparing the Notebook</span><a class="headerlink" href="#preparing-the-notebook" title="Link to this heading">#</a></h2>
 </section>
@@ -574,7 +585,7 @@ The following cell shows our completed code cell for imports.
     font-size: 14px;
     text-indent: 0.25in;
     line-height: 1.5;"></p>
-<p>Now that we’ve created an array and assigned it to <font color='green'>interest_rates</font>, we can perform calculations on that array. NumPy calculates array elements individually. For instance, the <font color='green'>exp()</font> method used below raises each element of <font color='green'>interest_rates</font> to Euler’s number, <span class="math notranslate nohighlight">\(e\)</span>. This approach is faster and more convenient than iterating through the rates.
+<p>Now that we’ve created an array and assigned it to <font color='green'>interest_rates</font>, we can perform calculations on that array. NumPy calculates array elements individually. For instance, the <font color='green'>exp()</font> method used below raises Euler’s number, <span class="math notranslate nohighlight">\(e\)</span>, to the power of each element of <font color='green'>interest_rates</font> resulting in future value factors. This approach is faster and more convenient than iterating through the rates.
 </span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -591,16 +602,16 @@ The following cell shows our completed code cell for imports.
 </section>
 <section id="application-create-a-numpy-array">
 <h2><font color='green'><em><strong>Application: Create a NumPy Array</strong></em></font><a class="headerlink" href="#application-create-a-numpy-array" title="Link to this heading">#</a></h2>
-<div style="background-color:LightGray;
+<p><span style="display:block;background-color:LightGray;
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
-    font-size: 17px;
     line-height: 1.5;
     padding: 15px">
 <br>
-<p>Create a NumPy array of the present value factors for the rates of <font color='green'>interest_rates</font>. For hints, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Hints.html#create-a-numpy-array">Chapter One Hints: Create a NumPy Array</a>, and check the <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Results.html#create-a-numpy-array">expected results here</a>.</p>
+Create a NumPy array of the present-value factors for the rates of <font color='green'>interest_rates</font>. For hints, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Hints.html#create-a-numpy-array">Chapter One Hints: Create a NumPy Array</a>, and for expected results, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Results.html#create-a-numpy-array">Chapter One Expected Results: Create a NumPy Array</a>.
 <br>
-</div>
+<br>
+</span></p>
 </section>
 <section id="two-dimensional-numpy-arrays">
 <h2><span style="text-align:center;font-family:Franklin Gothic Book', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Two-Dimensional NumPy arrays</span><a class="headerlink" href="#two-dimensional-numpy-arrays" title="Link to this heading">#</a></h2>
@@ -639,15 +650,17 @@ The following cell shows our completed code cell for imports.
 </section>
 <section id="application-manipulate-a-two-dimensional-array">
 <h2><font color='green'><em><strong>Application: Manipulate a Two-Dimensional Array</strong></em></font><a class="headerlink" href="#application-manipulate-a-two-dimensional-array" title="Link to this heading">#</a></h2>
-<div style="background-color:LightGray;
+<p><span style="display:block;background-color:LightGray;
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
-    font-size: 17px;
     line-height: 1.5;
     padding: 15px">
 <br>
-<p>Create a two-dimensional array by raising the interest-rate row to Euler’s number and multiplying the results by the present value factors. For hints, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Hints.html#manipulate-two-dimensional-array">Chapter One Hints: Manipulate a Two-Dimensional Array</a>, and check the <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Results.html#manipulate-two-dimensional-array">expected results here</a>.</p>
-</div></section>
+Create a two-dimensional array by raising the interest-rate row to Euler’s number and multiplying the results by the present value factors. For hints, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Hints.html#manipulate-two-dimensional-array">Chapter One Hints: Manipulate a Two-Dimensional Array</a>, and for expected results, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Results.html#manipulate-two-dimensional-array">Chapter One Expected Results: Manipulate a Two-Dimensional Array</a>.</p>
+<br>
+<br>
+</span>
+</section>
 <section id="creating-a-pandas-dataframe-from-numpy-arrays">
 <h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Creating a Pandas DataFrame from NumPy Arrays</span><a class="headerlink" href="#creating-a-pandas-dataframe-from-numpy-arrays" title="Link to this heading">#</a></h2>
 <section id="a-simple-example">
@@ -719,17 +732,17 @@ The following cell shows our completed code cell for imports.
 </section>
 <section id="application-create-a-dataframe-from-a-two-dimensional-array">
 <h2><font color='green'><em><strong>Application:Create a DataFrame from a Two-Dimensional Array</strong></em></font><a class="headerlink" href="#application-create-a-dataframe-from-a-two-dimensional-array" title="Link to this heading">#</a></h2>
-<div style="background-color:LightGray;
+<p><span style="display:block;background-color:LightGray;
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
-    font-size: 17px;
     line-height: 1.5;
     padding: 15px">
 <br>
-<p>Create a DataFrame with the two-dimensional array <font color='green'><em><strong>pv_rates</strong></em></font>.</p>
-<p>For hints, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Hints.html#create-a-dataframe-from-a-two-dimensional-array">Chapter One Hints: Create A DataFrame From A Two-Dimensional Array</a>.</p>
-<p>Check <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Results.html#create-a-dataframe-from-a-two-dimensional-array">expected results here</a></p>
-</div></section>
+Create a DataFrame with the two-dimensional array <font color='green'>pv_rates</font>. For hints, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Hints.html#create-a-dataframe-from-a-two-dimensional-array">Chapter One Hints: Create A DataFrame From A Two-Dimensional Array</a>, for expected results, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Results.html#create-a-dataframe-from-a-two-dimensional-array">Chapter One Expected Results: Create A DataFrame From A Two-Dimensional Array</a>.</p>
+<br>
+<br>
+</span>
+</section>
 <section id="making-rows-into-columns-and-labeling-the-columns">
 <h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Making rows into columns and labeling the columns</span><a class="headerlink" href="#making-rows-into-columns-and-labeling-the-columns" title="Link to this heading">#</a></h2>
 <p><span style="font-family: 'Garamond', serif;
@@ -1053,6 +1066,7 @@ The following cell shows our completed code cell for imports.
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Preparing the Notebook</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Importing libraries and functions</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">NumPy Arrays</span></a></li>
