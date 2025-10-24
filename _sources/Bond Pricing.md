@@ -21,7 +21,7 @@ This chapter will introduce some fundamental principles of fixed income. These p
     text-indent: 0.25in;
     line-height: 1.5;">
 
-<font color='SeaGreen'>Chapter One of *Time Value Of Money*</font> asserted that the value of an asset with certain cash flows equals the present value of its cash flows, as shown in the following equation, where  $\ T$ is the total number of cash flow periods, and $\ PV(t)$ is the present-value factor for a certain cash flow in period $t$:
+<font color='SeaGreen'>Chapter One of the Volume *Time Value Of Money*</font> asserted that the value of an asset with certain cash flows equals the present value of its cash flows, as shown in the following equation, where  $\ T$ is the total number of cash flow periods, and $\ PV(t)$ is the present-value factor for a certain cash flow in period $t$:
 
 $$\Large Value = \sum_{t=1}^{T}Cash\,Flow_t\times PV(t)$$
 
