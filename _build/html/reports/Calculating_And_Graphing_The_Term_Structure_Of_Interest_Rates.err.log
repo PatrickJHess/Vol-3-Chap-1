@@ -17,37 +17,81 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-parent,folder,subfolder=parent_folder_subfolder()
+save_config=dict(file_name='Term Structure September 15 2022.pdf',
+                 volume='Basic Concepts Fixed Income',
+                 chapter= 'One')
+# Define the labels for the x-axis, representing different maturities.
+xaxis = ['One', 'Two', 'Three', 'Six', 'Twelve']
+
+# Define the specific date for which the term structure will be plotted.
+string_date = '09/15/2022'
+
+# Get the integer location (row index) of the specified 'string_date' in the DataFrame's index..
+loc = Tbill_data_excel.index.get_indexer([string_date])[0]
+
+# Prepare the data to be plotted on the y-axis (as %).
+data = [spot_rates[loc]*100, forward_rates[loc]*100]
+
+# Attempt to extract the plot title from the file name.
+try:
+    title = os.path.splitext(save_config['file_name'])[0]
+#'file_name key not found set a default title.
+except:
+    title = 'September 15, 2022'
+
+# Define the names for the data series that will appear in the plot's legend.
+series = ['Spot Rate', 'Forward Rate']
+
+# Define the label for the y-axis.
+ylabel = 'Continuous Compounded Annualized % Rates'
+
+# Define the label for the x-axis.
+xlabel = 'Maturity In Months'
+
+#'data' contains two series (spot and forward rates).
+x = len(data)
+
+# Define markers for the plot.
+markers = ['<','>']*round(x/2+x%2+0.001)
+
+# Define the lower bound for the y-axis.
+lower = 0
+
+# Define the upper bound for the y-axis.
+# considering NaN values (not a number) and adds a small buffer (0.5) for padding.
+upper = max(np.nanmax(data[0]), np.nanmax(data[1])) + 0.5
+
+# Define the y-axis limits (minimum and maximum values).
+ylim = [lower, upper]
+
+# Define the size of the plot (width, height) in inches.
+size = (10, 6)
+# Define colors as red and blue
+colors=['r','b']
+# This function generates and possibly saves a plot.
+one_y_axis(xaxis, data, title, series, xlabel, ylabel, markers, size, ylim,
+           save_config=save_config,colors=colors)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mIndexError[0m                                Traceback (most recent call last)
-[0;32m/tmp/ipykernel_29692/3824672720.py[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mparent[0m[0;34m,[0m[0mfolder[0m[0;34m,[0m[0msubfolder[0m[0;34m=[0m[0mparent_folder_subfolder[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;32m<string>[0m in [0;36mparent_folder_subfolder[0;34m(default)[0m
+[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+[0;32m/tmp/ipykernel_21655/213374803.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     51[0m [0mcolors[0m[0;34m=[0m[0;34m[[0m[0;34m'r'[0m[0;34m,[0m[0;34m'b'[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m     52[0m [0;31m# This function generates and possibly saves a plot.[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 53[0;31m one_y_axis(xaxis, data, title, series, xlabel, ylabel, markers, size, ylim,
+[0m[1;32m     54[0m            save_config=save_config,colors=colors)
 
-[0;32m~/anaconda3/lib/python3.9/site-packages/ipynbname/__init__.py[0m in [0;36mname[0;34m()[0m
-[1;32m     91[0m         [0;32mor[0m [0mraises[0m [0ma[0m [0mFileNotFoundError[0m [0mexception[0m [0;32mif[0m [0mit[0m [0mcannot[0m [0mbe[0m [0mdetermined[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     92[0m     """
-[0;32m---> 93[0;31m     [0m_[0m[0;34m,[0m [0mpath[0m [0;34m=[0m [0m_find_nb_path[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     94[0m     [0;32mif[0m [0mpath[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     95[0m         [0;32mreturn[0m [0mpath[0m[0;34m.[0m[0mstem[0m[0;34m[0m[0;34m[0m[0m
+[0;32m<string>[0m in [0;36mone_y_axis[0;34m(x_data, y_data_list, title, series_labels, xlabel, ylabel, markers, figure_size, y_limits, save_config, fill_config, colors)[0m
 
-[0;32m~/anaconda3/lib/python3.9/site-packages/ipynbname/__init__.py[0m in [0;36m_find_nb_path[0;34m()[0m
-[1;32m     73[0m [0;32mdef[0m [0m_find_nb_path[0m[0;34m([0m[0;34m)[0m [0;34m->[0m [0mUnion[0m[0;34m[[0m[0mTuple[0m[0;34m[[0m[0mdict[0m[0;34m,[0m [0mPurePath[0m[0;34m][0m[0;34m,[0m [0mTuple[0m[0;34m[[0m[0;32mNone[0m[0;34m,[0m [0;32mNone[0m[0;34m][0m[0;34m][0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     74[0m     [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 75[0;31m         [0mkernel_id[0m [0;34m=[0m [0m_get_kernel_id[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     76[0m     [0;32mexcept[0m [0;34m([0m[0mMultipleInstanceError[0m[0;34m,[0m [0mRuntimeError[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     77[0m         [0;32mreturn[0m [0;32mNone[0m[0;34m,[0m [0;32mNone[0m  [0;31m# Could not determine[0m[0;34m[0m[0;34m[0m[0m
+[0;32m<string>[0m in [0;36msave_results[0;34m(save_config)[0m
 
-[0;32m~/anaconda3/lib/python3.9/site-packages/ipynbname/__init__.py[0m in [0;36m_get_kernel_id[0;34m()[0m
-[1;32m     46[0m     """
-[1;32m     47[0m     [0mconnection_file[0m [0;34m=[0m [0mPath[0m[0;34m([0m[0mipykernel[0m[0;34m.[0m[0mget_connection_file[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m.[0m[0mstem[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 48[0;31m     [0mkernel_id[0m [0;34m=[0m [0mconnection_file[0m[0;34m.[0m[0msplit[0m[0;34m([0m[0;34m'-'[0m[0;34m,[0m [0;36m1[0m[0;34m)[0m[0;34m[[0m[0;36m1[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     49[0m     [0;32mreturn[0m [0mkernel_id[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     50[0m [0;34m[0m[0m
+[0;32m~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
+[1;32m   1272[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0m_allow_stdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1273[0m             [0mmsg[0m [0;34m=[0m [0;34m"raw_input was called, but this frontend does not support input requests."[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1274[0;31m             [0;32mraise[0m [0mStdinNotImplementedError[0m[0;34m([0m[0mmsg[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1275[0m         return self._input_request(
+[1;32m   1276[0m             [0mstr[0m[0;34m([0m[0mprompt[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mIndexError[0m: list index out of range
-IndexError: list index out of range
+[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+StdinNotImplementedError: raw_input was called, but this frontend does not support input requests.
 
