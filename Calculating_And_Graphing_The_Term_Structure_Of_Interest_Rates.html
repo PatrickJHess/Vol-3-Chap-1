@@ -62,8 +62,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Python, Pandas, NumPy, and Financial Insights" href="Chapter_One_Summary.html" />
-    <link rel="prev" title="NumPy And Pandas" href="Chapter_One_NumPy_And_Pandas.html" />
+    <link rel="next" title="Python, Pandas, NumPy, and Financial Insights" href="Chapter_Summary.html" />
+    <link rel="prev" title="NumPy And Pandas" href="Numpy_And_Pandas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,10 +184,11 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Highlights.html">Basic Bond Concepts and the Term Structure of Interest Rates</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Bond%20Pricing.html"><span style="font-family:Franklin Gothic Medium', sans-serif;">Introduction to Bond Pricing</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter_One_NumPy_And_Pandas.html"><span style="font-family:Franklin Gothic Medium', sans-serif;"> NumPy And Pandas</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Numpy_And_Pandas.html"><strong>NumPy And Pandas</strong></a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Calculating And Graphing The Term Structure Of Interest Rates</strong></a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="Chapter_One_Summary.html"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Python, Pandas, NumPy, and Financial Insights</span></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Chapter_Summary.html"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Python, Pandas, NumPy, and Financial Insights</span></a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="imported_functions.html">Functions Imported By the Volume <em>Basic Concepts Of Fixed Income</em></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="parent_folder_subfolder.html">parent_folder_subfolder is a helper function for saving files created by <em>Financial Python</em></a></li>
 <li class="toctree-l3"><a class="reference internal" href="one_y_axis.html">one-y-axis is a helper function for plotting graphs created by <em>Financial Python</em>.</a></li>
@@ -451,9 +452,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-rates"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Forward rates</span></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Preparing the notebook</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-term-structure"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Graphing the Term Structure</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-spot-and-forward-rates-for-september-15-2022"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Graphing the spot and forward rates for September 15, 2022</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Preparing the notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-spot-and-forward-rates-for-september-15-2022">Graphing the spot and forward rates for September 15, 2022</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-t-bill-data-directly-from-the-treasury"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Accessing T-Bill Data Directly from the Treasury</span></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-link-to-the-daily-treasury-bill-rates-on-the-treasury-site">The link to the Daily Treasury Bill Rates on the Treasury Site</a></li>
 </ul>
@@ -464,11 +464,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Going from bankers’ discounts to zero prices</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Spot Rates</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Forward Rates</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Preparing the notebook</span></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-term-structure-again"><span style="font-family:Franklin Gothic Medium', sans-serif;">Graphing the Term Structure (Again)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-spot-and-forward-rates-for-september-30-2025"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Graphing the spot and forward rates for September 30, 2025</span></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-term-structure-again">Graphing the Term Structure (Again)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-spot-and-forward-rates-for-september-30-2025">Graphing the spot and forward rates for September 30, 2025</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
@@ -574,8 +575,8 @@ The following cell shows our completed code cell for imports.
 <p><span style="font-family: 'Garamond', serif;
     font-size: 14px;
     text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>We’ll then import two functions from the module: <font color='green'>parent_folder_subfolder</font> and <font color='green'>one_y_axis</font>. The former determines locations for saving and accessing files and can be <a href='https://patrickjhess.github.io/Imported-Functions/parent_folder_subfolder.html#parent-folder-subfolder-is-a-helper-function-for-saving-files-created-by-financial-python'>viewed here</a>. The latter plots calculation results and can be <a href='https://patrickjhess.github.io/Imported-Functions/one_y_axis.html#one-y-axis-is-a-helper-function-for-plotting-graphs-created-by-financial-python'>viewed here</a>.
+    line-height: 1.5;">
+<big>We’ll then import the function <font color='green'>one_y_axis</font> from the module. The function plots calculation results and can be <a href='https://patrickjhess.github.io/Imported-Functions/one_y_axis.html#one-y-axis-is-a-helper-function-for-plotting-graphs-created-by-financial-python'>viewed here</a>.</big>
 </span></p>
 <span style="margin-left: 1in;">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span><span class="p">(</span><span class="n">parent_folder_subfolder</span><span class="p">,</span>
@@ -606,10 +607,8 @@ The following cell shows our completed code cell for imports.
 <span class="c1"># Open the local file in &quot;write binary&quot; (&#39;wb&#39;) mode and save the downloaded content.</span>
 <span class="c1"># Using a &#39;with&#39; statement ensures the file is properly closed after writing.</span>
 
-<span class="c1"># Now that &#39;basic_concepts_fixed_income&#39; exists in the notebook, import the specific functions</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span><span class="p">(</span><span class="n">parent_folder_subfolder</span><span class="p">,</span>
-                                        <span class="n">get_global</span><span class="p">,</span>
-                                        <span class="n">one_y_axis</span><span class="p">)</span>
+<span class="c1"># Now that &#39;basic_conepts_fixed_income&#39; exists in the notebook, import the specific functions</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span><span class="p">(</span><span class="n">one_y_axis</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1585,165 +1584,93 @@ Name: 2022-09-15 00:00:00, dtype: float64
 </section>
 </section>
 <section id="id1">
-<h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Preparing the notebook</span><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<p><spam style="font-family: 'Garamond', serif;
-    font-size: 14px;
+<h2>Preparing the notebook<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p><span style="display:block; font-family: 'Garamond', serif;
     text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>We suggest creating a main folder and subfolders on your local computer or Google Drive to store files (graphs, spreadsheets, and so forth) generated by the Notebooks in this volume.</p>
-<p>The function <font color='green'>parent_folder_subfolder</font> that was imported from <font color='green'>module_basic_concepts_fixed_income</font> determines default values and allows you to name the parent directory, the folder, and subfolders. The function’s single argument is set to <font color='green'>True</Font> by default. If <font color='green'>False</font> is not explicitly passed, the function will attempt to return default values for the parent, folder, and subfolder. Conversely, passing <font color='green'>False</font> will prompt the user for these inputs. Note that the function does not direct output to the parent, folder, or subfolder.</p>
-</span>
-<span style="font-family: 'Garamond', serif;
-    font-size: 14px;
     line-height: 1.5;">
+<big>We suggest saving files (graphs, spreadsheets, and so forth) generated by notebooks. To that end, a parameter of the <font color='green'>one_y_axis</font> function is the dictionary <font color='green'>save_config</font>. The keys of the dictionary are assumed to be:</p>
 <ul class="simple">
-<li><p><em>Parent Directory: The default is always the current working directory for a local computer, or</em> <font color='green'>/content/drive/MyDrive</font> <em>for Colab</em></p></li>
-<li><p><em>Folder: The default is the volume name.</em></p></li>
-<li><p><em>Subfolder: The default is the chapter name.</em></p></li>
+<li><p><font color='green'>volume</font></p></li>
+<li><p><font color='green'>chapter</font></p></li>
+<li><p><font color='green'>file_name</font> </big></span>
+<big>
+If values are assigned to at least one of the keys, the graph will be saved.  If you change the name of the keys, the value will be ignored. In this example the dictionary is created with the constructor <font color='green'>dict</font> with the keys:<span class="math notranslate nohighlight">\(^{13,14}\)</span></p></li>
 </ul>
-</span>
-<span style="font-family: 'Garamond', serif;
-    font-size: 14px;
-    text-indent: 0.25in;
+ </big>
+<p><span style="display:block; font-family: 'Garamond', serif;
+    text-indent: 1in;
     line-height: 1.5;">
-<p>If you input values, the function corrects errors and removes spaces that prevent the URL from being usable. The below code returns the values that can be used to create a path.</p>
-</span>
-<span style="margin-left: 1in;">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parent</span><span class="p">,</span><span class="n">folder</span><span class="p">,</span><span class="n">subfolder</span><span class="o">=</span><span class="n">parent_folder_subfolder</span><span class="p">()</span>
+<big><i>
+<span style="display:block; margin-left: 1in;margin-bottom: .2in;"></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save_config</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s1">&#39;Term Structure September 15 2022.pdf&#39;</span><span class="p">,</span>
+                 <span class="n">volume</span><span class="o">=</span><span class="s1">&#39;Basic Concepts Fixed Income&#39;</span><span class="p">,</span>
+                 <span class="n">chapter</span><span class="o">=</span> <span class="s1">&#39;One&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</span><hr><div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parent</span><span class="p">,</span><span class="n">folder</span><span class="p">,</span><span class="n">subfolder</span><span class="o">=</span><span class="n">parent_folder_subfolder</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_29692</span><span class="o">/</span><span class="mf">3824672720.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">parent</span><span class="p">,</span><span class="n">folder</span><span class="p">,</span><span class="n">subfolder</span><span class="o">=</span><span class="n">parent_folder_subfolder</span><span class="p">()</span>
-
-<span class="nn">&lt;string&gt;</span> in <span class="ni">parent_folder_subfolder</span><span class="nt">(default)</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/ipynbname/__init__.py</span> in <span class="ni">name</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span>         <span class="ow">or</span> <span class="n">raises</span> <span class="n">a</span> <span class="ne">FileNotFoundError</span> <span class="n">exception</span> <span class="k">if</span> <span class="n">it</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">determined</span><span class="o">.</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">93</span><span class="sd">     _, path = _find_nb_path()</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span><span class="sd">     if path:</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span><span class="sd">         return path.stem</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/ipynbname/__init__.py</span> in <span class="ni">_find_nb_path</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">73</span><span class="sd"> def _find_nb_path() -&gt; Union[Tuple[dict, PurePath], Tuple[None, None]]:</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="sd">     try:</span>
-<span class="ne">---&gt; </span><span class="mi">75</span><span class="sd">         kernel_id = _get_kernel_id()</span>
-<span class="g g-Whitespace">     </span><span class="mi">76</span><span class="sd">     except (MultipleInstanceError, RuntimeError):</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span><span class="sd">         return None, None  # Could not determine</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/ipynbname/__init__.py</span> in <span class="ni">_get_kernel_id</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span>     <span class="n">connection_file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">ipykernel</span><span class="o">.</span><span class="n">get_connection_file</span><span class="p">())</span><span class="o">.</span><span class="n">stem</span>
-<span class="ne">---&gt; </span><span class="mi">48</span>     <span class="n">kernel_id</span> <span class="o">=</span> <span class="n">connection_file</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>     <span class="k">return</span> <span class="n">kernel_id</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span> 
-
-<span class="ne">IndexError</span>: list index out of range
-</pre></div>
-</div>
-</div>
-</div>
-<hr></section>
-<section id="graphing-the-term-structure">
-<h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Graphing the Term Structure</span><a class="headerlink" href="#graphing-the-term-structure" title="Link to this heading">#</a></h2>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
-    text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>Now that we’ve performed our calculations and prepared our Notebook, we’re finally ready to graph the term structure. The function <font color='green'>one_y_axis()</font> graphs values on a single <em>y</em>-axis. If the <font color='green'>save_config</font> dictionary has a value assigned to one of its four keys,<span class="math notranslate nohighlight">\(^{13}\)</span> (<font color='green'>Parent</font>, <font color='green'>Folder</font>, <font color='green'>Subfolder</font>, and <font color='green'>File</font>), <font color='green'>one_y_axis()</font> will attempt to save the plot as a PDF.</p>
-<p>The values returned by <font color='green'>create_path_folder()</font> and <font color='green'>T-Bill Term Structure: 9-15-2022.pdf</font> may be assigned to the four keys, shown below. If no values are assigned, the graph will not be saved. In this graph the assignment statements are commented out and save_config is an empty dictionary.</p>
-</span>
-<span style="margin-left: 1in;">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save_config</span><span class="o">=</span><span class="p">{}</span>
-<span class="c1"># &#39;&#39;&#39; starts a multiple line comment</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">save_config[&#39;Parent&#39;]=parent</span>
-<span class="sd">save_config[&#39;Folder&#39;]=folder</span>
-<span class="sd">save_config[&#39;Subfolder&#39;]=subfolder</span>
-<span class="sd">save_config[&#39;File]=&#39;T-Bill Term Structure: 9-15-2022.pdf&#39;</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="c1"># &#39;&#39;&#39; ends a multiple line comment</span>
-</pre></div>
-</div>
-<p></span><br></p>
-<hr>
-<p><span style="font-family: 'Garamond', serif;
-          font-size: 10.5px;
-          text-indent: 0.13in;
-          line-height: 1.3;"></p>
-<p>13. For background on Python dictionaries, see “<a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/Dictionaries.html#an-introduction-to-dictionaries">A Quick Introduction to Dictionaries</a>.”
+<p></span></big></p>
+<hr class="docutils" />
+<p><sup>13</sup> For background on Python dictionaries, see “<a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/Dictionaries.html#an-introduction-to-dictionaries">A Quick Introduction to Dictionaries</a>.”
 </span></p>
+<p><span class="math notranslate nohighlight">\(^{14}\)</span> Dictionaries can be created with curly brackets- <font color='greem'><strong>{ }</strong></font>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save_config</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;file_name&#39;</span><span class="p">:</span><span class="s1">&#39;Term Structure September 15 2022.pdf&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;volume&#39;</span><span class="p">:</span><span class="s1">&#39;Basic Concepts Fixed Income&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;chapter&#39;</span><span class="p">:</span> <span class="s1">&#39;One&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</i>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">save_config</span><span class="o">=</span><span class="p">{}</span>
-
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">save_config[&#39;Parent&#39;]=parent</span>
-<span class="sd">save_config[&#39;Folder&#39;]=folder</span>
-<span class="sd">save_config[&#39;Subfolder&#39;]=subfolder</span>
-<span class="sd">save_config[&#39;File&#39;]=&#39;T-Bill Term Structure: 9-15-2022.pdf&#39;</span>
-<span class="sd">&#39;&#39;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">save_config</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s1">&#39;Term Structure September 15 2022.pdf&#39;</span><span class="p">,</span>
+                 <span class="n">volume</span><span class="o">=</span><span class="s1">&#39;Basic Concepts Fixed Income&#39;</span><span class="p">,</span>
+                 <span class="n">chapter</span><span class="o">=</span> <span class="s1">&#39;One&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="graphing-the-spot-and-forward-rates-for-september-15-2022">
-<h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Graphing the spot and forward rates for September 15, 2022</span><a class="headerlink" href="#graphing-the-spot-and-forward-rates-for-september-15-2022" title="Link to this heading">#</a></h2>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
+<h2>Graphing the spot and forward rates for September 15, 2022<a class="headerlink" href="#graphing-the-spot-and-forward-rates-for-september-15-2022" title="Link to this heading">#</a></h2>
+<p><span style="display:block; font-family: 'Garamond', serif;
     text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>In the following code, the <em>x</em>-axis is set at the five maturities of the bills in months. Forward and spot rates are calculated for the month of September 2022, and the data for September 15, 2022, is plotted.</p>
-<p></span><br></p>
-<span style="margin-left: 1in;">
+    line-height: 1.5;">
+<big>In the following code, the <em>x</em>-axis is set at the five maturities of the bills in months. Forward and spot rates are calculated for the month of September 2022, and the data for September 15, 2022, is plotted.</big>
+</span></p>
+<span style="display:block; margin-left: 1in;margin-bottom: .2in;">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xaxis</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;One&#39;</span><span class="p">,</span><span class="s1">&#39;Two&#39;</span><span class="p">,</span><span class="s1">&#39;Three&#39;</span><span class="p">,</span><span class="s1">&#39;Six&#39;</span><span class="p">,</span><span class="s1">&#39;Twelve&#39;</span><span class="p">]</span>
 <span class="n">string_date</span><span class="o">=</span><span class="s1">&#39;09/15/2022&#39;</span>
 </pre></div>
 </div>
-<p></span><br></p>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
+</span>
+<p><span style="display:block; font-family: 'Garamond', serif;
     text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>Since they lack index columns, the correct rows of the NumPy arrays <font color='green'>spot_rates</font> and <font color='green'>forward_rates</font> cannot be determined from the value of <font color='green'>string_date</font>. Because the rows of the arrays correspond to the rows of the DataFrame, the correct row is determined with our now familiar Pandas method <font color='green'>get_indexer()</font>. The method returns an array with index values corresponding to the argument. The spot- and forward-rate rows for September 15, 2022, are then multiplied by 100 and assigned to the list <font color='green'>data</font>.</p>
-<p></span><br></p>
-<span style="margin-left: 1in;">
+    line-height: 1.5;">
+<big>Since they lack index columns, the correct rows of the NumPy arrays <font color='green'>spot_rates</font> and <font color='green'>forward_rates</font> cannot be determined from the value of <font color='green'>string_date</font>. Because the rows of the arrays correspond to the rows of the DataFrame, the correct row is determined with our now familiar Pandas method <font color='green'>get_indexer()</font>. The method returns an array with index values corresponding to the argument. The spot- and forward-rate rows for September 15, 2022, are then multiplied by 100 and assigned to the list <font color='green'>data</font>.</big>
+</span></p>
+<span style="display:block; margin-left: 1in;margin-bottom: .2in;">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">loc</span><span class="o">=</span><span class="n">Tbill_data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_indexer</span><span class="p">([</span><span class="n">string_date</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">spot_rates</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="n">forward_rates</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">]</span>
 </pre></div>
 </div>
-<p></span><br></p>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
+</span>
+<p><span style="display:block; font-family: 'Garamond', serif;
     text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>The plot title is assigned whatever value is assigned to <font color='green'>save_config[‘File Name’]</font> (minus the PDF extension). If no title, it’s assigned “Add A Title.”</p>
-<p></span><br></p>
-<span style="margin-left: 1in;">
+    line-height: 1.5;">
+<big>The plot title is assigned whatever value is assigned to <font color='green'>save_config[‘File Name’]</font> (minus the PDF extension). If no title, it’s assigned “Add A Title.”</big></p>
+</span>
+<span style="display:block; margin-left: 1in;margin-bottom: .2in;">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>                    
-  <span class="n">title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">save_config</span><span class="p">[</span><span class="s1">&#39;File&#39;</span><span class="p">])</span>              
+  <span class="n">title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">save_config</span><span class="p">[</span><span class="s1">&#39;file_name&#39;</span><span class="p">])</span>              
 <span class="k">except</span><span class="p">:</span>
   <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Add A Title&#39;</span>
 </pre></div>
 </div>
-<p></span><br></p>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
+</span>
+<p><span style="display:block; font-family: 'Garamond', serif;
     text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>Series names, labels, and markers are then assigned.</p>
-<p></span><br></p>
-<span style="margin-left: 1in;">
+    line-height: 1.5;">
+<big>Series names, labels, and markers are then assigned.</big></p>
+</span>
+<span style="display:block; margin-left: 1in;margin-bottom: .2in;">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">series</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Spot Rate&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward Rate&#39;</span><span class="p">]</span>
 <span class="n">ylabel</span> <span class="o">=</span> <span class="s1">&#39;Continuous Compounded Annualized % Rates&#39;</span>
 <span class="n">xlabel</span> <span class="o">=</span> <span class="s1">&#39;Maturity In Months&#39;</span>
@@ -1751,14 +1678,12 @@ Name: 2022-09-15 00:00:00, dtype: float64
 <span class="n">markers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="s1">&#39;&gt;&#39;</span><span class="p">]</span><span class="o">*</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">+</span><span class="mf">0.001</span><span class="p">)</span>
 </pre></div>
 </div>
-<p></span><br></p>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
+</span>
+<p><span style="display:block; font-family: 'Garamond', serif;
     text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>The upper limit of the <em>y</em>-axis is assigned to <font color='green'>upper</font> and calculated from the maximum value of the spot and forward rates. The NumPy method <font color='green'>nanmax()</font> ignores <font color='green'>nan</font> values. The maximum of <font color='green'>nanmax()</font> of spot rates (<font color='green'>data[0]</font>) and forward rates (<font color='green'>data[1]</font>) plus 0.5% are assigned to <font color='green'>upper </font>. The lower limit is set to 0, and the size and colors of the lines are set as 10 inches wide and six inches tall (10,6) and red and blue, respectively.</p>
-<p></span><br></p>
-<span style="margin-left: 1in;">
+    line-height: 1.5;">
+<big>The upper limit of the <em>y</em>-axis is assigned to <font color='green'>upper</font> and calculated from the maximum value of the spot and forward rates. The NumPy method <font color='green'>nanmax()</font> ignores <font color='green'>nan</font> values. The maximum of <font color='green'>nanmax()</font> of spot rates (<font color='green'>data[0]</font>) and forward rates (<font color='green'>data[1]</font>) plus 0.5% are assigned to <font color='green'>upper </font>. The lower limit is set to 0, and the size and colors of the lines are set as 10 inches wide and six inches tall (10,6) and red and blue, respectively.</big></span></p>
+<span style="display:block; margin-left: 1in;margin-bottom: .2in;">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lower</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">upper</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">+</span> <span class="mf">0.5</span>
 <span class="n">ylim</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
@@ -1766,21 +1691,23 @@ Name: 2022-09-15 00:00:00, dtype: float64
 <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p></span><br></p>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
+</span>
+<p><span style="display:block; font-family: 'Garamond', serif;
     text-indent: 0.25in;
     line-height: 1.5;">
-Finally, the graph is generated and saved with <font color='green'>one_y_axis()</font>.</p>
-<p></span><br></p>
-<span style="margin-left: 1in;">
+<big>Finally, the graph is generated and saved with <font color='green'>one_y_axis()</font>.</big></p>
+</span>
+<span style="display:block; margin-left: 1in;margin-bottom: .2in;">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">one_y_axis</span><span class="p">(</span><span class="n">xaxis</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">series</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">markers</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">ylim</span><span class="p">,</span>
            <span class="n">save_config</span><span class="o">=</span><span class="n">save_config</span><span class="p">,</span><span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
 </pre></div>
 </div>
 </span><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the labels for the x-axis, representing different maturities.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">save_config</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s1">&#39;Term Structure September 15 2022.pdf&#39;</span><span class="p">,</span>
+                 <span class="n">volume</span><span class="o">=</span><span class="s1">&#39;Basic Concepts Fixed Income&#39;</span><span class="p">,</span>
+                 <span class="n">chapter</span><span class="o">=</span> <span class="s1">&#39;One&#39;</span><span class="p">)</span>
+<span class="c1"># Define the labels for the x-axis, representing different maturities.</span>
 <span class="n">xaxis</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;One&#39;</span><span class="p">,</span> <span class="s1">&#39;Two&#39;</span><span class="p">,</span> <span class="s1">&#39;Three&#39;</span><span class="p">,</span> <span class="s1">&#39;Six&#39;</span><span class="p">,</span> <span class="s1">&#39;Twelve&#39;</span><span class="p">]</span>
 
 <span class="c1"># Define the specific date for which the term structure will be plotted.</span>
@@ -1794,8 +1721,8 @@ Finally, the graph is generated and saved with <font color='green'>one_y_axis()<
 
 <span class="c1"># Attempt to extract the plot title from the file name.</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">save_config</span><span class="p">[</span><span class="s1">&#39;File&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
-<span class="c1">#&#39;File Name&#39; key not found or string is too short), set a default title.</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">save_config</span><span class="p">[</span><span class="s1">&#39;file_name&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1">#&#39;file_name key not found set a default title.</span>
 <span class="k">except</span><span class="p">:</span>
     <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;September 15, 2022&#39;</span>
 
@@ -1835,7 +1762,29 @@ Finally, the graph is generated and saved with <font color='green'>one_y_axis()<
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/9c3b9a552289edf1e7fa261f8d1c6b531cd2598e4805860bef525f80e3225dc1.png" src="_images/9c3b9a552289edf1e7fa261f8d1c6b531cd2598e4805860bef525f80e3225dc1.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_21655</span><span class="o">/</span><span class="mf">213374803.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="c1"># This function generates and possibly saves a plot.</span>
+<span class="ne">---&gt; </span><span class="mi">53</span> <span class="n">one_y_axis</span><span class="p">(</span><span class="n">xaxis</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">series</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">markers</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">ylim</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span>            <span class="n">save_config</span><span class="o">=</span><span class="n">save_config</span><span class="p">,</span><span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
+
+<span class="nn">&lt;string&gt;</span> in <span class="ni">one_y_axis</span><span class="nt">(x_data, y_data_list, title, series_labels, xlabel, ylabel, markers, figure_size, y_limits, save_config, fill_config, colors)</span>
+
+<span class="nn">&lt;string&gt;</span> in <span class="ni">save_results</span><span class="nt">(save_config)</span>
+
+<span class="nn">~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1272</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1273</span>             <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1274</span>             <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1275</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1276</span>             <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+<img alt="_images/d274236b8ca77441f3b8888ac6e9a763e618e4be003258b8fddbc9ced570d1a6.png" src="_images/d274236b8ca77441f3b8888ac6e9a763e618e4be003258b8fddbc9ced570d1a6.png" />
 </div>
 </div>
 </section>
@@ -2029,7 +1978,7 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c3fa6e34-84dc-402f-b645-07c83c933f30" class="colab-df-container">
+  <div id="df-41afac39-84e1-43bc-b2d3-0965c49f8b5c" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2124,7 +2073,7 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-c3fa6e34-84dc-402f-b645-07c83c933f30')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-41afac39-84e1-43bc-b2d3-0965c49f8b5c')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -2176,12 +2125,12 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
 
     <script>
       const buttonEl =
-        document.querySelector('#df-c3fa6e34-84dc-402f-b645-07c83c933f30 button.colab-df-convert');
+        document.querySelector('#df-41afac39-84e1-43bc-b2d3-0965c49f8b5c button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-c3fa6e34-84dc-402f-b645-07c83c933f30');
+        const element = document.querySelector('#df-41afac39-84e1-43bc-b2d3-0965c49f8b5c');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -2201,8 +2150,8 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
   </div>
 
 
-    <div id="df-7f97f910-ab3d-492d-9d07-4bad50b1601a">
-      <button class="colab-df-quickchart" onclick="quickchart('df-7f97f910-ab3d-492d-9d07-4bad50b1601a')"
+    <div id="df-23fcad14-71e6-4686-803e-1007503ededd">
+      <button class="colab-df-quickchart" onclick="quickchart('df-23fcad14-71e6-4686-803e-1007503ededd')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -2321,7 +2270,7 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-7f97f910-ab3d-492d-9d07-4bad50b1601a button');
+            document.querySelector('#df-23fcad14-71e6-4686-803e-1007503ededd button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
@@ -2435,91 +2384,65 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
 </div>
 </div>
 </section>
-<section id="id5">
-<h3><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Preparing the notebook</span><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="graphing-the-term-structure-again">
+<h1>Graphing the Term Structure (Again)<a class="headerlink" href="#graphing-the-term-structure-again" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parent</span><span class="p">,</span><span class="n">folder</span><span class="p">,</span><span class="n">subfolder</span><span class="o">=</span><span class="n">parent_folder_subfolder</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">save_config</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s1">&#39;Term Structure September 30 2025.pdf&#39;</span><span class="p">,</span>
+                 <span class="n">volume</span><span class="o">=</span><span class="s1">&#39;Basic Concepts Fixed Income&#39;</span><span class="p">,</span>
+                 <span class="n">chapter</span><span class="o">=</span> <span class="s1">&#39;One&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<h3 class="rubric" id="parent-directory-content-drive-mydrive"><strong>✅ Parent Directory…/content/drive/MyDrive</strong></h3>
-<h3 class="rubric" id="no-folder"><strong>❌ No  Folder</strong></h3>
-<h3 class="rubric" id="no-subfolder"><strong>❌ No Subfolder</strong></h3>
 </div>
-</div>
-</section>
-</section>
-<section id="graphing-the-term-structure-again">
-<h2><span style="font-family:Franklin Gothic Medium', sans-serif;">Graphing the Term Structure (Again)</span><a class="headerlink" href="#graphing-the-term-structure-again" title="Link to this heading">#</a></h2>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
+<section id="graphing-the-spot-and-forward-rates-for-september-30-2025">
+<h2>Graphing the spot and forward rates for September 30, 2025<a class="headerlink" href="#graphing-the-spot-and-forward-rates-for-september-30-2025" title="Link to this heading">#</a></h2>
+<p><span style="display:block;
+    font-family: 'Garamond', serif;
     text-indent: 0.25in;
     line-height: 1.5;">
-As in the graph of the term structure for September 15<span class="math notranslate nohighlight">\(^{th}\)</span> 2022, no values will be assigned to the save_config dictinary and the graph will not be saved.
-</span>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">save_config</span><span class="o">=</span><span class="p">{}</span>
-
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">save_config[&#39;Parent&#39;]=parent</span>
-<span class="sd">save_config[&#39;Folder&#39;]=folder</span>
-<span class="sd">save_config[&#39;Subfolder&#39;]=subfolder</span>
-<span class="sd">save_config[&#39;File&#39;]=&#39;T-Bill Term Structure: 9-15-2022.pdf&#39;</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="graphing-the-spot-and-forward-rates-for-september-30-2025">
-<h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Graphing the spot and forward rates for September 30, 2025</span><a class="headerlink" href="#graphing-the-spot-and-forward-rates-for-september-30-2025" title="Link to this heading">#</a></h2>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
-    text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>Recall that the September 2022 T-bill data had five maturity dates. The September 2025 data has two additional dates: ‘6 WEEKS’ and ‘17 WEEKS’. In the following code, the <em>x</em>-axis is set at the bills’ seven maturities in months. Forward and spot rates are calculated for the month of September 2025, and the data for September 30, 2025, is plotted.
+<big>Recall that the September 2022 T-bill data had five maturity dates. The September 2025 data has two additional dates: <font color='green'>’6 WEEKS’</font> and <font color='green'>’17 WEEKS’</font>. In the following code, the <em>x</em>-axis is set at the bills’ seven maturities in months. Forward and spot rates are calculated for the month of September 2025, and the data for September 30, 2025, is plotted.</big>
 </span></p>
-<span style="margin-left: 1in;">
+<span style="display:block; margin-left: 1in;margin-bottom: .2in;">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xaxis</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;One&#39;</span><span class="p">,</span><span class="s1">&#39;One &amp; Half&#39;</span><span class="p">,</span><span class="s1">&#39;Two&#39;</span><span class="p">,</span><span class="s1">&#39;Three&#39;</span><span class="p">,</span><span class="s1">&#39;Four&#39;</span><span class="p">,</span><span class="s1">&#39;Six&#39;</span><span class="p">,</span><span class="s1">&#39;Twelve&#39;</span><span class="p">]</span>
 <span class="n">string_date</span><span class="o">=</span><span class="s1">&#39;09/15/2022&#39;</span>
 </pre></div>
 </div>
-<p></span><br></p>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
-    text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>The first row of <font color='green'>spot_rates</font> and <font color='green'>forward_rates</font> correspond to September 30. The spot- and forward-rate rows for September 30, 2025, are then multiplied by 100 and assigned to the list <font color='green'>data</font>.</p>
 </span>
-<span style="margin-left: 1in;">
+<p><span style="display:block;
+    font-family: 'Garamond', serif;
+    text-indent: 0.25in;
+    line-height: 1.5;">
+<big>The first row of <font color='green'>spot_rates</font> and <font color='green'>forward_rates</font> correspond to September 30. The spot- and forward-rate rows for September 30, 2025, are then multiplied by 100 and assigned to the list <font color='green'>data</font>.</big>
+</span></p>
+<span style="display:block; margin-left: 1in;margin-bottom: .2in;">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">spot_rates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="n">forward_rates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">]</span>
 </pre></div>
 </div>
-<p></span><br></p>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
-    text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>The plot title is assigned whatever value is assigned to <font color='green'>save_config[‘File Name’]</font> (minus the PDF extension).</p>
 </span>
-<span style="margin-left: 1in;">
+<p><span style="display:block;
+    font-family: 'Garamond', serif;
+    text-indent: 0.25in;
+    line-height: 1.5;">
+<big>The plot title is assigned whatever value is assigned to <font color='green'>save_config[‘File Name’]</font> (minus the PDF extension).</big>
+</span></p>
+<span style="display:block; margin-left: 1in;margin-bottom: .2in;">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>                    
-  <span class="n">title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">save_config</span><span class="p">[</span><span class="s1">&#39;File&#39;</span><span class="p">])</span>              
+  <span class="n">title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">save_config</span><span class="p">[</span><span class="s1">&#39;file_name&#39;</span><span class="p">])</span>              
 <span class="k">except</span><span class="p">:</span>
   <span class="n">title</span><span class="o">=</span><span class="s1">&#39;September 30, 2025&#39;</span>
 </pre></div>
 </div>
-<p></span><br></p>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
-    text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>Series names, labels, and markers are then assigned.</p>
 </span>
-<span style="margin-left: 1in;">
+<p><span style="display:block;
+    font-family: 'Garamond', serif;
+    text-indent: 0.25in;
+    line-height: 1.5;">
+<big>Series names, labels, and markers are then assigned.</big>
+</span></p>
+<span style="display:block; margin-left: 1in;margin-bottom: .2in;">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">series</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Spot Rate&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward Rate&#39;</span><span class="p">]</span>
 <span class="n">ylabel</span> <span class="o">=</span> <span class="s1">&#39;Continuous Compounded Annualized % Rates&#39;</span>
 <span class="n">xlabel</span> <span class="o">=</span> <span class="s1">&#39;Maturity In Months&#39;</span>
@@ -2527,14 +2450,14 @@ As in the graph of the term structure for September 15<span class="math notransl
 <span class="n">markers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="s1">&#39;&gt;&#39;</span><span class="p">]</span><span class="o">*</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">+</span><span class="mf">0.001</span><span class="p">)</span>
 </pre></div>
 </div>
-<p></span><br></p>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
-    text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>The upper limit of the <em>y</em>-axis is assigned to <font color='green'>upper</font> and calculated from the maximum value of the spot and forward rates. As before, the NumPy method <font color='green'>nanmax()</font> ignores <font color='green'>nan</font> values. The maximum of <font color='green'>nanmax()</font> of spot rates (<font color='green'>data[0]</font>) and forward rates (<font color='green'>data[1]</font>) plus 0.5% are assigned to <font color='green'>upper </font>. The lower limit is set to 0, and the size and colors of the lines are once again set as 10 inches wide and 6 inches tall (10,6) and red and blue, respectively.</p>
 </span>
-<span style="margin-left: 1in;">
+<p><span style="display:block;
+    font-family: 'Garamond', serif;
+    text-indent: 0.25in;
+    line-height: 1.5;">
+<big>The upper limit of the <em>y</em>-axis is assigned to <font color='green'>upper</font> and calculated from the maximum value of the spot and forward rates. As before, the NumPy method <font color='green'>nanmax()</font> ignores <font color='green'>nan</font> values. The maximum of <font color='green'>nanmax()</font> of spot rates (<font color='green'>data[0]</font>) and forward rates (<font color='green'>data[1]</font>) plus 0.5% are assigned to <font color='green'>upper </font>. The lower limit is set to 0, and the size and colors of the lines are once again set as 10 inches wide and 6 inches tall (10,6) and red and blue, respectively.</big>
+</span></p>
+<span style="display:block; margin-left: 1in;margin-bottom: .2in;">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lower</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">upper</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">+</span> <span class="mf">0.5</span>
 <span class="n">ylim</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
@@ -2542,14 +2465,14 @@ As in the graph of the term structure for September 15<span class="math notransl
 <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p></span><br></p>
-<p><span style="font-family: 'Garamond', serif;
-    font-size: 14px;
-    text-indent: 0.25in;
-    line-height: 1.5;"></p>
-<p>Finally, the graph is generated and saved with <font color='green'>one_y_axis()</font>.</p>
 </span>
-<span style="margin-left: 1in;">
+<p><span style="display:block;
+    font-family: 'Garamond', serif;
+    text-indent: 0.25in;
+    line-height: 1.5;">
+<big>Finally, the graph is generated and saved with <font color='green'>one_y_axis()</font>.</big>
+</span></p>
+<span style="display:block; margin-left: 1in;margin-bottom: .2in;">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">one_y_axis</span><span class="p">(</span><span class="n">xaxis</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">series</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">markers</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">ylim</span><span class="p">,</span>
            <span class="n">save_config</span><span class="o">=</span><span class="n">save_config</span><span class="p">,</span><span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
 </pre></div>
@@ -2560,16 +2483,18 @@ As in the graph of the term structure for September 15<span class="math notransl
 <span class="n">xaxis</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;One&#39;</span><span class="p">,</span><span class="s1">&#39;One &amp; Half&#39;</span><span class="p">,</span> <span class="s1">&#39;Two&#39;</span><span class="p">,</span> <span class="s1">&#39;Three&#39;</span><span class="p">,</span><span class="s1">&#39;Four&#39;</span><span class="p">,</span> <span class="s1">&#39;Six&#39;</span><span class="p">,</span> <span class="s1">&#39;Twelve&#39;</span><span class="p">]</span>
 
 <span class="c1"># Define the specific date for which the term structure will be plotted.</span>
-<span class="n">string_date</span> <span class="o">=</span> <span class="s1">&#39;09/30/2022&#39;</span>
+<span class="n">string_date</span> <span class="o">=</span> <span class="s1">&#39;09/30/2025&#39;</span>
 
+<span class="c1"># Get the integer location (row index) of the specified &#39;string_date&#39; in the DataFrame&#39;s index..</span>
+<span class="n">loc</span> <span class="o">=</span> <span class="n">Tbill_data_excel</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_indexer</span><span class="p">([</span><span class="n">string_date</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># Prepare the data to be plotted on the y-axis (as %).</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">spot_rates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="n">forward_rates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">spot_rates</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="n">forward_rates</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">]</span>
 
 <span class="c1"># Attempt to extract the plot title from the file name.</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">save_config</span><span class="p">[</span><span class="s1">&#39;File&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
-<span class="c1">#&#39;File Name&#39; key not found or string is too short), set a default title.</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">save_config</span><span class="p">[</span><span class="s1">&#39;file_name&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1">#&#39;file_name key not found set a default title.</span>
 <span class="k">except</span><span class="p">:</span>
     <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;September 30, 2025&#39;</span>
 
@@ -2609,7 +2534,15 @@ As in the graph of the term structure for September 15<span class="math notransl
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/c0d0c9eaca256d4eba3107c4d5345aab380a0015a3e8607a32e2d09025851451.png" src="_images/c0d0c9eaca256d4eba3107c4d5345aab380a0015a3e8607a32e2d09025851451.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>❓ Do you want to save the file? (y/n) (press enter for n): y
+</pre></div>
+</div>
+<p>###<em><strong>⌛ Generating A Path</strong></em></p>
+<h3 class="rubric" id="drive-mount-failed-error-credential-propagation-was-unsuccessful-saving-to-temporary-content-folder">⚠️ <strong>Drive Mount Failed:</strong> Error: credential propagation was unsuccessful. Saving to temporary ‘/content’ folder.</h3>
+<h3 class="rubric" id="file-path-generated">✅ <strong>File Path Generated:</strong></h3>
+<p><code class="docutils literal notranslate"><span class="pre">/content/Basic</span> <span class="pre">Concepts</span> <span class="pre">Fixed</span> <span class="pre">Income/One/Term</span> <span class="pre">Structure</span> <span class="pre">September</span> <span class="pre">30</span> <span class="pre">2025.pdf</span></code></p>
+<h3 class="rubric" id="file-is-in-a-temporary-location-and-will-be-lost-on-runtime-restart">⚠️ <em>File is in a temporary location and will be lost on runtime restart.</em></h3>
+<img alt="_images/8fcf9646044080917815f9ebc11f7f2e17268821b23872c80ed5f222e894ac1f.png" src="_images/8fcf9646044080917815f9ebc11f7f2e17268821b23872c80ed5f222e894ac1f.png" />
 </div>
 </div>
 </section>
@@ -2667,16 +2600,16 @@ As in the graph of the term structure for September 15<span class="math notransl
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Chapter_One_NumPy_And_Pandas.html"
+       href="Numpy_And_Pandas.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span style="font-family:Franklin Gothic Medium', sans-serif;"> NumPy And Pandas</span></p>
+        <p class="prev-next-title"><strong>NumPy And Pandas</strong></p>
       </div>
     </a>
     <a class="right-next"
-       href="Chapter_One_Summary.html"
+       href="Chapter_Summary.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
@@ -2726,9 +2659,8 @@ As in the graph of the term structure for September 15<span class="math notransl
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-rates"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Forward rates</span></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Preparing the notebook</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-term-structure"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Graphing the Term Structure</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-spot-and-forward-rates-for-september-15-2022"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Graphing the spot and forward rates for September 15, 2022</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Preparing the notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-spot-and-forward-rates-for-september-15-2022">Graphing the spot and forward rates for September 15, 2022</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-t-bill-data-directly-from-the-treasury"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Accessing T-Bill Data Directly from the Treasury</span></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-link-to-the-daily-treasury-bill-rates-on-the-treasury-site">The link to the Daily Treasury Bill Rates on the Treasury Site</a></li>
 </ul>
@@ -2739,11 +2671,12 @@ As in the graph of the term structure for September 15<span class="math notransl
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Going from bankers’ discounts to zero prices</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Spot Rates</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Forward Rates</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Preparing the notebook</span></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-term-structure-again"><span style="font-family:Franklin Gothic Medium', sans-serif;">Graphing the Term Structure (Again)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-spot-and-forward-rates-for-september-30-2025"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Graphing the spot and forward rates for September 30, 2025</span></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-term-structure-again">Graphing the Term Structure (Again)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-spot-and-forward-rates-for-september-30-2025">Graphing the spot and forward rates for September 30, 2025</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
