@@ -187,9 +187,10 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>NumPy And Pandas</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates.html"><strong>Calculating And Graphing The Term Structure Of Interest Rates</strong></a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="Chapter_One_Summary.html"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Python, Pandas, NumPy, and Financial Insights</span></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Chapter_Summary.html"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Python, Pandas, NumPy, and Financial Insights</span></a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="imported_functions.html">Functions Imported By the Volume <em>Basic Concepts Of Fixed Income</em></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="parent_folder_subfolder.html">parent_folder_subfolder is a helper function for saving files created by <em>Financial Python</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="save_results.html">save_results is a helper function that asks users if they wish to save files created by <em>Financial Python</em>.</a></li>
 <li class="toctree-l3"><a class="reference internal" href="one_y_axis.html">one-y-axis is a helper function for plotting graphs created by <em>Financial Python</em>.</a></li>
 </ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
@@ -426,20 +427,18 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Preparing the Notebook</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Importing libraries and functions</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">NumPy Arrays</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-calculations"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">NumPy Calculations</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-create-a-numpy-array"><font color="green"><em><strong>Application: Create a NumPy Array</strong></em></font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-dimensional-numpy-arrays"><span style="text-align:center;font-family:Franklin Gothic Book', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Two-Dimensional NumPy arrays</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-manipulate-a-two-dimensional-array"><font color="green"><em><strong>Application: Manipulate a Two-Dimensional Array</strong></em></font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-pandas-dataframe-from-numpy-arrays"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Creating a Pandas DataFrame from NumPy Arrays</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-example"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">A simple example</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook">Preparing the Notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions">Importing libraries and functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-create-a-dataframe-from-a-two-dimensional-array"><font color="green"><em><strong>Application:Create a DataFrame from a Two-Dimensional Array</strong></em></font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-rows-into-columns-and-labeling-the-columns"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Making rows into columns and labeling the columns</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-set-index-method"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">The set_index() method</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays">NumPy Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-dimensional-numpy-arrays">Two-Dimensional NumPy arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-pandas-dataframe-from-numpy-arrays">Creating a Pandas DataFrame from NumPy Arrays</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-example">&lt;A simple example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-rows-into-columns-and-labeling-the-columns">Making rows into columns and labeling the columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-set-index-method">The set_index() method</a></li>
 </ul>
             </nav>
         </div>
@@ -464,10 +463,9 @@ document.write(`
 </br>
 </section>
 <section id="preparing-the-notebook">
-<h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Preparing the Notebook</span><a class="headerlink" href="#preparing-the-notebook" title="Link to this heading">#</a></h2>
-</section>
+<h2>Preparing the Notebook<a class="headerlink" href="#preparing-the-notebook" title="Link to this heading">#</a></h2>
 <section id="importing-libraries-and-functions">
-<h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Importing libraries and functions</span><a class="headerlink" href="#importing-libraries-and-functions" title="Link to this heading">#</a></h2>
+<h3>Importing libraries and functions<a class="headerlink" href="#importing-libraries-and-functions" title="Link to this heading">#</a></h3>
 <p><span style="font-family: 'Garamond', serif;
     font-size: 16px;
     text-indent: 0.25in;
@@ -548,8 +546,9 @@ The following cell shows our completed code cell for imports.
 </div>
 </div>
 </section>
+</section>
 <section id="numpy-arrays">
-<h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">NumPy Arrays</span><a class="headerlink" href="#numpy-arrays" title="Link to this heading">#</a></h2>
+<h2>NumPy Arrays<a class="headerlink" href="#numpy-arrays" title="Link to this heading">#</a></h2>
 <p><span style="font-family: 'Garamond', serif;
     font-size: 14px;
     text-indent: 0.25in;
@@ -578,9 +577,7 @@ The following cell shows our completed code cell for imports.
 </div>
 </div>
 </div>
-</section>
-<section id="numpy-calculations">
-<h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">NumPy Calculations</span><a class="headerlink" href="#numpy-calculations" title="Link to this heading">#</a></h2>
+<p>##NumPy Calculations</p>
 <p><span style="font-family: 'Garamond', serif;
     font-size: 14px;
     text-indent: 0.25in;
@@ -599,9 +596,7 @@ The following cell shows our completed code cell for imports.
 </div>
 </div>
 </div>
-</section>
-<section id="application-create-a-numpy-array">
-<h2><font color='green'><em><strong>Application: Create a NumPy Array</strong></em></font><a class="headerlink" href="#application-create-a-numpy-array" title="Link to this heading">#</a></h2>
+ <h2><font color='green'><b><i>Application: Create a NumPy Array</font>
 <p><span style="display:block;background-color:LightGray;
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
@@ -614,7 +609,7 @@ Create a NumPy array of the present-value factors for the rates of <font color='
 </span></p>
 </section>
 <section id="two-dimensional-numpy-arrays">
-<h2><span style="text-align:center;font-family:Franklin Gothic Book', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Two-Dimensional NumPy arrays</span><a class="headerlink" href="#two-dimensional-numpy-arrays" title="Link to this heading">#</a></h2>
+<h2>Two-Dimensional NumPy arrays<a class="headerlink" href="#two-dimensional-numpy-arrays" title="Link to this heading">#</a></h2>
 <p><span style="font-family: 'Garamond', serif;
     font-size: 14px;
     text-indent: 0.25in;
@@ -647,10 +642,7 @@ Create a NumPy array of the present-value factors for the rates of <font color='
 </div>
 </div>
 </div>
-</section>
-<section id="application-manipulate-a-two-dimensional-array">
-<h2><font color='green'><em><strong>Application: Manipulate a Two-Dimensional Array</strong></em></font><a class="headerlink" href="#application-manipulate-a-two-dimensional-array" title="Link to this heading">#</a></h2>
-<p><span style="display:block;background-color:LightGray;
+<h2> <font color='green'><b><i>Application: Manipulate a Two-Dimensional Array</font><p><span style="display:block;background-color:LightGray;
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
     line-height: 1.5;
@@ -662,9 +654,9 @@ Create a two-dimensional array by raising the interest-rate row to Euler’s num
 </span>
 </section>
 <section id="creating-a-pandas-dataframe-from-numpy-arrays">
-<h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Creating a Pandas DataFrame from NumPy Arrays</span><a class="headerlink" href="#creating-a-pandas-dataframe-from-numpy-arrays" title="Link to this heading">#</a></h2>
+<h2>Creating a Pandas DataFrame from NumPy Arrays<a class="headerlink" href="#creating-a-pandas-dataframe-from-numpy-arrays" title="Link to this heading">#</a></h2>
 <section id="a-simple-example">
-<h3><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">A simple example</span><a class="headerlink" href="#a-simple-example" title="Link to this heading">#</a></h3>
+<h3>&lt;A simple example<a class="headerlink" href="#a-simple-example" title="Link to this heading">#</a></h3>
 <p><span style="font-family: 'Garamond', serif;
     font-size: 14px;
     text-indent: 0.25in;
@@ -728,11 +720,7 @@ Create a two-dimensional array by raising the interest-rate row to Euler’s num
 </table>
 </div></div></div>
 </div>
-</section>
-</section>
-<section id="application-create-a-dataframe-from-a-two-dimensional-array">
-<h2><font color='green'><em><strong>Application:Create a DataFrame from a Two-Dimensional Array</strong></em></font><a class="headerlink" href="#application-create-a-dataframe-from-a-two-dimensional-array" title="Link to this heading">#</a></h2>
-<p><span style="display:block;background-color:LightGray;
+<h2> <font color='green'><b><i>Application:Create a DataFrame from a Two-Dimensional Array</font><p><span style="display:block;background-color:LightGray;
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
     line-height: 1.5;
@@ -743,8 +731,9 @@ Create a DataFrame with the two-dimensional array <font color='green'>pv_rates</
 <br>
 </span>
 </section>
+</section>
 <section id="making-rows-into-columns-and-labeling-the-columns">
-<h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Making rows into columns and labeling the columns</span><a class="headerlink" href="#making-rows-into-columns-and-labeling-the-columns" title="Link to this heading">#</a></h2>
+<h2>Making rows into columns and labeling the columns<a class="headerlink" href="#making-rows-into-columns-and-labeling-the-columns" title="Link to this heading">#</a></h2>
 <p><span style="font-family: 'Garamond', serif;
     font-size: 14px;
     text-indent: 0.25in;
@@ -817,7 +806,7 @@ Create a DataFrame with the two-dimensional array <font color='green'>pv_rates</
 </div>
 </section>
 <section id="the-set-index-method">
-<h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">The set_index() method</span><a class="headerlink" href="#the-set-index-method" title="Link to this heading">#</a></h2>
+<h2>The set_index() method<a class="headerlink" href="#the-set-index-method" title="Link to this heading">#</a></h2>
 <p>Once the DataFrame has been transposed, the next step is to make the <font color='green'>Rates</font> column the index.  Why? The reason is that the values of <font color='green'>Rates</font> determine the values of the columns <font color='green'>Future Value</font> and <font color='green'>Pesent Value</font>. This change isn’t necessary, but it draws our eye to a natural connection. Instead of an index that points only to a row number, the new index points to the rate that results in the future and present values.</p>
 <p>The method <font color='green'>set_index()</font> takes a column name and removes the column from the DataFrame. Pandas has a built-in <em>fail-safe-switch</em>. By default, this change (and others we’ll encounter later) doesn’t permanently alter the DataFrame. This might seem a bit strange, but <font color='SeaGreen'>this characteristic prevents mistakes that are difficult to fix.</font> To make the change permanent, you can do the following:<span class="math notranslate nohighlight">\(^{7}\)</span></p>
 <p><span style="font-family: 'Garamond', serif;
@@ -1067,20 +1056,18 @@ Create a DataFrame with the two-dimensional array <font color='green'>pv_rates</
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Preparing the Notebook</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Importing libraries and functions</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">NumPy Arrays</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-calculations"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">NumPy Calculations</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-create-a-numpy-array"><font color="green"><em><strong>Application: Create a NumPy Array</strong></em></font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-dimensional-numpy-arrays"><span style="text-align:center;font-family:Franklin Gothic Book', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Two-Dimensional NumPy arrays</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-manipulate-a-two-dimensional-array"><font color="green"><em><strong>Application: Manipulate a Two-Dimensional Array</strong></em></font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-pandas-dataframe-from-numpy-arrays"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Creating a Pandas DataFrame from NumPy Arrays</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-example"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">A simple example</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook">Preparing the Notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions">Importing libraries and functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-create-a-dataframe-from-a-two-dimensional-array"><font color="green"><em><strong>Application:Create a DataFrame from a Two-Dimensional Array</strong></em></font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-rows-into-columns-and-labeling-the-columns"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Making rows into columns and labeling the columns</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-set-index-method"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">The set_index() method</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays">NumPy Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-dimensional-numpy-arrays">Two-Dimensional NumPy arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-pandas-dataframe-from-numpy-arrays">Creating a Pandas DataFrame from NumPy Arrays</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-example">&lt;A simple example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-rows-into-columns-and-labeling-the-columns">Making rows into columns and labeling the columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-set-index-method">The set_index() method</a></li>
 </ul>
   </nav></div>
 
