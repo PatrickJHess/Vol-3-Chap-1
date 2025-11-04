@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Functions Imported By the Volume Basic Concepts Of Fixed Income &#8212; Basic Bond Concepts and the Term Structure of Interest Rates</title>
+    <title>Accrued Interest &#8212; Basic Bond Concepts and the Term Structure of Interest Rates</title>
   
   
   
@@ -57,11 +57,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'imported_functions';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter_Two_Highlights';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="parent_folder_subfolder is a helper function for saving files created by Financial Python" href="parent_folder_subfolder.html" />
-    <link rel="prev" title="Chapter One Notebook Of Basic Concepts Of Fixed Income" href="Chapter_One_Some_Basic_Concepts_And_Term_Structure_Of_Interest_Rates.html" />
+    <link rel="next" title="The Mechanics Of Bond Pricing" href="Machanics_Of_Bond_Pricces.html" />
+    <link rel="prev" title="Financial Python" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,15 +177,16 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Basic Bond Concepts and the Term Structure of Interest Rates
+                    Financial Python
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Chapter_One_Some_Basic_Concepts_And_Term_Structure_Of_Interest_Rates.html"><strong>Chapter One Notebook Of Basic Concepts Of Fixed Income</strong></a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Functions Imported By the Volume <em>Basic Concepts Of Fixed Income</em></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="parent_folder_subfolder.html">parent_folder_subfolder is a helper function for saving files created by <em>Financial Python</em></a></li>
-<li class="toctree-l2"><a class="reference internal" href="one_y_axis.html">one-y-axis is a helper function for plotting graphs created by <em>Financial Python</em>.</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Accrued Interest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Machanics_Of_Bond_Pricces.html"><span style="font-family:Franklin Gothic Medium', sans-serif;">The Mechanics Of Bond Pricing</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Dealing_With_Dates.html">Manipulating Dates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter_Two_Accrued_Interest.html">Calculating Accrued Interest</a></li>
+
 </ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
 </ul>
@@ -229,7 +232,7 @@
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/PatrickJHess/Basic-Bond-Concepts/issues/new?title=Issue%20on%20page%20%2Fimported_functions.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/PatrickJHess/Vol-3-Chap-2/issues/new?title=Issue%20on%20page%20%2FChapter_Two_Highlights.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -255,7 +258,7 @@
       
       
       
-      <li><a href="_sources/imported_functions.md" target="_blank"
+      <li><a href="_sources/Chapter_Two_Highlights.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -326,7 +329,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -337,11 +342,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Functions Imported By the Volume Basic Concepts Of Fixed Income</h1>
+    <h1>Accrued Interest</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-two-a-road-map">Chapter Two: A Road Map</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -351,23 +365,119 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="functions-imported-by-the-volume-basic-concepts-of-fixed-income">
-<h1>Functions Imported By the Volume <em>Basic Concepts Of Fixed Income</em><a class="headerlink" href="#functions-imported-by-the-volume-basic-concepts-of-fixed-income" title="Link to this heading">#</a></h1>
-<p>Chapter One’s notebook imports two helper functions:</p>
-<ol class="arabic simple">
-<li><p><em><strong>parent_folder_subfolder:</strong></em> This function helps track files generated by the notebook. It is designed for users running the notebook with Jupyter Lab or as a Colab notebook and is not effective for notebooks launched with Binder, Colab, or Live Code.</p></li>
-<li><p><em><strong>one-y-axis:</strong></em> This function utilizes the matplotlib library to graph multiple series on a single y-axis.</p></li>
-</ol>
-<p>Both functions are part of a module downloaded from DropBox. These and other functions within the module are intended to shift focus from coding to financial concepts.</p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="accrued-interest">
+<h1>Accrued Interest<a class="headerlink" href="#accrued-interest" title="Link to this heading">#</a></h1>
+<p><strong>Chapter Two of the Volume <em>Basic Concepts of Fixed Income</em></strong>.</p>
+<p><strong>Highlights of the Chapter are:</strong></p>
+<ul class="simple">
+<li><p><em><strong>Financial Concepts</strong></em></p>
+<ul>
+<li><p><em>Quoted verss transaction prices pf bpmds</em></p></li>
+<li><p><em>The clean price of a bond</em></p></li>
+<li><p><em>The dirty price of a bond</em></p></li>
+<li><p><em>Accrued interest</em></p></li>
+</ul>
+</li>
+<li><p><em><strong>Python Concepts</strong></em></p>
+<ul>
+<li><p><em>NumPy arrays</em></p></li>
+<li><p><em>Python DataFrames</em></p></li>
+<li><p><em>Accesing data with a URL address</em></p></li>
+<li><p><em>Custom modules</em></p></li>
+<li><p><em>The Pandas apply method</em></p></li>
+<li><p><em>Saving DataFrames as spreadsheets</em></p></li>
+</ul>
+</li>
+</ul>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
+<div style="font-family: 'Garamond', serif;
+    font-size: 16px;
+    text-indent: 0.25in;
+    line-height: 1.5;">
+<p>This chapter uses the Python libraries Pandas and NumPy. The basic usage of these libraries is detailed in three Notebooks: “<a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_Pandas.html">A Quick Introduction to Pandas</a>” reviews some basic concepts of Pandas, “<a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_NumPy.html">A Quick Introduction to NumPy</a>” and “<a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_NumPy.html">A Quick Introduction to Manipulating Dates</a>”  do the same for NumPy and the datetime module. These Notebooks are part of the introductory volume <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/intro.html">Background Material: An Introduction to Python for Financial Python</a>. Portions of the volume will be cited throughout this chapter. Feel free to consult these materials as needed for greater discussion of Python concepts.</p>
 </div>
+</br>
+</section>
+<section id="chapter-two-a-road-map">
+<h2>Chapter Two: A Road Map<a class="headerlink" href="#chapter-two-a-road-map" title="Link to this heading">#</a></h2>
+<p><span style="font-family: 'Garamond', serif;
+    font-size: 16px;
+    text-indent: 0.25in;
+    line-height: 1.5;"></p>
+<p><strong>1. Quoted and transaction prices of bonds</strong></p>
+<p><strong>2. Accrued interest for Government bonds</strong></p>
+<p><strong>5. Accrued intrerest for non-governmnet bonds</strong></p>
+<p><strong>4. Calculatng accrued interest for 304 Government bonds</strong></p>
+<p><strong>Chapter Exercise: Calculate and save an Excel workbook with accrued interest</strong>
+</span></p>
+<p><strong>The Chapter includes Four sections.</strong></p>
+<ol class="arabic simple">
+<li><p><em>Introduction To The Mechanics Of Bond Pricing</em>.</p></li>
+<li><p>The Jupyter notebook <em>Dealing With Dates</em>.</p></li>
+<li><p>The  Jupyter notebook <em>Accrued Interest</em> that:</p></li>
+<li><p><em>Summary</em> summarizes the financial concepts and results.</p></li>
+<li><p><em>Functions Imported By Accrued Interest</em> describes the functions imported from DropBox. (<em>module_basic_concepts_fixed_income</em>)..</p></li>
+</ol>
+<p><strong>Interacting with Jupyter Notebooks</strong></p>
+<p>The Jupyter notebooks can be viewed just as you are viewing this page; however, they offer deeper interactive capabilities.  For example the upper-right corner of <em>Accrued Interest</em> shows icons for launching and downloading the notebook.  Downloading needs no elaboration.  The launch icon offers three options:</p>
+<ul class="simple">
+<li><p><strong>Binder:</strong></p>
+<ul>
+<li><p>Launches in a new browser tab, typically within a minute.</p></li>
+<li><p>Supports up to one hundred simultaneous users.</p></li>
+<li><p>Functions like any other Jupyter notebook, but runs remotely.</p></li>
+<li><p>Allows you to:</p>
+<ul>
+<li><p>Execute existing cells.</p></li>
+<li><p>Add or modify cells.</p></li>
+<li><p>Download the notebook.</p></li>
+</ul>
+</li>
+<li><p>Note: In this mode the notebook will not be available if saved.</p></li>
+</ul>
+</li>
+<li><p><strong>Colab:</strong></p>
+<ul>
+<li><p>Offers the quickest and easiest access without requiring Binder.</p>
+<ul>
+<li><p>A Google Drive is not necessary for launching.</p></li>
+<li><p>You can download the notebook without signing into a Google account.</p></li>
+</ul>
+</li>
+<li><p>Note: You must sign in to a Google account to execute cells or make a copy.</p></li>
+</ul>
+</li>
+<li><p><strong>Live Code:</strong></p>
+<ul>
+<li><p>Requires a Binder launch and is ideal for demonstrations.</p></li>
+<li><p>Enables you to:</p>
+<ul>
+<li><p>Run code in existing cells.</p></li>
+<li><p>Alter code in existing cells.</p></li>
+</ul>
+</li>
+<li><p>Note: You cannot add cells or save results in this mode.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Any code cell in a notebook or code block in a text cell can be copied to the clipboard by moving your cursor to upper-right corner of the code cell or code block.</strong></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Machanics_Of_Bond_Pricces.html"><span style="font-family:Franklin Gothic Medium', sans-serif;">The Mechanics Of Bond Pricing</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dealing_With_Dates.html">Manipulating Dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Two_Accrued_Interest.html">Calculating Accrued Interest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Two_Accrued_Interest.html#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
+</ul>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "PatrickJHess/Basic-Bond-Concepts",
+            repo: "PatrickJHess/Vol-3-Chap-2",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -394,20 +504,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Chapter_One_Some_Basic_Concepts_And_Term_Structure_Of_Interest_Rates.html"
+       href="intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><strong>Chapter One Notebook Of Basic Concepts Of Fixed Income</strong></p>
+        <p class="prev-next-title">Financial Python</p>
       </div>
     </a>
     <a class="right-next"
-       href="parent_folder_subfolder.html"
+       href="Machanics_Of_Bond_Pricces.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">parent_folder_subfolder is a helper function for saving files created by <em>Financial Python</em></p>
+        <p class="prev-next-title"><span style="font-family:Franklin Gothic Medium', sans-serif;">The Mechanics Of Bond Pricing</span></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -417,6 +527,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-two-a-road-map">Chapter Two: A Road Map</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>one-y-axis is a helper function for plotting graphs created by Financial Python. &#8212; Basic Bond Concepts and the Term Structure of Interest Rates</title>
+    <title>The Mechanics Of Bond Pricing &#8212; Basic Bond Concepts and the Term Structure of Interest Rates</title>
   
   
   
@@ -57,10 +57,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'one_y_axis';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Machanics_Of_Bond_Pricces';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="parent_folder_subfolder is a helper function for saving files created by Financial Python" href="parent_folder_subfolder.html" />
+    <link rel="next" title="Manipulating Dates" href="Dealing_With_Dates.html" />
+    <link rel="prev" title="Accrued Interest" href="Chapter_Two_Highlights.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,15 +177,16 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Basic Bond Concepts and the Term Structure of Interest Rates
+                    Financial Python
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Chapter_One_Some_Basic_Concepts_And_Term_Structure_Of_Interest_Rates.html"><strong>Chapter One Notebook Of Basic Concepts Of Fixed Income</strong></a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="imported_functions.html">Functions Imported By the Volume <em>Basic Concepts Of Fixed Income</em></a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="parent_folder_subfolder.html">parent_folder_subfolder is a helper function for saving files created by <em>Financial Python</em></a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">one-y-axis is a helper function for plotting graphs created by <em>Financial Python</em>.</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Two_Highlights.html">Accrued Interest</a><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><span style="font-family:Franklin Gothic Medium', sans-serif;">The Mechanics Of Bond Pricing</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Dealing_With_Dates.html">Manipulating Dates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter_Two_Accrued_Interest.html">Calculating Accrued Interest</a></li>
+
 </ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
 </ul>
@@ -228,7 +232,7 @@
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/PatrickJHess/Basic-Bond-Concepts/issues/new?title=Issue%20on%20page%20%2Fone_y_axis.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/PatrickJHess/Vol-3-Chap-2/issues/new?title=Issue%20on%20page%20%2FMachanics_Of_Bond_Pricces.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -254,7 +258,7 @@
       
       
       
-      <li><a href="_sources/one_y_axis.md" target="_blank"
+      <li><a href="_sources/Machanics_Of_Bond_Pricces.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +329,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -336,11 +342,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>one-y-axis is a helper function for plotting graphs created by Financial Python.</h1>
+    <h1><span style="font-family:Franklin Gothic Medium', sans-serif;">The Mechanics Of Bond Pricing</span></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-prices-and-accrued-interest">Bond Prices And Accrued Interest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#illustrating-accrued-interest-with-five-maturity-dates">Illustrating Accrued Interest With Five Maturity Dates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-next-coupon-period">The Next Coupon Period</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-the-next-coupon-date">Determining The Next Coupon Date</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-accrued-interest">Calculating Accrued Interest</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -350,103 +368,55 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="one-y-axis-is-a-helper-function-for-plotting-graphs-created-by-financial-python">
-<h1>one-y-axis is a helper function for plotting graphs created by <em>Financial Python</em>.<a class="headerlink" href="#one-y-axis-is-a-helper-function-for-plotting-graphs-created-by-financial-python" title="Link to this heading">#</a></h1>
+  <section id="the-mechanics-of-bond-pricing">
+<h1><span style="font-family:Franklin Gothic Medium', sans-serif;">The Mechanics Of Bond Pricing</span><a class="headerlink" href="#the-mechanics-of-bond-pricing" title="Link to this heading">#</a></h1>
+<p>This chapter introduces essential date manipulation skills for finance professionals. Several new functions are developed. The most important of these is accrued_interest().  Bonds are quoted without accrued interest (‘clean’) but trade with accrued interest (‘dirty’).  It’s fair to characterize the calculation of accrued interest as messy.  Here we demonstrate the concepts and calculations.  No need to memorize the details: the goal is a thorough understanding of concepts.  accrued_interest()  calculates accrued interest for government and non-government bonds (e.g. corporate and agencies). Some of the mess is the difference in the calculations for government and non-government bonds.  The function handles this and other details.</p>
+<section id="bond-prices-and-accrued-interest">
+<h2>Bond Prices And Accrued Interest<a class="headerlink" href="#bond-prices-and-accrued-interest" title="Link to this heading">#</a></h2>
+<p>The transaction price (or dirty price) of a coupon bond is the sum of its quoted (or clean) price and accrued interest. Accrued interest is the allocation of a coupon payment between payment dates. It’s worth noting that accrued interest determines how taxable interest income is allocated between purchasers and sellers of a bond.</p>
+<p>For government notes and bonds, accrued interest is calculated based on the actual number of days from the last coupon payment relative to the total days between payments: the so-called actual/actual rule. For non-government bonds, a 30-day month is assumed for accrued interest calculations: the so-called 30/360 rule.</p>
+</section>
+<section id="illustrating-accrued-interest-with-five-maturity-dates">
+<h2>Illustrating Accrued Interest With Five Maturity Dates<a class="headerlink" href="#illustrating-accrued-interest-with-five-maturity-dates" title="Link to this heading">#</a></h2>
+<p>Two time periods are required to calculate accrued interest:</p>
 <ol class="arabic simple">
-<li><p><em><strong>The function plots a single or multiple series on a single y-axis.</strong></em></p></li>
-<li><p><em><strong>The x axis must be iterable.</strong></em></p></li>
-<li><p><em><strong>The y axis data must be iterable; e.g. list of NumPy arrays.</strong></em></p></li>
-<li><p><em><strong>The dictionaries save_config and fill_config are optional and determine if the graph is saved to file and if fill colors are added.</strong></em></p></li>
+<li><p>the time remaining until the next payment,</p></li>
+<li><p>the time between the next and previous payments.</p></li>
 </ol>
-<div class="highlight-'py notranslate"><div class="highlight"><pre><span></span>def one_y_axis(x_data, y_data_list, title, series_labels, xlabel, ylabel,
-                       markers, figure_size, y_limits,save_config={}, fill_config={},
-                       colors=None):
-    &#39;&#39;&#39;
-    Plots data on a single y-axis.
-
-    Args:
-        x_data (array-like): Data for the x-axis.
-        y_data_list (list of array-like): A list of datasets for the y-axis.
-        title (str): The title of the graph.
-        series_labels (list of str): Identifiers for each data series in the legend.
-        xlabel (str): The label for the x-axis.
-        ylabel (str): The label for the y-axis.
-        markers (list of str): The markers to use for each series.
-        figure_size (tuple): The width and height of the figure in inches.
-        y_limits (tuple): The minimum and maximum values for the y-axis.
-        save_config (dict, optional): Configuration for saving the file.
-            Keys: &#39;File Name&#39;, &#39;Folder&#39;. Defaults to {}.
-        fill_config (dict, optional): Configuration for filling areas.
-            Keys: &#39;Between&#39;, &#39;Start&#39;, &#39;End&#39;, &#39;Colors&#39;, &#39;Labels&#39;, &#39;Alpha&#39;. Defaults to {}.
-        colors (list of str, optional): Colors for each series. If None, uses a default colormap.
-    Raises:
-        ValueError: If input lists for series, markers, or colors do not match the number of y-datasets.
-    &#39;&#39;&#39;
-    import os
-    from matplotlib import pyplot as plt    
-    num_series = len(y_data_list)
-    # --- Input Validation&#39;&#39;&#39;&#39;
-    if not all(len(lst) == num_series for lst in [series_labels, markers]):
-        raise ValueError(&quot;The &#39;series_labels&#39; and &#39;markers&#39; lists must have the same length as &#39;y_data_list&#39;.&quot;)
-
-    if colors and len(colors) != num_series:
-        raise ValueError(&quot;The &#39;colors&#39; list must have the same length as &#39;y_data_list&#39;.&quot;)
-
-    # --- Plotting Setup ---
-    fig = plt.figure(figsize=figure_size)
-    fig.suptitle(title)
-    plt.style.use(&#39;ggplot&#39;)
-
-    if colors is None:
-        # Generate a default color cycle if none are provided
-        colors = plt.cm.viridis_r(np.linspace(0, 1, num_series))
-
-    # --- Plot Data Series ---
-    for i in range(num_series):
-        plt.plot(x_data, y_data_list[i], label=series_labels[i], marker=markers[i], color=colors[i])
-
-    # --- Handle Fill Area ---
-    if fill_config.get(&#39;Between&#39;):
-        if len(fill_config[&#39;Between&#39;]) &gt; 2:
-            raise ValueError(&quot;The &#39;Between&#39; key in fill_config can contain a maximum of two indices.&quot;)
-        
-        # Assuming &#39;fill_function&#39; is defined and returns necessary parameters
-        start, end, alpha, color, label = fill_function(fill_config, x_data)
-        
-        if len(fill_config[&#39;Between&#39;]) == 2:
-            y1_index, y2_index = fill_config[&#39;Between&#39;]
-            plt.fill_between(x_data[start:end], y_data_list[y1_index][start:end], y_data_list[y2_index][start:end],
-                             color=color, alpha=alpha, label=label)
-        else:
-            y_index = fill_config[&#39;Between&#39;][0]
-            plt.fill_between(x_data[start:end], y_data_list[y_index][start:end],
-                             color=color, alpha=alpha, label=label)
-
-    # --- Final Touches ---
-    plt.ylim(y_limits)
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    plt.legend()
-    plt.tight_layout()
-
-    # --- Save Figure ---
-    
-    if save_config:
-        # Assuming &#39;file_graph&#39; is defined and handles path creation
-        path,file_name = file_graph(save_config,title)
-        full_path=os.path.join(path,file_name)
-        plt.savefig(full_path, dpi=300, bbox_inches=&#39;tight&#39;)
-
-    plt.show()```
-</pre></div>
-</div>
+<p>Until it matures, a coupon bond makes a payment every year on the anniversary of its maturity date. If the maturity date is a month-end, all payments are as well.  Consider a bond maturing on April 30<span class="math notranslate nohighlight">\(^{th}\)</span> making semi-annual coupon payments. Before April 30<span class="math notranslate nohighlight">\(^{th}\)</span> of the current year, the next payment date will be April 30<span class="math notranslate nohighlight">\(^{th}\)</span> in the current year and the previous payment date is October 31<span class="math notranslate nohighlight">\(^{st}\)</span> of the previous year .After April 30<span class="math notranslate nohighlight">\(^{th}\)</span> and before October 31<span class="math notranslate nohighlight">\(^{st}\)</span> of the current year, the next payment occurs on October 31<span class="math notranslate nohighlight">\(^{st}\)</span>.</p>
+<p>Since May of 2024 bond trades settle one business day following the trade date.  Accrued interest is calculated relative to the settlement date.   The module datetime is part of the standard Python library and manipulates dates.  We use it extensively in this and other chapters.  Two other modules are also needed.: dateutil and  the built-in module calendar.  The next section of the chapter, the notebooks <em>Dealing With Dates</em>, illustrates the uses of datetime, dateutil,  and calendar.  A more general discussion is provided in <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/Manipulating_Dates.html#a-quick-introduction-to-manipulating-dates">A Quick Introduction To Manipulating Dates</a>.</p>
+<p>Five maturity dates are selected to illustrate the calculations. The fifth bond matures on February 29<span class="math notranslate nohighlight">\(^{th}\)</span> in a leap year.  The current settlement date is January 21<span class="math notranslate nohighlight">\(^{st}\)</span> 2025 and February 29<span class="math notranslate nohighlight">\(^{th}\)</span> doesn’t exist in 2025.  Controlling for month-end, however, will automatically adjust the coupon payment date to February 28 in 2025.</p>
+<ul class="simple">
+<li><p>February 28<span class="math notranslate nohighlight">\(^{th}\)</span> 2025</p></li>
+<li><p>July 15<span class="math notranslate nohighlight">\(^{th}\)</span> 2025</p></li>
+<li><p>August 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2025</p></li>
+<li><p>January 15<span class="math notranslate nohighlight">\(^{th}\)</span> 2026</p></li>
+<li><p>February 29<span class="math notranslate nohighlight">\(^{th}\)</span> 2028</p></li>
+</ul>
+</section>
+<section id="the-next-coupon-period">
+<h2>The Next Coupon Period<a class="headerlink" href="#the-next-coupon-period" title="Link to this heading">#</a></h2>
+<p>The end of the next coupon period is determined by adding the number of months between payments to the settlement date.  In these examples the bonds pay semi-annually and the number of months between payments is six</p>
+</section>
+<section id="determining-the-next-coupon-date">
+<h2>Determining The Next Coupon Date<a class="headerlink" href="#determining-the-next-coupon-date" title="Link to this heading">#</a></h2>
+<p>Government notes and bonds make semi-annual payments.  When a coupon bond is purchased, the next coupon payment date will be within six months of the settlement date.<br />
+In this example the settlement date is January 21<span class="math notranslate nohighlight">\(^{st}\)</span> 2025 making the next coupon date falling between January 21<span class="math notranslate nohighlight">\(^{st}\)</span> 2025 and July 21<span class="math notranslate nohighlight">\(^{st}\)</span> 2025. If the maturity month and day of the security is between January 21<span class="math notranslate nohighlight">\(^{st}\)</span> and July 21<span class="math notranslate nohighlight">\(^{st}\)</span>, the next coupon payment date will be the maturity month and day in 2025. The exception to this is the bond that matures on February 29<span class="math notranslate nohighlight">\(^{th}\)</span> 2028. Because of the month-end maturity, its next coupon date is adjusted to February 28<span class="math notranslate nohighlight">\(^{th}\)</span> 2025.</p>
+<img src='https://docs.google.com/drawings/d/e/2PACX-1vS1L8ZT3QiCyUdLd8kddTgsgqGHUp7u8d1nUDZ4KhiIMTuHrPq1Jc3dpfmSmgbaI6bd4EPLnTqEKJj4/pub?w=960&h=720'>
+<p>.</p>
+</section>
+<section id="calculating-accrued-interest">
+<h2>Calculating Accrued Interest<a class="headerlink" href="#calculating-accrued-interest" title="Link to this heading">#</a></h2>
+<p>Accrued interest for Government bonds is calculated by determining the ratio of days since the last coupon payment to the total days between coupon payments. This calculation uses the settlement date, next coupon date, and last coupon date. For Corporate and other bonds, accrued interest is calculated based on a 30-day month and 360-day year.  Using the settlement date of January  21<span class="math notranslate nohighlight">\(^{st}\)</span> 2025, the diagram highlights the calculations for the five Government bonds paying a coupon on February 28<span class="math notranslate nohighlight">\(^{th}\)</span> 2025 or July 15<span class="math notranslate nohighlight">\(^{th}\)</span> 2025.</p>
+<img src='https://docs.google.com/drawings/d/e/2PACX-1vR6XvDjt0b_IiI23LnhIthZ1uMpS4dMOX9LH0gW5wMK_7DnpkaFiu1lkP3T8otpurLPU5jI9y8f18ea/pub?w=960&h=720'>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "PatrickJHess/Basic-Bond-Concepts",
+            repo: "PatrickJHess/Vol-3-Chap-2",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -473,13 +443,22 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="parent_folder_subfolder.html"
+       href="Chapter_Two_Highlights.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">parent_folder_subfolder is a helper function for saving files created by <em>Financial Python</em></p>
+        <p class="prev-next-title">Accrued Interest</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Dealing_With_Dates.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Manipulating Dates</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -487,6 +466,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-prices-and-accrued-interest">Bond Prices And Accrued Interest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#illustrating-accrued-interest-with-five-maturity-dates">Illustrating Accrued Interest With Five Maturity Dates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-next-coupon-period">The Next Coupon Period</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-the-next-coupon-date">Determining The Next Coupon Date</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-accrued-interest">Calculating Accrued Interest</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
