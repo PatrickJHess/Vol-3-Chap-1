@@ -75,7 +75,7 @@ one_y_axis(xaxis, data, title, series, xlabel, ylabel, markers, size, ylim,
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
-[0;32m/tmp/ipykernel_28439/213374803.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_27190/213374803.py[0m in [0;36m<module>[0;34m[0m
 [1;32m     51[0m [0mcolors[0m[0;34m=[0m[0;34m[[0m[0;34m'r'[0m[0;34m,[0m[0;34m'b'[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
 [1;32m     52[0m [0;31m# This function generates and possibly saves a plot.[0m[0;34m[0m[0;34m[0m[0m
 [0;32m---> 53[0;31m one_y_axis(xaxis, data, title, series, xlabel, ylabel, markers, size, ylim,
