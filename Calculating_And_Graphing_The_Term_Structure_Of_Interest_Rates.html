@@ -624,7 +624,7 @@ except:
 <section id="forward-rates-of-interest">
 <h3>Forward rates of interest<a class="headerlink" href="#forward-rates-of-interest" title="Link to this heading">#</a></h3>
 <p>The forward rate of interest represents the additional return gained by extending an investment’s duration—or the extra earnings from investing for two months instead of one, for example. When two bonds offer an identical single payment at maturity, the forward rate between the shorter and longer maturities is determined by the ratio of their respective prices.</p>
-<p>For zero-coupon bonds with a principal of \<span class="math notranslate nohighlight">\(1, the calculation of one plus the forward rate between \)</span>t<span class="math notranslate nohighlight">\( and \)</span>t+\Delta t$ is:</p>
+<p>For zero-coupon bonds with a principal of $1, the calculation of one plus the forward rate between <span class="math notranslate nohighlight">\(t\)</span> and <span class="math notranslate nohighlight">\(t+\Delta t\)</span> is:</p>
 <div class="math notranslate nohighlight">
 \[\large\frac{\frac{1}{P(t+\Delta t)}}{\frac{1}{P(t)}}= e^{f(t,t+\Delta t)\times\Delta t}\]</div>
 <p>simplified to</p>
@@ -1196,7 +1196,7 @@ Name: 2022-09-15 00:00:00, dtype: float64
 <section id="calculating-the-term-structure-a-return">
 <h2>Calculating the Term Structure: A Return<a class="headerlink" href="#calculating-the-term-structure-a-return" title="Link to this heading">#</a></h2>
 <p>Having gathered the bond data, we can return to calculating the term structure. Recall that the price of a T-bill (a zero-coupon bond) is its principal discounted back at the annualized continuous spot rate of interest. The forward rate of interest is the difference of the natural logs of the prices of a shorter maturity and a longer maturity zero-coupon bond. To calculate the term structure, we need to first calculate the prices of the T-bills (the zero-coupon prices).</p>
-<p>T-bills are quoted as bank discounts or coupon-equivalent yields. T-bill</p>
+<p>T-bills are quoted as bank discounts or coupon-equivalent yields.</p>
 <div class="math notranslate nohighlight">
 \[\normalsize Bill\,Price = 100 - bank\,discount\times\frac{Maturity\,In\,Days}{360}\]</div>
 <p>The bank discount of the four-week bill on September 15th is 2.68%, which implies a bill price of:</p>
@@ -1226,7 +1226,7 @@ Name: 2022-09-15 00:00:00, dtype: float64
 </pre></div>
 </div>
 <hr class="docutils" />
-<p><span class="math notranslate nohighlight">\(^{5}\)</span> As shown in the following code, the desired columns could be selected with a <font color='green'>for</font> loop. For greater discussion of list comprehension as well as <font color='green'>for</font> loops, see “<a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/A_First_Look_At_Lists.html#create-a-list-by-iterating-through-a-string-list-comprehension-for-loop">A First Look at Lists</a>.”</p>
+<p><span class="math notranslate nohighlight">\(^{5}\)</span> As shown in the following code, the desired columns could be selected with a <font color='green'>for</font> loop. For greater discussion of list comprehension as well as <font color='green'>for</font> loops, see “<a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/A_First_Look_At_Lists.html#create-a-list-by-iterating-through-a-string-list-comprehension-for-loop">A First Look at Lists</a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 <span class="n">desired_columns</span><span class="o">=</span><span class="p">[]</span>
 <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">Tbill_data_excel</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
@@ -1429,27 +1429,18 @@ Name: 2022-09-15 00:00:00, dtype: float64
 <li><p><font color='green'>chapter</font></p></li>
 <li><p><font color='green'>file_name</font></p></li>
 </ul>
-<p>If values are assigned to at least one of the keys, the graph will be saved.  If you change the name of the keys, the value will be ignored. In this example the dictionary is created with the constructor <font color='green'>dict</font> with the keys:<span class="math notranslate nohighlight">\(^{6,7}\)</span></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>save_config=dict(file_name=&#39;Term Structure September 15 2022.pdf&#39;,
-                 volume=&#39;Basic Concepts Fixed Income&#39;,
-                 chapter= &#39;One&#39;)
----
-
-
----
-
-
-$^{6}$;For background on Python dictionaries, see “[A Quick Introduction to Dictionaries](https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/Dictionaries.html#an-introduction-to-dictionaries).”
-
-
-$^{7}$ Dictionaries can be created with curly brackets- &lt;font color=&#39;greem&#39;&gt;**{ }**&lt;/font&gt;:
+<p>If values are assigned to at least one of the keys, the graph will be saved.  If you change the name of the keys, the value will be ignored. In this example the dictionary is created with the constructor <font color='green'>dict</font> with the keys:<span class="math notranslate nohighlight">\(^{7,8}\)</span></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save_config</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s1">&#39;Term Structure September 15 2022.pdf&#39;</span><span class="p">,</span>
+                 <span class="n">volume</span><span class="o">=</span><span class="s1">&#39;Basic Concepts Fixed Income&#39;</span><span class="p">,</span>
+                 <span class="n">chapter</span><span class="o">=</span> <span class="s1">&#39;One&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>save_config={‘file_name’:’Term Structure September 15 2022.pdf’,
-‘volume’:’Basic Concepts Fixed Income’,
-‘chapter’: ‘One’}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
+<hr class="docutils" />
+<p><span class="math notranslate nohighlight">\(^{7}\)</span> For background on Python dictionaries, see <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/Dictionaries.html#an-introduction-to-dictionaries">A Quick Introduction to Dictionaries</a>.</p>
+<p><span class="math notranslate nohighlight">\(^{8}\)</span> Dictionaries can be created with curly brackets- <font color='green'><strong>{ }</strong></font>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save_config</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;file_name&#39;</span><span class="p">:</span><span class="s1">&#39;Term Structure September 15 2022.pdf&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;volume&#39;</span><span class="p">:</span><span class="s1">&#39;Basic Concepts Fixed Income&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;chapter&#39;</span><span class="p">:</span> <span class="s1">&#39;One&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
 <div class="cell docutils container">
@@ -1564,7 +1555,7 @@ $^{7}$ Dictionaries can be created with curly brackets- &lt;font color=&#39;gree
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_28439</span><span class="o">/</span><span class="mf">213374803.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5702</span><span class="o">/</span><span class="mf">213374803.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
 <span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="c1"># This function generates and possibly saves a plot.</span>
 <span class="ne">---&gt; </span><span class="mi">53</span> <span class="n">one_y_axis</span><span class="p">(</span><span class="n">xaxis</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">series</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">markers</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">ylim</span><span class="p">,</span>
@@ -1601,7 +1592,7 @@ Source: “Daily Treasury Bill Rates,” US Department of the Treasury, 2025 (ac
 </section>
 <section id="changing-the-url-and-using-the-pandas-method-read-csv">
 <h2>Changing the URL and using the Pandas method <font color='green'>read_csv</font><a class="headerlink" href="#changing-the-url-and-using-the-pandas-method-read-csv" title="Link to this heading">#</a></h2>
-<p>The data is accessed directly from the Treasury as a CSV file, and the code below displays the data row for September 30, 2025. With the exception of the URL value and the <font color='green'>read_csv()</font> versus <font color='green'>read_excel()</font> methods, the code is identical to what we used to create <font color='green'>Tbill_data_excel</font>. In this example, the URL points to a Treasury site instead of Dropbox. The URL is copied by right-clicking the “Download CSV” link on the Treasury website. The URL for a particular year and month is shown below, and <font color='green'>data_date</font> is assigned the string <font color='green'>’202509’</font>. You can assign it any year and month after 2022.<span class="math notranslate nohighlight">\(^{8}\)</span></p>
+<p>The data is accessed directly from the Treasury as a CSV file, and the code below displays the data row for September 30, 2025. With the exception of the URL value and the <font color='green'>read_csv()</font> versus <font color='green'>read_excel()</font> methods, the code is identical to what we used to create <font color='green'>Tbill_data_excel</font>. In this example, the URL points to a Treasury site instead of Dropbox. The URL is copied by right-clicking the “Download CSV” link on the Treasury website. The URL for a particular year and month is shown below, and <font color='green'>data_date</font> is assigned the string <font color='green'>’202509’</font>. You can assign it any year and month after 2022.<span class="math notranslate nohighlight">\(^{9}\)</span></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data_date</span><span class="o">=</span><span class="s1">&#39;202509&#39;</span>
 <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://home.treasury.gov/resource-center/data-chart-center/</span><span class="se">\</span>
 <span class="s1">interest-rates/daily-treasury-rates.csv/all/&#39;</span><span class="o">+</span><span class="n">data_date</span><span class="o">+</span><span class="s1">&#39;?</span><span class="se">\</span>
@@ -1610,7 +1601,7 @@ Source: “Daily Treasury Bill Rates,” US Department of the Treasury, 2025 (ac
 </div>
 <p>The CSV file is in descending order of the dates. The first row is for September 30 and is displayed with <font color='green'>iloc[0]</font>.</p>
 <hr class="docutils" />
-<p><span class="math notranslate nohighlight">\(^{8}\)</span>As of November 3, 2025, dates prior to 2022 will be moved to a historical page, according to the Treasury. See <a class="reference external" href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_bill_rates&amp;amp;field_tdr_date_value=2025">US Treasury Data Chart Center</a>.</p>
+<p><span class="math notranslate nohighlight">\(^{9}\)</span>As of November 3, 2025, dates prior to 2022 will be moved to a historical page, according to the Treasury. See <a class="reference external" href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_bill_rates&amp;amp;field_tdr_date_value=2025">US Treasury Data Chart Center</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Read the csv file from the U.S. Treasury website</span>
