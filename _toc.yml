@@ -3,7 +3,7 @@
 format: jb-book
 root: intro
 chapters:
-- file: Chapter_Highlights
+- file: Chapter_Highlights (copy)
   sections:
   - file: Bond Pricing
   - file: Numpy_And_Pandas
