@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -182,12 +182,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Highlights.html">Basic Bond Concepts and the Term Structure of Interest Rates</a><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Highlights%20%28copy%29.html">Basic Bond Concepts and the Term Structure of Interest Rates</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Bond%20Pricing.html"><span style="font-family:Franklin Gothic Medium', sans-serif;">Introduction to Bond Pricing</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="Numpy_And_Pandas.html"><strong>NumPy And Pandas</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Numpy_And_Pandas.html">NumPy And Pandas</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Calculating And Graphing The Term Structure Of Interest Rates</a></li>
-
-
 <li class="toctree-l2"><a class="reference internal" href="Chapter_Summary.html"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Python, Pandas, NumPy, and Financial Insights</span></a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="imported_functions.html">Functions Imported By the Volume <em>Basic Concepts Of Fixed Income</em></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="save_results.html">save_results is a helper function that asks users if they wish to save files created by <em>Financial Python</em>.</a></li>
@@ -426,7 +424,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Calculating And Graphing The Term Structure Of Interest Rates</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook">Preparing the Notebook</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions">Importing libraries and functions</a></li>
@@ -468,15 +465,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Forward rates</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-term-structure-again">Graphing the Term Structure (Again)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-term-structure-again">Graphing the Term Structure (Again)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-spot-and-forward-rates-for-september-30-2025">Graphing the spot and forward rates for September 30, 2025</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -661,7 +653,7 @@ except:
 </section>
 <section id="python-and-finance-in-action">
 <h2>Python and finance in action<a class="headerlink" href="#python-and-finance-in-action" title="Link to this heading">#</a></h2>
-<p>his example will outline two Python concepts integral to financial calculations. First, it will demonstrate how to leverage the Pandas library to access Excel workbooks from a URL and convert them into DataFrames—a highly effective skill given Excel’s widespread use in the finance world. The Pandas method we’ll use is <font color='green'>read_excel</font><span class="math notranslate nohighlight">\(^{3}\)</span> Second, this example will illustrate the valuable data manipulation techniques available through Pandas, specifically focusing on how the attributes <font color='green'>loc</font> and <font color='green'>iloc</font> and the method <font color='green'>get_indexer</font> are used to retrieve the necessary data for calculations.<span class="math notranslate nohighlight">\(^{4}\)</span></p>
+<p>This example will outline two Python concepts integral to financial calculations. First, it will demonstrate how to leverage the Pandas library to access Excel workbooks from a URL and convert them into DataFrames—a highly effective skill given Excel’s widespread use in the finance world. The Pandas method we’ll use is <font color='green'>read_excel</font><span class="math notranslate nohighlight">\(^{3}\)</span> Second, this example will illustrate the valuable data manipulation techniques available through Pandas, specifically focusing on how the attributes <font color='green'>loc</font> and <font color='green'>iloc</font> and the method <font color='green'>get_indexer</font> are used to retrieve the necessary data for calculations.<span class="math notranslate nohighlight">\(^{4}\)</span></p>
 <p>Measuring the term structure is a key financial skill. The term structure of interest rates is a critical indicator of financial market conditions. Its explanation, along with the concepts necessary for its calculation, represents the most significant aspect of this example. The relationships between past, present,and future market conditions are all expressed by measuring the term structure.</p>
 </section>
 <section id="getting-t-bill-data">
@@ -669,9 +661,9 @@ except:
 <p>T-bill data is available from the US Department of the Treasury (Treasury) at the department’s <a href='https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_bill_rates&field_tdr_date_value_month=202409'>Daily Treasury Bill Rate page</a>. The data used in this example is for September 2022 and was uploaded to the authors’ Dropbox as an Excel workbook.</p>
 <section id="accessing-the-data">
 <h3>Accessing the data<a class="headerlink" href="#accessing-the-data" title="Link to this heading">#</a></h3>
-<p>The Pandas magic used to read a an Excel workbook from a URL is <font color='green'>read_excel()</font>. The arguments of the method are:</p>
+<p>The Pandas magic used to read an Excel workbook from a URL is <font color='green'>read_excel()</font>. The arguments of the method are:</p>
 <ol class="arabic simple">
-<li><p>The website address, or <font color='green'>url</font>. This argument is requiredt item</p></li>
+<li><p>The website address, or <font color='green'>url</font>. This argument is a required item</p></li>
 <li><p>The columns used as the index, or <font color='green'>index_col</font>. This argument is optional and is assigned to the <font color='green'>Date</font> column.</p></li>
 </ol>
 <p>The below code assigns the Dropbox URL to <font color='green'>url</font> and sets <font color='green'>index_col</font> to <font color='green'>Date</font>, then passes both through our <font color='green'>read_excel()</font> method to give us <font color='green'>Tbill_data_excel</font>.</p>
@@ -1553,28 +1545,6 @@ Name: 2022-09-15 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5702</span><span class="o">/</span><span class="mf">213374803.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="c1"># This function generates and possibly saves a plot.</span>
-<span class="ne">---&gt; </span><span class="mi">53</span> <span class="n">one_y_axis</span><span class="p">(</span><span class="n">xaxis</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">series</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">markers</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">ylim</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>            <span class="n">save_config</span><span class="o">=</span><span class="n">save_config</span><span class="p">,</span><span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
-
-<span class="nn">&lt;string&gt;</span> in <span class="ni">one_y_axis</span><span class="nt">(x_data, y_data_list, title, series_labels, xlabel, ylabel, markers, figure_size, y_limits, save_config, fill_config, colors)</span>
-
-<span class="nn">&lt;string&gt;</span> in <span class="ni">save_results</span><span class="nt">(save_config)</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1272</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1273</span>             <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1274</span>             <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1275</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1276</span>             <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div>
-</div>
 <img alt="_images/d274236b8ca77441f3b8888ac6e9a763e618e4be003258b8fddbc9ced570d1a6.png" src="_images/d274236b8ca77441f3b8888ac6e9a763e618e4be003258b8fddbc9ced570d1a6.png" />
 </div>
 </div>
@@ -1628,88 +1598,26 @@ Source: “Daily Treasury Bill Rates,” US Department of the Treasury, 2025 (ac
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attempting to load data from https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/all/202509?type=daily_treasury_bill_rates&amp;field_tdr_date_value_month=202509&amp;page&amp;_format=csv
 </pre></div>
 </div>
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>09/30/2025</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>4 WEEKS BANK DISCOUNT</th>
-      <td>4.05</td>
-    </tr>
-    <tr>
-      <th>4 WEEKS COUPON EQUIVALENT</th>
-      <td>4.12</td>
-    </tr>
-    <tr>
-      <th>6 WEEKS BANK DISCOUNT</th>
-      <td>4.02</td>
-    </tr>
-    <tr>
-      <th>6 WEEKS COUPON EQUIVALENT</th>
-      <td>4.10</td>
-    </tr>
-    <tr>
-      <th>8 WEEKS BANK DISCOUNT</th>
-      <td>4.00</td>
-    </tr>
-    <tr>
-      <th>8 WEEKS COUPON EQUIVALENT</th>
-      <td>4.08</td>
-    </tr>
-    <tr>
-      <th>13 WEEKS BANK DISCOUNT</th>
-      <td>3.86</td>
-    </tr>
-    <tr>
-      <th>13 WEEKS COUPON EQUIVALENT</th>
-      <td>3.95</td>
-    </tr>
-    <tr>
-      <th>17 WEEKS BANK DISCOUNT</th>
-      <td>3.83</td>
-    </tr>
-    <tr>
-      <th>17 WEEKS COUPON EQUIVALENT</th>
-      <td>3.93</td>
-    </tr>
-    <tr>
-      <th>26 WEEKS BANK DISCOUNT</th>
-      <td>3.72</td>
-    </tr>
-    <tr>
-      <th>26 WEEKS COUPON EQUIVALENT</th>
-      <td>3.84</td>
-    </tr>
-    <tr>
-      <th>52 WEEKS BANK DISCOUNT</th>
-      <td>3.53</td>
-    </tr>
-    <tr>
-      <th>52 WEEKS COUPON EQUIVALENT</th>
-      <td>3.68</td>
-    </tr>
-  </tbody>
-</table>
-</div><br><label><b>dtype:</b> float64</label></div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4 WEEKS BANK DISCOUNT         4.05
+4 WEEKS COUPON EQUIVALENT     4.12
+6 WEEKS BANK DISCOUNT         4.02
+6 WEEKS COUPON EQUIVALENT     4.10
+8 WEEKS BANK DISCOUNT         4.00
+8 WEEKS COUPON EQUIVALENT     4.08
+13 WEEKS BANK DISCOUNT        3.86
+13 WEEKS COUPON EQUIVALENT    3.95
+17 WEEKS BANK DISCOUNT        3.83
+17 WEEKS COUPON EQUIVALENT    3.93
+26 WEEKS BANK DISCOUNT        3.72
+26 WEEKS COUPON EQUIVALENT    3.84
+52 WEEKS BANK DISCOUNT        3.53
+52 WEEKS COUPON EQUIVALENT    3.68
+Name: 09/30/2025, dtype: float64
+</pre></div>
 </div>
+</div>
+</div>
+<p>For this date, the U.S. Treasury returns T-Bill rates for seven dates.  In September of 2022, rates are returned for five dates.</p>
 </section>
 <section id="application-downloading-treasury-data">
 <h2><font color='green'>Application: Downloading Treasury Data</font><a class="headerlink" href="#application-downloading-treasury-data" title="Link to this heading">#</a></h2>
@@ -1741,9 +1649,7 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-41afac39-84e1-43bc-b2d3-0965c49f8b5c" class="colab-df-container">
-    <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1833,217 +1739,7 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
     </tr>
   </tbody>
 </table>
-</div>
-    <div class="colab-df-buttons">
-
-  <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-41afac39-84e1-43bc-b2d3-0965c49f8b5c')"
-            title="Convert this dataframe to an interactive table."
-            style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
-    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
-  </svg>
-    </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    .colab-df-buttons div {
-      margin-bottom: 4px;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-    <script>
-      const buttonEl =
-        document.querySelector('#df-41afac39-84e1-43bc-b2d3-0965c49f8b5c button.colab-df-convert');
-      buttonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-      async function convertToInteractive(key) {
-        const element = document.querySelector('#df-41afac39-84e1-43bc-b2d3-0965c49f8b5c');
-        const dataTable =
-          await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                    [key], {});
-        if (!dataTable) return;
-
-        const docLinkHtml = 'Like what you see? Visit the ' +
-          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-          + ' to learn more about interactive tables.';
-        element.innerHTML = '';
-        dataTable['output_type'] = 'display_data';
-        await google.colab.output.renderOutput(dataTable, element);
-        const docLink = document.createElement('div');
-        docLink.innerHTML = docLinkHtml;
-        element.appendChild(docLink);
-      }
-    </script>
-  </div>
-
-
-    <div id="df-23fcad14-71e6-4686-803e-1007503ededd">
-      <button class="colab-df-quickchart" onclick="quickchart('df-23fcad14-71e6-4686-803e-1007503ededd')"
-                title="Suggest charts"
-                style="display:none;">
-
-<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-     width="24px">
-    <g>
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-    </g>
-</svg>
-      </button>
-
-<style>
-  .colab-df-quickchart {
-      --bg-color: #E8F0FE;
-      --fill-color: #1967D2;
-      --hover-bg-color: #E2EBFA;
-      --hover-fill-color: #174EA6;
-      --disabled-fill-color: #AAA;
-      --disabled-bg-color: #DDD;
-  }
-
-  [theme=dark] .colab-df-quickchart {
-      --bg-color: #3B4455;
-      --fill-color: #D2E3FC;
-      --hover-bg-color: #434B5C;
-      --hover-fill-color: #FFFFFF;
-      --disabled-bg-color: #3B4455;
-      --disabled-fill-color: #666;
-  }
-
-  .colab-df-quickchart {
-    background-color: var(--bg-color);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    fill: var(--fill-color);
-    height: 32px;
-    padding: 0;
-    width: 32px;
-  }
-
-  .colab-df-quickchart:hover {
-    background-color: var(--hover-bg-color);
-    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-    fill: var(--button-hover-fill-color);
-  }
-
-  .colab-df-quickchart-complete:disabled,
-  .colab-df-quickchart-complete:disabled:hover {
-    background-color: var(--disabled-bg-color);
-    fill: var(--disabled-fill-color);
-    box-shadow: none;
-  }
-
-  .colab-df-spinner {
-    border: 2px solid var(--fill-color);
-    border-color: transparent;
-    border-bottom-color: var(--fill-color);
-    animation:
-      spin 1s steps(1) infinite;
-  }
-
-  @keyframes spin {
-    0% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-      border-left-color: var(--fill-color);
-    }
-    20% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    30% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-      border-right-color: var(--fill-color);
-    }
-    40% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    60% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-    }
-    80% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-bottom-color: var(--fill-color);
-    }
-    90% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-    }
-  }
-</style>
-
-      <script>
-        async function quickchart(key) {
-          const quickchartButtonEl =
-            document.querySelector('#' + key + ' button');
-          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
-          quickchartButtonEl.classList.add('colab-df-spinner');
-          try {
-            const charts = await google.colab.kernel.invokeFunction(
-                'suggestCharts', [key], {});
-          } catch (error) {
-            console.error('Error during call to suggestCharts:', error);
-          }
-          quickchartButtonEl.classList.remove('colab-df-spinner');
-          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
-        }
-        (() => {
-          let quickchartButtonEl =
-            document.querySelector('#df-23fcad14-71e6-4686-803e-1007503ededd button');
-          quickchartButtonEl.style.display =
-            google.colab.kernel.accessAllowed ? 'block' : 'none';
-        })();
-      </script>
-    </div>
-
-    </div>
-  </div>
-</div></div>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2149,9 +1845,8 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
 </div>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="graphing-the-term-structure-again">
-<h1>Graphing the Term Structure (Again)<a class="headerlink" href="#graphing-the-term-structure-again" title="Link to this heading">#</a></h1>
+<section id="graphing-the-term-structure-again">
+<h2>Graphing the Term Structure (Again)<a class="headerlink" href="#graphing-the-term-structure-again" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">save_config</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s1">&#39;Term Structure September 30 2025.pdf&#39;</span><span class="p">,</span>
@@ -2161,11 +1856,10 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
 </div>
 </div>
 </div>
+</section>
 <section id="graphing-the-spot-and-forward-rates-for-september-30-2025">
 <h2>Graphing the spot and forward rates for September 30, 2025<a class="headerlink" href="#graphing-the-spot-and-forward-rates-for-september-30-2025" title="Link to this heading">#</a></h2>
-<blockquote>
-<div><p>Recall that the September 2022 T-bill data had five maturity dates. The September 2025 data has two additional dates: <font color='green'>’6 WEEKS’</font> and <font color='green'>’17 WEEKS’</font>. In the following code, the <em>x</em>-axis is set at the bills’ seven maturities in months. Forward and spot rates are calculated for the month of September 2025, and the data for September 30, 2025, is plotted.</p>
-</div></blockquote>
+<p>In the following code, the <em>x</em>-axis is set at the bills’ seven maturities in months. Forward and spot rates are calculated for the month of September 2025, and the data for September 30, 2025, is plotted.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xaxis</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;One&#39;</span><span class="p">,</span><span class="s1">&#39;One &amp; Half&#39;</span><span class="p">,</span><span class="s1">&#39;Two&#39;</span><span class="p">,</span><span class="s1">&#39;Three&#39;</span><span class="p">,</span><span class="s1">&#39;Four&#39;</span><span class="p">,</span><span class="s1">&#39;Six&#39;</span><span class="p">,</span><span class="s1">&#39;Twelve&#39;</span><span class="p">]</span>
 <span class="n">string_date</span><span class="o">=</span><span class="s1">&#39;09/15/2022&#39;</span>
 </pre></div>
@@ -2259,21 +1953,12 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>❓ Do you want to save the file? (y/n) (press enter for n): y
-</pre></div>
-</div>
-<p>###<em><strong>⌛ Generating A Path</strong></em></p>
-<h3 class="rubric" id="drive-mount-failed-error-credential-propagation-was-unsuccessful-saving-to-temporary-content-folder">⚠️ <strong>Drive Mount Failed:</strong> Error: credential propagation was unsuccessful. Saving to temporary ‘/content’ folder.</h3>
-<h3 class="rubric" id="file-path-generated">✅ <strong>File Path Generated:</strong></h3>
-<p><code class="docutils literal notranslate"><span class="pre">/content/Basic</span> <span class="pre">Concepts</span> <span class="pre">Fixed</span> <span class="pre">Income/One/Term</span> <span class="pre">Structure</span> <span class="pre">September</span> <span class="pre">30</span> <span class="pre">2025.pdf</span></code></p>
-<h3 class="rubric" id="file-is-in-a-temporary-location-and-will-be-lost-on-runtime-restart">⚠️ <em>File is in a temporary location and will be lost on runtime restart.</em></h3>
-<img alt="_images/8fcf9646044080917815f9ebc11f7f2e17268821b23872c80ed5f222e894ac1f.png" src="_images/8fcf9646044080917815f9ebc11f7f2e17268821b23872c80ed5f222e894ac1f.png" />
+<img alt="_images/52888b4304f9f15c9f1dce133551391c0f057d8bd0146bcc14cbc5504f3399f3.png" src="_images/52888b4304f9f15c9f1dce133551391c0f057d8bd0146bcc14cbc5504f3399f3.png" />
 </div>
 </div>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="chapter-exercise">
-<h1><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span><a class="headerlink" href="#chapter-exercise" title="Link to this heading">#</a></h1>
+<section id="chapter-exercise">
+<h2><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span><a class="headerlink" href="#chapter-exercise" title="Link to this heading">#</a></h2>
 <p><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 0; margin-bottom: 0.5em; font-style: italic;"><big>Calculating and Plotting Spot and Forward Rates</big></span></p>
 <p><span style="display:block;
     border-left: 12px solid green;
@@ -2293,6 +1978,7 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
     padding: 15px">
 <br><big>For hints, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Hints.html#chapter-one-exercise">Chapter One Hints</a>. For expected results, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Results.html#chapter-one-exercise">Chapter One Expected Results</a>.</big></p>
 </span></section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2330,7 +2016,7 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><strong>NumPy And Pandas</strong></p>
+        <p class="prev-next-title">NumPy And Pandas</p>
       </div>
     </a>
     <a class="right-next"
@@ -2358,7 +2044,6 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Calculating And Graphing The Term Structure Of Interest Rates</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook">Preparing the Notebook</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions">Importing libraries and functions</a></li>
@@ -2400,15 +2085,10 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Forward rates</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-term-structure-again">Graphing the Term Structure (Again)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-term-structure-again">Graphing the Term Structure (Again)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-spot-and-forward-rates-for-september-30-2025">Graphing the spot and forward rates for September 30, 2025</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
