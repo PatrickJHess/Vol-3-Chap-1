@@ -3,8 +3,9 @@
 format: jb-book
 root: intro
 chapters:
-- file: Chapter_Highlights (copy)
+- file: Chapter_Highlights
   sections:
+  - file: Interacting With Jupyter Books
   - file: Bond Pricing
   - file: Numpy_And_Pandas
   - file: Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates
