@@ -60,12 +60,16 @@ def save_results(save_config={}):
     from IPython.display import display, Markdown as md
 
     # --- 1. Get user's choice (y/n) ---
+
     default_value = "n"
     prompt = f"❓ Do you want to save the file? (y/n) (press enter for n): "
 
     # The 'or default_value' part assigns the default if input is empty
-    choice = input(prompt) or default_value
-
+    # input doesn't work with jupyter build '
+    try:
+        choice = input(prompt) or default_value
+    except:
+        return None
     while choice not in ['y', 'n']:
         choice = input(prompt).strip().lower()
 
