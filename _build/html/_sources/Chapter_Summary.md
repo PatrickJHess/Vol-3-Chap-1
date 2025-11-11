@@ -1,4 +1,4 @@
-# <span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Python, Pandas, NumPy, and Financial Insights</span>
+# Python, Pandas, NumPy, and Financial Insights
 
 
 
