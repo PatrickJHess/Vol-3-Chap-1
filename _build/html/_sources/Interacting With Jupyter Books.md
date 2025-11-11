@@ -2,7 +2,7 @@
 
 This and other chapters of *Basic Concepts Of Fixed Income*, contain two types of documents:
 
-1. **Markdown Documents (e.g., this chapter):**  
+1. **Markdown Documents (*.md*):**  
    * Contain no executable code.  
    * Can be downloaded as a Markdown file (*.md*) or a PDF file (*.pdf*).  
 2. **Notebook Documents (*.ipynb*):**  
