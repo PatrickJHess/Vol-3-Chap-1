@@ -1,7 +1,7 @@
 
 
 
-# <span style="font-family:Franklin Gothic Medium', sans-serif;">Introduction to Bond Pricing</span>
+# Introduction to Bond Pricing
 
 
 <span style="font-family: 'Garamond', serif;
