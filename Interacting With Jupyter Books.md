@@ -2,11 +2,13 @@
 
 This and other chapters of *Basic Concepts Of Fixed Income*, contain two types of documents:
 
-1. **Markdown Documents (*.md*):**  
+1. **Markdown Documents- what you are currently reading (*.md*):**  
    * Contain no executable code.  
    * Can be downloaded as a Markdown file (*.md*) or a PDF file (*.pdf*).  
 2. **Notebook Documents (*.ipynb*):**  
-   * Offer deeper interactive capabilities.  
+   * HTML representatins of Jupyter notebooks
+   * Can be downloaded as a notebook (*.ipynb*) or a PDF file (*.pdf*). 
+   * Have interactive capabilities.  
    * In a chapter like *Calculating And Graphing The Term Structure Of Interest Rates*, icons are available in the upper-right corner for launching and downloading the notebook.
 
 Notebook Launch Options
