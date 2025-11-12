@@ -1,4 +1,4 @@
-## one-y-axis is a helper function for plotting graphs created by *Financial Python*.
+## one_y_axis is a helper function for plotting graphs created by *Financial Python*.
 
 
 1. ***The function plots a single or multiple series on a single y-axis.***
