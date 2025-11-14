@@ -2,16 +2,17 @@
 # _toc.yml
 format: jb-book
 root: intro
-chapters:
-- file: Interacting With Jupyter Books
-- file: Chapter_Highlights
-  sections:
-  - file: Bond Pricing
-  - file: Numpy_And_Pandas
-  - file: Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates
-  - file: Chapter_Summary
-  - file: imported_functions
+parts:
+- caption: Getting Stsrted
+  chapters:
+  - file: Interacting With Jupyter Books
+- caption: Basic Concepts Of Fixed Income- Chapter One
+  chapters:
+  - file: Chapter_Highlights
     sections:
-    - file: save_results
-    - file: one_y_axis
+    - file: Bond Pricing
+    - file: Numpy_And_Pandas
+    - file: Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates
+    - file: Chapter_Summary
+    - file: imported_functions
 
