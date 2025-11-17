@@ -17,6 +17,15 @@
     * *Python DataFrames*
     * *Accessing data with a URL address*
     * *Custom modules*
+## Background
+
+This chapter's examples and discussions rely on the **Pandas** and **NumPy** libraries.
+
+* **Pandas** is introduced in [*A Quick Introduction to Pandas*](https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_Pandas.html#a-quick-introduction-to-pandas).  
+* **NumPy** is introduced in [A Quick Introduction to NumPy](https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_NumPy.html#a-quick-introduction-to-numpy).  
+* The *NumPy and Pandas* notebook in this chapter provides examples of using these libraries in relation to the *Calculating and Graphing The Term Structure Of Interest Rates* notebook.  
+* Additional relevant Python concepts can be found in the introductory volume, [*Background Material: An Introduction to Python for Financial Python*](https://patrickjhess.github.io/Introduction-To-Python-
+For-Financial-Python/intro.html), that relate to this and other chapters of *Basic Concepts of Fixed Income*.
 
 **The Chapter includes five sections.**
 
@@ -30,14 +39,7 @@
 5. *Functions Imported By Basic Concepts Of Fixed Income* descries the functions imported from DropBox (*module_basic_concepts_fixed_income*)..
 
 
-## Background
 
-This chapter's examples and discussions rely on the **Pandas** and **NumPy** libraries.
-
-* **Pandas** is introduced in [*A Quick Introduction to Pandas*](https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_Pandas.html#a-quick-introduction-to-pandas).  
-* **NumPy** is introduced in [A Quick Introduction to NumPy](https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_NumPy.html#a-quick-introduction-to-numpy).  
-* The *NumPy and Pandas* notebook in this chapter provides examples of using these libraries in relation to the *Calculating and Graphing The Term Structure Of Interest Rates* notebook.  
-* Additional relevant Python concepts can be found in the introductory volume, [*Background Material: An Introduction to Python for Financial Python*](https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/intro.html), that relate to this and other chapters of *Basic Concepts of Fixed Income*.
 
 
 
