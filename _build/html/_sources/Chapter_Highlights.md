@@ -32,13 +32,12 @@
 
 ## Background
 
+This chapter's examples and discussions rely on the **Pandas** and **NumPy** libraries.
 
-
-
-This chapter uses the Python libraries Pandas and NumPy. The basic usage of these libraries is detailed in two Notebooks: "[A Quick Introduction to Pandas](https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_Pandas.html)" reviews some basic concepts of Pandas, and "[A Quick Introduction to NumPy](https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_NumPy.html)" does the same for NumPy. These Notebooks are part of the introductory volume [Background Material: An Introduction to Python for Financial Python](https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/intro.html). Portions of the volume will be cited throughout this chapter. Feel free to consult these materials as needed for greater 
-
-
-
+* **Pandas** is introduced in [*A Quick Introduction to Pandas*](https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_Pandas.html#a-quick-introduction-to-pandas).  
+* **NumPy** is introduced in [A Quick Introduction to NumPy](https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_NumPy.html#a-quick-introduction-to-numpy).  
+* The *NumPy and Pandas* notebook in this chapter provides examples of using these libraries in relation to the *Calculating and Graphing The Term Structure Of Interest Rates* notebook.  
+* Additional relevant Python concepts can be found in the introductory volume, [*Background Material: An Introduction to Python for Financial Python*](https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/intro.html), that relate to this and other chapters of *Basic Concepts of Fixed Income*.
 
 
 
