@@ -3,10 +3,10 @@
 format: jb-book
 root: intro
 parts:
-- caption: Getting Stsrted
+- caption: Getting Started
   chapters:
   - file: Interacting With Jupyter Books
-- caption: Basic Concepts Of Fixed Income- Chapter One
+- caption: "Basic Concepts of Fixed Income: Chapter One"
   chapters:
   - file: Chapter_Highlights
     sections:

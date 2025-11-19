@@ -2,8 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Basic Bond Concepts and the Term Structure of Interest Rates
-author: Financial Python
-logo: Small_Logo.svg
+author: 
+copyright: "© 2025 by the University of Virginia Darden School Foundation, Charlottesville, VA." # This will appear in the footer
+logo: 
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -29,6 +30,8 @@ repository:
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
+ # extra_footer:
+  # <p>Copyright © 2025 by the University of Virginia Darden School Foundation, Charlottesville, VA.</p>
 launch_buttons:
 launch_buttons:
   thebe: true
