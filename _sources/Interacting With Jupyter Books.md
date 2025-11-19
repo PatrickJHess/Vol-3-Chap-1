@@ -22,9 +22,9 @@ The launch icon provides three interactive options for notebook documents:
 | **Colab** | Offers the quickest and easiest access, not requiring Binder. A Google Drive is unnecessary for launching. | Execute cells or make a copy. | You must sign in to a Google account to execute cells or make a copy. You can download the notebook without signing into a Google account. |
 | **Live Code** | Requires a Binder launch and is ideal for demonstrations. | Run code in existing cells, and alter code in existing cells. | You cannot add cells or save results in this mode. |
 
-Additional Interactive Features
+Additional Interactive Feature
 
-* **Copying code:** Any code cell or code block can be copied to the clipboard by moving the cursor to its upper-right corner.
+**Copying code:** Any code cell or code block can be copied to the clipboard by moving the cursor to its upper-right corner.
 
 Summary
 
