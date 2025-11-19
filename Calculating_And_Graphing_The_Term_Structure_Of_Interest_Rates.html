@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Calculating And Graphing The Term Structure Of Interest Rates &#8212; Basic Bond Concepts and the Term Structure of Interest Rates</title>
+    <title>Calculating and Graphing the Term Structure of Interest Rates &#8212; Basic Bond Concepts and the Term Structure of Interest Rates</title>
   
   
   
@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Python, Pandas, NumPy, and Financial Insights" href="Chapter_Summary.html" />
-    <link rel="prev" title="NumPy And Pandas" href="Numpy_And_Pandas.html" />
+    <link rel="prev" title="NumPy and Pandas" href="Numpy_And_Pandas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -150,14 +150,8 @@
   
   
   
-    
-    
-      
-    
-    
-    <img src="_static/Small_Logo.svg" class="logo__image only-light" alt="Basic Bond Concepts and the Term Structure of Interest Rates - Home"/>
-    <script>document.write(`<img src="_static/Small_Logo.svg" class="logo__image only-dark" alt="Basic Bond Concepts and the Term Structure of Interest Rates - Home"/>`);</script>
   
+    <p class="title logo__title">Basic Bond Concepts and the Term Structure of Interest Rates</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -181,18 +175,18 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Stsrted</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Interacting%20With%20Jupyter%20Books.html">Working With Jupyter Books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Interacting%20With%20Jupyter%20Books.html">Working with Jupyter Books</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Concepts Of Fixed Income- Chapter One</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Concepts of Fixed Income: Chapter One</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Highlights.html">Basic Bond Concepts and the Term Structure of Interest Rates</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Bond%20Pricing.html">Introduction to Bond Pricing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Numpy_And_Pandas.html">NumPy And Pandas</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Calculating And Graphing The Term Structure Of Interest Rates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Numpy_And_Pandas.html">NumPy and Pandas</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Calculating and Graphing the Term Structure of Interest Rates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter_Summary.html">Python, Pandas, NumPy, and Financial Insights</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imported_functions.html">Functions Imported By the Volume <em>Basic Concepts Of Fixed Income</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="imported_functions.html">Functions Imported by the Chapter.</a></li>
 </ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
 </ul>
@@ -415,7 +409,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Calculating And Graphing The Term Structure Of Interest Rates</h1>
+    <h1>Calculating and Graphing the Term Structure of Interest Rates</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -425,7 +419,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook">Preparing the Notebook</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions">Importing libraries and functions</a></li>
 </ul>
@@ -481,17 +474,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="calculating-and-graphing-the-term-structure-of-interest-rates">
-<h1>Calculating And Graphing The Term Structure Of Interest Rates<a class="headerlink" href="#calculating-and-graphing-the-term-structure-of-interest-rates" title="Link to this heading">#</a></h1>
-<section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
-<p>This chapter’s examples and discussions rely on the <strong>Pandas</strong> and <strong>NumPy</strong> libraries.</p>
-<ul class="simple">
-<li><p><strong>Pandas</strong> is introduced in <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_Pandas.html#a-quick-introduction-to-pandas"><em>A Quick Introduction to Pandas</em></a>.</p></li>
-<li><p><strong>NumPy</strong> is introduced in <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_NumPy.html#a-quick-introduction-to-numpy"><em>A Quick Introduction to NumPy</em></a>.</p></li>
-<li><p>The <em>NumPy and Pandas</em> notebook in this chapter provides examples of using these libraries in relation to the <em>Calculating and Graphing The Term Structure Of Interest Rates</em> notebook.</p></li>
-<li><p>Additional relevant Python concepts can be found in the introductory volume, <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_Pandas.html#a-quick-introduction-to-pandas"><em>Background Material: An Introduction to Python for Financial Python</em></a> <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/intro.html"><em>Background Material: An Introduction to Python for Financial Python</em></a>, that relate to this and other chapters of <em>Basic Concepts of Fixed Income</em>.</p></li>
-</ul>
-</section>
+<h1>Calculating and Graphing the Term Structure of Interest Rates<a class="headerlink" href="#calculating-and-graphing-the-term-structure-of-interest-rates" title="Link to this heading">#</a></h1>
 <section id="preparing-the-notebook">
 <h2>Preparing the Notebook<a class="headerlink" href="#preparing-the-notebook" title="Link to this heading">#</a></h2>
 <section id="importing-libraries-and-functions">
@@ -588,8 +571,6 @@ except:
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Error: Could not fetch module from URL. </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Error: Failed to execute or import the module. </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="c1"># Open the local file in &quot;write binary&quot; (&#39;wb&#39;) mode and save the downloaded content.</span>
-<span class="c1"># Using a &#39;with&#39; statement ensures the file is properly closed after writing.</span>
 
 <span class="c1"># Now that &#39;basic_conepts_fixed_income&#39; exists in the notebook, import the specific functions</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span><span class="p">(</span><span class="n">one_y_axis</span><span class="p">)</span>
@@ -601,7 +582,7 @@ except:
 <section id="term-structure-putting-numpy-and-pandas-to-work">
 <h2>Term Structure: Putting NumPy and Pandas to Work<a class="headerlink" href="#term-structure-putting-numpy-and-pandas-to-work" title="Link to this heading">#</a></h2>
 <p>The <em>term structure of interest rates</em> (term structure) describes how interest rates vary over time. It’s a critical financial metric reflected in the pricing or valuation of almost all assets.</p>
-<p>NumPy and Pandas are powerful tools that greatly simplify the manipulation and calculation of extensive and complex financial data. In this section, we’ll explore their application in calculating the term structure on various dates, a process that requires accessing large datasets and performing numerous</p>
+<p>NumPy and Pandas are powerful tools that greatly simplify the manipulation and calculation of extensive and complex financial data. In this section, we’ll explore their application in calculating the term structure on various dates, a process that requires accessing large datasets and performing numerous calculations.</p>
 <section id="calculating-term-structure">
 <h3>Calculating term structure<a class="headerlink" href="#calculating-term-structure" title="Link to this heading">#</a></h3>
 <p>The earlier discussion of bond pricing described the price of a zero-coupon bond as its maturity value multiplied by the present-value factor. A NumPy array and a Pandas DataFrame included interest rates, future values, and present-value factors. These same concepts are used to calculate term structure.</p>
@@ -1340,7 +1321,7 @@ Name: 2022-09-15 00:00:00, dtype: float64
 <p>The price of one dollar, or the the zero price, is:</p>
 <div class="math notranslate nohighlight">
 \[\large\frac{100-bank\,discount\times\frac{Maturity\,In\,Days}{360}}{100}\]</div>
-<p>The maturity of the bills are 4, 8, 13, 26, and 52 weeks. In the following code, the NumPy array <font color='green'>maturity_days</font> is created by multiplying the number of weeks by seven. The <font color='green'>zero_price_one</font> array is calculated by multiplying <font color='green'>bankers_discount</font> by <font color='green'>maturity_days</font>, annualized with 360 days per year. We then divide by 100 to convert the value to a percentage.</p>
+<p>The maturity of the bills are 4, 8, 13, 26, and 52 weeks. In the following code, the NumPy array <font color='green'>maturity_days</font> is created by multiplying the number of weeks by seven. The <font color='green'>zero_price_one</font> array is calculated by multiplying <font color='green'>bankers_discount</font> by <font color='green'>maturity_days</font>, annualized with 360 days per year. We then divide by 100 to convert the value to a one dollar zero price.</p>
 <hr><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maturity_days</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="o">*</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="o">*</span><span class="mi">7</span><span class="p">,</span><span class="mi">13</span><span class="o">*</span><span class="mi">7</span><span class="p">,</span><span class="mi">26</span><span class="o">*</span><span class="mi">7</span><span class="p">,</span><span class="mi">52</span><span class="o">*</span><span class="mi">7</span><span class="p">])</span> <span class="c1">#Maturity in days calculated</span>
@@ -1629,8 +1610,6 @@ Name: 09/30/2025, dtype: float64
 <h2><font color='green'>Application: Downloading Treasury Data</font><a class="headerlink" href="#application-downloading-treasury-data" title="Link to this heading">#</a></h2>
 <p><span style="display:block;
     border-left: 12px solid green;
-    font-family: 'Garamond', serif;
-    line-height: 1.5;
     padding: 15px">
 <br>
 Access the T-bill data for September 2024 from the US Treasury and display the values for September 12, 2024. For hints, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Hints.html#download-data-for-september-2024-from-the-u-s-treasury-and-display-the-values-for-september-12-2024">Chapter One Hints: Download US Treasury Data September 2024</a>, and for expected results, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Results.html#download-data-for-september-2024-from-the-u-s-treasury-and-display-the-values-for-september-12-2024">Chapter One expected Results: Download US Treasury Data September 2024</a>.
@@ -2022,7 +2001,7 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">NumPy And Pandas</p>
+        <p class="prev-next-title">NumPy and Pandas</p>
       </div>
     </a>
     <a class="right-next"
@@ -2050,7 +2029,6 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook">Preparing the Notebook</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions">Importing libraries and functions</a></li>
 </ul>
@@ -2107,10 +2085,6 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
   
   <div class="footer-item">
     
-<p class="component-author">
-By Financial Python
-</p>
-
   </div>
   
   <div class="footer-item">
@@ -2118,7 +2092,7 @@ By Financial Python
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright © 2025 by the University of Virginia Darden School Foundation, Charlottesville, VA..
       <br/>
     
   </p>
