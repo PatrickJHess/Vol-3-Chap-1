@@ -60,6 +60,7 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates';</script>
+    <script src="_static/open_new_tab.js?v=408d5d40"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Python, Pandas, NumPy, and Financial Insights" href="Chapter_Summary.html" />
@@ -420,10 +421,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook">Preparing the Notebook</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions">Importing libraries and functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-modules-and-functions">Importing libraries, modules, and functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-custom-module-and-importing-functions">Adding a custom module and importing functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-custom-module-and-importing-functions">Adding a custom module and importing functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#term-structure-putting-numpy-and-pandas-to-work">Term Structure: Putting NumPy and Pandas to Work</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-term-structure">Calculating term structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spot-rates-of-interest">Spot rates of interest</a></li>
@@ -462,6 +463,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-term-structure-again">Graphing the Term Structure (Again)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-spot-and-forward-rates-for-september-30-2025">Graphing the spot and forward rates for September 30, 2025</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-a-deeper-dive-with-gemini"><font color="green">Take a deeper dive with Gemini</font></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-suggestions-to-get-you-started">Some suggestions to get you started.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here-is-the-link-where-you-can-copy-and-paste-the-questions">Here is the link where you can copy and paste the questions</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -477,8 +483,8 @@ document.write(`
 <h1>Calculating and Graphing the Term Structure of Interest Rates<a class="headerlink" href="#calculating-and-graphing-the-term-structure-of-interest-rates" title="Link to this heading">#</a></h1>
 <section id="preparing-the-notebook">
 <h2>Preparing the Notebook<a class="headerlink" href="#preparing-the-notebook" title="Link to this heading">#</a></h2>
-<section id="importing-libraries-and-functions">
-<h3>Importing libraries and functions<a class="headerlink" href="#importing-libraries-and-functions" title="Link to this heading">#</a></h3>
+<section id="importing-libraries-modules-and-functions">
+<h3>Importing libraries, modules, and functions<a class="headerlink" href="#importing-libraries-modules-and-functions" title="Link to this heading">#</a></h3>
 <p>It’s good practice to import all required libraries and modules in the first code cell of a Notebook. Unless a new function or module is being introduced, this chapter follows this practice. If a library is already installed, it’s imported to the Notebook. If a library isn’t installed, it’s installed and then imported.</p>
 <p>The standard Python installation includes five module imports: <font color='green'>os</font>, <font color='green'>sys</font>, <font color='green'>requests</font>, <font color='green'>types</font>, and <font color='green'>datetime</font>. The imports <font color='green'>os</font> and <font color='green'>sys</font> facilitate interaction with the operating system. The <font color='green'>requests</font> module enables sending and retrieving data from external URLs; in this notebook, the module is specifically used to access files from Dropbox. The <font color='green'>types</font> module lets us create the module from the Python code accessed from Dropbox. Finally, <font color='green'>datetime</font> allows for the creation and manipulation of date objects.</p>
 <p>The below code imports these modules, and specifically accesses <font color='green'>types</font> and <font color='green'>datetime</font> to import <font color='green'>ModuleType</font> and <font color='green'>date</font>, respectively. <font color='green'>ModuleType</font> will allow us to <em>instantiate</em> new modules, and we’ll use <font color='green'>date</font> for our date calculations later.</p>
@@ -526,9 +532,8 @@ except:
 </div>
 </div>
 </section>
-</section>
 <section id="adding-a-custom-module-and-importing-functions">
-<h2>Adding a custom module and importing functions<a class="headerlink" href="#adding-a-custom-module-and-importing-functions" title="Link to this heading">#</a></h2>
+<h3>Adding a custom module and importing functions<a class="headerlink" href="#adding-a-custom-module-and-importing-functions" title="Link to this heading">#</a></h3>
 <p>Now that we’ve imported our main modules and libraries, we’ll access a custom module for our more specific functions. In the below code, the custom module <font color='green'>module_basic_concepts_fixed_income</font> contains functions utilized by this notebook and others in the volume <em>Basic Concepts of Fixed Income</em>. This module is accessed from Dropbox using <font color='green'>requests.get()</font></p>
 <p>You have the flexibility to choose the module name; in this instance, <font color='green'>module_basic_concepts_fixed_income</font> is assigned to <font color='green'>module_name</font>. Dropbox provides the URL for access. The module is instantiated with <font color='green'>ModuleType</font> (which we imported earlier) using the chosen <font color='green'>module_name</font>. Once created, the module becomes accessible in the Notebook’s memory, though it is not added to a drive.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url</span><span class="o">=</span> <span class="s1">&#39;https://www.dropbox.com/scl/fi/4y5hjxlfphh1ngvbgo77q/</span><span class="se">\</span>
@@ -577,7 +582,14 @@ except:
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">25.3</span> -&gt; <span class=" -Color -Color-Green">26.0.1</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
+</pre></div>
 </div>
+</div>
+</div>
+</section>
 </section>
 <section id="term-structure-putting-numpy-and-pandas-to-work">
 <h2>Term Structure: Putting NumPy and Pandas to Work<a class="headerlink" href="#term-structure-putting-numpy-and-pandas-to-work" title="Link to this heading">#</a></h2>
@@ -1459,11 +1471,11 @@ Name: 2022-09-15 00:00:00, dtype: float64
 <span class="n">markers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="s1">&#39;&gt;&#39;</span><span class="p">]</span><span class="o">*</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">+</span><span class="mf">0.001</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The upper limit of the <em>y</em>-axis is assigned to <font color='green'>upper</font> and calculated from the maximum value of the spot and forward rates. The NumPy method <font color='green'>nanmax()</font> ignores <font color='green'>nan</font> values. The maximum of <font color='green'>nanmax()</font> of spot rates (<font color='green'>data[0]</font>) and forward rates (<font color='green'>data[1]</font>) plus 0.5% are assigned to <font color='green'>upper </font>. The lower limit is set to 0, and the size and colors of the lines are set as 10 inches wide and six inches tall (10,6) and red and blue, respectively.</p>
+<p>The upper limit of the <em>y</em>-axis is assigned to <font color='green'>upper</font> and calculated from the maximum value of the spot and forward rates. The NumPy method <font color='green'>nanmax()</font> ignores <font color='green'>nan</font> values. The maximum of <font color='green'>nanmax()</font> of spot rates (<font color='green'>data[0]</font>) and forward rates (<font color='green'>data[1]</font>) plus 0.5% are assigned to <font color='green'>upper </font>. The lower limit is set to 0, and the size and colors of the lines are set as seven inches wide and five inches tall (7,5) and red and blue, respectively.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lower</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">upper</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">+</span> <span class="mf">0.5</span>
 <span class="n">ylim</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
-<span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>  
+<span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  
 <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -1522,7 +1534,7 @@ Name: 2022-09-15 00:00:00, dtype: float64
 <span class="n">ylim</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
 
 <span class="c1"># Define the size of the plot (width, height) in inches.</span>
-<span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="c1"># Define colors as red and blue</span>
 <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
 <span class="c1"># This function generates and possibly saves a plot.</span>
@@ -1532,7 +1544,7 @@ Name: 2022-09-15 00:00:00, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/d274236b8ca77441f3b8888ac6e9a763e618e4be003258b8fddbc9ced570d1a6.png" src="_images/d274236b8ca77441f3b8888ac6e9a763e618e4be003258b8fddbc9ced570d1a6.png" />
+<img alt="_images/7e3d835bd78e30be35c45023690ed8f59beb73752e1682b1fd90b92a88b15e9c.png" src="_images/7e3d835bd78e30be35c45023690ed8f59beb73752e1682b1fd90b92a88b15e9c.png" />
 </div>
 </div>
 </section>
@@ -1872,7 +1884,7 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lower</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">upper</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">+</span> <span class="mf">0.5</span>
 <span class="n">ylim</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
-<span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -1928,7 +1940,7 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
 <span class="n">ylim</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
 
 <span class="c1"># Define the size of the plot (width, height) in inches.</span>
-<span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="c1"># Define colors as red and blue</span>
 <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
 <span class="c1"># This function generates and possibly saves a plot.</span>
@@ -1938,7 +1950,7 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/52888b4304f9f15c9f1dce133551391c0f057d8bd0146bcc14cbc5504f3399f3.png" src="_images/52888b4304f9f15c9f1dce133551391c0f057d8bd0146bcc14cbc5504f3399f3.png" />
+<img alt="_images/94ce4f7cd0ac0ff90b14db31f05a1ec44cf31703f4a807c30859fd8809786c5c.png" src="_images/94ce4f7cd0ac0ff90b14db31f05a1ec44cf31703f4a807c30859fd8809786c5c.png" />
 </div>
 </div>
 </section>
@@ -1963,6 +1975,21 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
     padding: 15px">
 <br><big>For hints, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Hints.html#chapter-one-exercise">Chapter One Hints</a>. For expected results, see <a class="reference external" href="https://patrickjhess.github.io/Hints-Results/Chapter_One_Results.html#chapter-one-exercise">Chapter One Expected Results</a>.</big></p>
 </span></section>
+<section id="take-a-deeper-dive-with-gemini">
+<h2><font color='green'>Take a deeper dive with Gemini</font><a class="headerlink" href="#take-a-deeper-dive-with-gemini" title="Link to this heading">#</a></h2>
+<section id="some-suggestions-to-get-you-started">
+<h3>Some suggestions to get you started.<a class="headerlink" href="#some-suggestions-to-get-you-started" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Why calculate forward rates?</strong></p></li>
+<li><p><strong>How important are Treasury bills in calculating the term structure of interest rates?</strong></p></li>
+<li><p><strong>Do higher future spot rates follow from increasing forward rates?</strong></p></li>
+<li><p><strong>What’s the likely shape of the term structure when the Federal Reserve is expected to cut rates?</strong></p></li>
+</ol>
+</section>
+<section id="here-is-the-link-where-you-can-copy-and-paste-the-questions">
+<h3><a class="reference external" href="https://gemini.google.com">Here is the link where you can copy and paste the questions</a><a class="headerlink" href="#here-is-the-link-where-you-can-copy-and-paste-the-questions" title="Link to this heading">#</a></h3>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -2030,10 +2057,10 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook">Preparing the Notebook</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-and-functions">Importing libraries and functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries-modules-and-functions">Importing libraries, modules, and functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-custom-module-and-importing-functions">Adding a custom module and importing functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-custom-module-and-importing-functions">Adding a custom module and importing functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#term-structure-putting-numpy-and-pandas-to-work">Term Structure: Putting NumPy and Pandas to Work</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-term-structure">Calculating term structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spot-rates-of-interest">Spot rates of interest</a></li>
@@ -2072,6 +2099,11 @@ Access the T-bill data for September 2024 from the US Treasury and display the v
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-term-structure-again">Graphing the Term Structure (Again)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-the-spot-and-forward-rates-for-september-30-2025">Graphing the spot and forward rates for September 30, 2025</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-a-deeper-dive-with-gemini"><font color="green">Take a deeper dive with Gemini</font></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-suggestions-to-get-you-started">Some suggestions to get you started.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here-is-the-link-where-you-can-copy-and-paste-the-questions">Here is the link where you can copy and paste the questions</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
