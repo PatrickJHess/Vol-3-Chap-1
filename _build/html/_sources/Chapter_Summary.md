@@ -26,9 +26,13 @@ In this chapter, we used Pandas and NumPy to explore different ways of calculati
     line-height: 2;">
 
 
-* The present value function describes all bonds as a portfolio of zero-coupon bonds.
-* Data was accessed directly from the Treasury as a CSV file and assigned to a Pandas Dataframe.
-* The term structure of interest rates describes the behavior of spot and forward interest rates.
-* The term structure of interest rates was calculated with T-bills for September 2022.
-* The term structure was graphed for September 15, 2022, and September 30, 2025.
+| |
+| :---- |
+|  The present value function describes all bonds as a portfolio of zero-coupon bonds. |
+| Data was accessed directly from the Treasury as a CSV file and assigned to a Pandas Dataframe. |
+| The term structure of interest rates describes the behavior of spot and forward interest rates |
+| The term structure of interest rates was calculated with T-bills for September 2022\. |
+| The term structure was graphed for September 15, 2022, and September 30, 2025\. |
+| |
+
 </span>
