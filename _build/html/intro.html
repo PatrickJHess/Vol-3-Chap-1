@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b47fed4d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -44,6 +45,7 @@
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/open_new_tab.js?v=9fade34f"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
@@ -60,7 +62,7 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
-    <script src="_static/open_new_tab.js?v=408d5d40"></script>
+    <script src="_static/open_new_tab.js?v=9fade34f"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Working with Jupyter Books" href="Interacting%20With%20Jupyter%20Books.html" />
@@ -191,6 +193,15 @@
 <li class="toctree-l2"><a class="reference internal" href="imported_functions.html">Functions Imported by the Chapter.</a></li>
 </ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hub &amp; Other Chapters Of Basic Concepts Of Fixed Income</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Volume-Three-Hub/">Hub For Basic Concepts Of Fixed Income</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-2-Chap-3/">Chapters Two and Three: Accrued Interest and Bond Pay Data</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-4/">Chapters Four: Bootstrapping The Term Structure With Coupon Bonds</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-5/">Chapter Five: Par Yields</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-6/">Chapter Six: Yield To Maturity</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-7/">Chapter Seven: Measuring Interest Rate Risk With Duration</a></li>
 </ul>
 
     </div>
@@ -355,10 +366,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-basic-concepts-of-fixed-income">Volume: Basic Concepts of Fixed Income</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a></li>
 </ul>
 </li>
 </ul>
@@ -378,12 +386,19 @@ document.write(`
 <h2>Volume: Basic Concepts of Fixed Income<a class="headerlink" href="#volume-basic-concepts-of-fixed-income" title="Link to this heading">#</a></h2>
 <section id="chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates">
 <h3>Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates<a class="headerlink" href="#chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates" title="Link to this heading">#</a></h3>
-<section id="id1">
-<h4><a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
-<p>DRAFT CHAPTER FOR PILOT. NOT FOR DISTRIBUTION. This Jupyter Book was prepared by Ken Eades, Professor Emeritus of Business Administration, and Pat Hess, Owner, Perceptum Financial Analytics. Copyright © 2025 by the University of Virginia Darden School Foundation, Charlottesville, VA. All rights reserved. <em>No part of this publication may be reproduced, stored in a retrieval system, used in a spreadsheet, or transmitted in any form or by any means</em>—<em>electronic, mechanical, photocopying, recording, or otherwise</em>—<em>without the permission of the Darden School Foundation. This publication is protected by copyright and may not be uploaded in whole or part to any AI, large language model, or similar system, or to any related training database.</em> We welcome your feedback on the <em>Financial Python</em> pilot program. For any comments or questions related to the pilot and the <em>Financial Python</em> users, <a href='mailto:sales@dardenbusinesspublishing.com'>contact sales&#64;dardenbusinesspublishing.com</a>.</p>
+<p>Bond pricing is founded on two core principles:</p>
+<ol class="arabic simple">
+<li><p><strong>The Arbitrage Principle:</strong> This principle asserts that the value of bonds making multiple payments (like coupons) is equal to the value of a portfolio of single-payment bonds, known as zero-coupon bonds. This portfolio is structured to replicate the payment schedule of the multi-payment bond.</p></li>
+<li><p><strong>The Present Value Principle:</strong> This principle states that the price of a single-payment bond is determined by its present value factor.</p></li>
+</ol>
+<p>These principles form the basis for pricing all financial instruments. Understanding the present value factors embedded in these prices is crucial, as their description offers significant insight into the state of financial markets.</p>
+<p>This chapter initiates our study of bond pricing and the term structure of interest rates-the description of the underlying present value factors. Two fundamental concepts will be introduced: spot rates of interest and forward rates of interest. These are central to the valuation of financial instruments and derivatives.</p>
+<p>To illustrate these concepts, we will calculate spot and forward rates using U.S. Treasury Bills data from two distinct dates. The data will be sourced from a dedicated data library for this volume and external URLs. The results will be presented graphically to highlight two contrasting market conditions: one where inflation is expected to rise and another where it is expected to moderate.</p>
+<p>Subsequent chapters will build upon these bond pricing principles and the term structure to provide a deeper analysis of financial instrument pricing and the term structure itself.</p>
 </section>
 </section>
-</section>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -394,7 +409,7 @@ document.write(`
     {
         requestKernel: true,
         binderOptions: {
-            repo: "PatrickJHess/Vol-3-Chap-1",
+            repo: "patrickjhess/Vol-3-Chap-1",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -446,10 +461,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-basic-concepts-of-fixed-income">Volume: Basic Concepts of Fixed Income</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a></li>
 </ul>
 </li>
 </ul>
@@ -465,6 +477,10 @@ document.write(`
   
   <div class="footer-item">
     
+<p class="component-author">
+By Financial Python
+</p>
+
   </div>
   
   <div class="footer-item">

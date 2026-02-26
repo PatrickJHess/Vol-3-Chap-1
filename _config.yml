@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: "Basic Concepts Of Fixed Income: Basic Bond Concepts and the Term Structure of Interest Rates"
-author: 
+author: Financial Python
 copyright: "2025 by the University of Virginia Darden School Foundation, Charlottesville, VA." # This will appear in the footer
 logo: 
 
@@ -30,20 +30,31 @@ repository:
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
- # extra_footer:
-  # <p>Copyright © 2025 by the University of Virginia Darden School Foundation, Charlottesville, VA.</p>
-launch_buttons:
+
+html:
+  use_issues_button: true
+
 launch_buttons:
   thebe: true
   colab_url: "https://colab.research.google.com"
   binderhub_url: "https://mybinder.org"
 
 sphinx:
+sphinx:
   config:
-    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     html_static_path: ['_static']
-    html_js_files: ['open_new_tab.js']
+    html_js_files:
+      # The 'priority: 200' helps move this script above the Thebe injection
+      - ['open_new_tab.js', {priority: 200}]
+    html_css_files:
+      - custom.css
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    thebe_config:
+      selector: ".thebe,.cell"
+      repository_url: "https://github.com/patrickjhess/Vol-3-Chap-1"
+      repository_branch: "master"
 
 parse:
   myst_enable_extensions:
+    - amsmath
     - dollarmath
