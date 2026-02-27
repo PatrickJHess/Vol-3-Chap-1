@@ -48,7 +48,7 @@ sphinx:
       - ['open_new_tab.js', {priority: 200}]
     html_css_files:
       - custom.css
-    html_baseurl: "https://patrickjhess.github.io/Volume-One/" # Change per repo
+    html_baseurl: "https://patrickjhess.github.io/Vol-3-Chap-1/" # Change per repo
     sitemap_url_scheme: "{link}" # Recommended for cleaner URLs
     html_extra_path:
       - google6c5f2d11d0c13eff.html   
