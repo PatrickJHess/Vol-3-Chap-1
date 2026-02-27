@@ -41,6 +41,8 @@ launch_buttons:
 
 sphinx:
 sphinx:
+  extra_extensions:
+    - sphinx_sitemap    
   config:
     html_static_path: ['_static']
     html_js_files:
