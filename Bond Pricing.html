@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Financial Python &#8212; Basic Concepts Of Fixed Income: Basic Bond Concepts and the Term Structure of Interest Rates</title>
+    <title>Introduction to Bond Pricing &#8212; Basic Concepts Of Fixed Income: Basic Bond Concepts and the Term Structure of Interest Rates</title>
   
   
   
@@ -61,12 +61,13 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Bond Pricing';</script>
     <script src="_static/open_new_tab.js?v=9fade34f"></script>
-    <link rel="canonical" href="https://patrickjhess.github.io/Vol-3-Chap-1/intro.html" />
+    <link rel="canonical" href="https://patrickjhess.github.io/Vol-3-Chap-1/Bond Pricing.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Working with Jupyter Books" href="Interacting%20With%20Jupyter%20Books.html" />
+    <link rel="next" title="NumPy and Pandas" href="Numpy_And_Pandas.html" />
+    <link rel="prev" title="Basic Bond Concepts and the Term Structure of Interest Rates" href="Chapter_Highlights.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -129,8 +130,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -149,7 +148,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -174,8 +173,8 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Financial Python
                 </a>
             </li>
@@ -185,14 +184,14 @@
 <li class="toctree-l1"><a class="reference internal" href="Interacting%20With%20Jupyter%20Books.html">Working with Jupyter Books</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Concepts of Fixed Income: Chapter One</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter_Highlights.html">Basic Bond Concepts and the Term Structure of Interest Rates</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Bond%20Pricing.html">Introduction to Bond Pricing</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Highlights.html">Basic Bond Concepts and the Term Structure of Interest Rates</a><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Introduction to Bond Pricing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Numpy_And_Pandas.html">NumPy and Pandas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates.html">Calculating and Graphing the Term Structure of Interest Rates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter_Summary.html">Python, Pandas, NumPy, and Financial Insights</a></li>
 <li class="toctree-l2"><a class="reference internal" href="imported_functions.html">Functions Imported by the Chapter.</a></li>
-</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Hub &amp; Other Chapters Of Basic Concepts Of Fixed Income</span></p>
@@ -246,7 +245,7 @@
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/PatrickJHess/Vol-3-Chap-1/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/PatrickJHess/Vol-3-Chap-1/issues/new?title=Issue%20on%20page%20%2FBond Pricing.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -272,7 +271,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Bond Pricing.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -356,7 +355,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Financial Python</h1>
+    <h1>Introduction to Bond Pricing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -366,10 +365,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-basic-concepts-of-fixed-income">Volume: Basic Concepts of Fixed Income</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-present-value-of-a-bond"><span style="font-family:Franklin Gothic Medium', sans-serif;">The present value of a bond</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coupon-bonds-and-zero-coupon-bonds"><span style="font-family:Franklin Gothic Medium', sans-serif;">Coupon bonds and zero-coupon bonds</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arbitrage-and-the-value-of-the-bond"><span style="font-family:Franklin Gothic Medium', sans-serif;">Arbitrage and the value of the bond</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-and-discrete-compounding"><span style="font-family:Franklin Gothic Medium', sans-serif;">Continuous and discrete compounding</span></a></li>
 </ul>
             </nav>
         </div>
@@ -381,29 +380,98 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="financial-python">
-<h1>Financial Python<a class="headerlink" href="#financial-python" title="Link to this heading">#</a></h1>
-<section id="volume-basic-concepts-of-fixed-income">
-<h2>Volume: Basic Concepts of Fixed Income<a class="headerlink" href="#volume-basic-concepts-of-fixed-income" title="Link to this heading">#</a></h2>
-<section id="chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates">
-<h3>Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates<a class="headerlink" href="#chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates" title="Link to this heading">#</a></h3>
-<p>Bond pricing is founded on two core principles:</p>
-<ol class="arabic simple">
-<li><p><strong>The Arbitrage Principle:</strong> This principle asserts that the value of bonds making multiple payments (like coupons) is equal to the value of a portfolio of single-payment bonds, known as zero-coupon bonds. This portfolio is structured to replicate the payment schedule of the multi-payment bond.</p></li>
-<li><p><strong>The Present Value Principle:</strong> This principle states that the price of a single-payment bond is determined by its present value factor.</p></li>
-</ol>
-<p>These principles form the basis for pricing all financial instruments. Understanding the present value factors embedded in these prices is crucial, as their description offers significant insight into the state of financial markets.</p>
-<p>This chapter initiates our study of bond pricing and the term structure of interest rates-the description of the underlying present value factors. Two fundamental concepts will be introduced: spot rates of interest and forward rates of interest. These are central to the valuation of financial instruments and derivatives.</p>
-<p>To illustrate these concepts, we will calculate spot and forward rates using U.S. Treasury Bills data from two distinct dates. The data will be sourced from a dedicated data library for this volume and external URLs. The results will be presented graphically to highlight two contrasting market conditions: one where inflation is expected to rise and another where it is expected to moderate.</p>
-<p>Subsequent chapters will build upon these bond pricing principles and the term structure to provide a deeper analysis of financial instrument pricing and the term structure itself.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-bond-pricing">
+<h1>Introduction to Bond Pricing<a class="headerlink" href="#introduction-to-bond-pricing" title="Link to this heading">#</a></h1>
+<p><span style="font-family: 'Garamond', serif;
+    font-size: 16px;
+    text-indent: 0.25in;
+    line-height: 1.5;"></p>
+<p>This chapter will introduce some fundamental principles of fixed income. These principles include pricing coupon bonds as a portfolio of zero-coupon bonds, the term structure of interest rates, and the relation between spot and forward rates of interest.
+</span></p>
+<section id="the-present-value-of-a-bond">
+<h2><span style="font-family:Franklin Gothic Medium', sans-serif;">The present value of a bond</span><a class="headerlink" href="#the-present-value-of-a-bond" title="Link to this heading">#</a></h2>
+<p><span style="font-family: 'Garamond', serif;
+    font-size: 16px;
+    text-indent: 0.25in;
+    line-height: 1.5;"></p>
+<p>Chapter One of the volume <em>Time Value Of Money</em> asserted that the value of an asset with certain cash flows equals the present value of its cash flows, as shown in the following equation, where  <span class="math notranslate nohighlight">\(\ T\)</span> is the total number of cash flow periods, and <span class="math notranslate nohighlight">\(\ PV(t)\)</span> is the present-value factor for a certain cash flow in period <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\Large Value = \sum_{t=1}^{T}Cash\,Flow_t\times PV(t)\]</div>
+<p>In finance, equating value with present value is ubiquitous and seems unworthy of much thought. It is, however, a powerful statement that value depends upon the ability to replicate an asset with other assets. Namely, if an asset’s cash flow dates and amounts can be replicated by another asset or combinations of assets, the values must be equal. You might call this idea the <em>law of one price</em>—a concept that is key in all pricing models.</p>
+</span>
 </section>
+<section id="coupon-bonds-and-zero-coupon-bonds">
+<h2><span style="font-family:Franklin Gothic Medium', sans-serif;">Coupon bonds and zero-coupon bonds</span><a class="headerlink" href="#coupon-bonds-and-zero-coupon-bonds" title="Link to this heading">#</a></h2>
+<p><span style="font-family: 'Garamond', serif;
+    font-size: 16px;
+    text-indent: 0.25in;
+    line-height: 1.5;"></p>
+<p>Most bonds, but not all, pay fixed coupons in each period and principal at their maturity. The values of coupon bonds are calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\large Coupon\, Bond= \sum_{t=1}^{T}Coupon_t\times PV(t)+ Principal_T\times PV(T)\]</div>
+<p>Some bonds only repay principal at maturity, or <span class="math notranslate nohighlight">\(T\)</span>. Because there are no periodic coupon payments, these bonds are appropriately known as zero-coupon bonds. The values of zero-coupon bonds are calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\large Zero\,Coupon\, Bond =Principal_T\times PV(T)\]</div>
+<p>In order to price any bond, it’s necessary to know the present value of payments at the relevant dates. If the zero-coupon bond values are known for the relevant dates, the present value of each date can be determined. To do so, dvide the value of the zero-coupon bond by its principal, as shown below:</p>
+<div class="math notranslate nohighlight">
+\[\large  PV(t)=\frac{Zero\,Coupon\, Bond_t }{Principal_t}\]</div>
+<p>Each coupon-bond cash flow is equivalent to an investment in a zero-coupon bond. As such, we can replicate a coupon bond with a sequence of zero-coupon bonds: The number of zero-coupon bonds with a maturity of <span class="math notranslate nohighlight">\(t\)</span> equals the coupon bond’s cash flow at <span class="math notranslate nohighlight">\(t\)</span> divided by the zero-coupon bond’s principal. For example, consider a <span class="math notranslate nohighlight">\(\$40\)</span> coupon that is paid every six months before maturity. This coupon is valued with a sequence of 0.04 zero-coupon bonds, with a <span class="math notranslate nohighlight">\(\$1,000\)</span> principal and maturities matching the coupon payment dates. The coupon bond’s payment at maturity equals 1.040 zero-coupon bonds, with a <span class="math notranslate nohighlight">\(\$1,000\)</span> principal and the same maturity as the coupon bond. Further, a coupon bond’s value is the sum of all the zero-coupon bond values needed to replicate that bond’s cash flows. If the coupon bond and the zero-coupon bonds have the same principal, and all the coupon payments of the coupon bond are equal, the value of the coupon bond is:</p>
+<div class="math notranslate nohighlight">
+\[\large Value = \sum_{t=1}^{T}Zero\,Coupon\,Bond_t\times\frac{Coupon}{Principal}+Zero\,Coupon\,Bond_T\]</div>
+<p>We define the sum  as:</p>
+<div class="math notranslate nohighlight">
+\[\large S(T) =\sum_{t=1}^{T}\frac{Zero\,Coupon\,Bond_t}{Principal} = \sum_{t=1}^{T}PV(t)\]</div>
+<p>And the value of the fixed-coupon bond is composed of two components equaling:</p>
+<div class="math notranslate nohighlight">
+\[\large Value = S(T)\times Coupon+PV(T)\times Principal(T)\]</div>
 </section>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
+<section id="arbitrage-and-the-value-of-the-bond">
+<h2><span style="font-family:Franklin Gothic Medium', sans-serif;">Arbitrage and the value of the bond</span><a class="headerlink" href="#arbitrage-and-the-value-of-the-bond" title="Link to this heading">#</a></h2>
+<p><span style="font-family: 'Garamond', serif;
+    font-size: 16px;
+    text-indent: 0.25in;
+    line-height: 1.5;"></p>
+<p>Thus far, bond values have been represented as the sum of the zero-coupon bonds’ values. But we must consider the zero-coupon bonds’ <em>market prices</em>—not their “theoretical” values. Will the value relation between zero-coupon and coupon bonds hold if we use the market prices of zero-coupon bonds? To answer that question, let’s look at examples where the coupon bond is worth more or less than the sum of the zero-coupon bonds. First, consider a case where the coupon bond’s price exceeds the sum of the zero-coupon bond prices:</p>
+<div class="math notranslate nohighlight">
+\[\large Value &gt; S(T)\times Coupon+PV(T)\times Principal(T)\]</div>
+<p>If the price of the coupon bond exceeds the sum of the zero-coupon bond prices, the coupon bond can be <em>shorted</em>.<span class="math notranslate nohighlight">\(^{1}\)</span> The zero-coupon bonds can then be purchased with the proceeds, leaving the investor with identical cash flows for a lower price. Consider if the inequality is reversed:</p>
+<div class="math notranslate nohighlight">
+\[\large Value &lt;  S(T)\times Coupon+PV(T)\times Principal(T)\]</div>
+<p>In this case, the <em>zero-coupon bonds</em> can be shorted, and the proceeds can be used to buy the coupon bond. This ability to recreate cash flows allows for arbitrage between zero-coupon and coupon bonds; as a result, the coupon bond prices equal the costs of the zero-coupon bonds used to recreate their cash flows. It is the law of one price in action. Whatever the bond prices might have been in theory does not matter. Those prices were ideas—the market value is a fact. This arbitrage relationship is important for deriving the <em>term of structure of interest rates</em> and <em>forward rates</em>, which we’ll examine later in this chapter. These concepts are key to understanding bond pricing as well as some important fixed-income derivatives.</p>
+</span>
+<hr>
+<p><span style="font-family: 'Garamond', serif;
+          font-size: 12px;
+          text-indent: 0.13in;
+          line-height: 1.3;"></p>
+<p><span class="math notranslate nohighlight">\(^{1}\)</span> The mechanics of shorting bonds will be discussed in future chapters.
+</span></p>
+</section>
+<section id="continuous-and-discrete-compounding">
+<h2><span style="font-family:Franklin Gothic Medium', sans-serif;">Continuous and discrete compounding</span><a class="headerlink" href="#continuous-and-discrete-compounding" title="Link to this heading">#</a></h2>
+<p><span style="font-family: 'Garamond', serif;
+    font-size: 16px;
+    text-indent: 0.25in;
+    line-height: 1.5;"></p>
+<p>For mathematical and computational convenience, our discussion of fixed income and bond pricing will use continuously compounded interest rates. At times, it’s appropriate to quote interest rates as discretely compounded rates. To that end, this short aside demonstrates the conversion between continuously and discretely compounded rates.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(R_c\)</span> is the continuously compounded annual interest rate for <span class="math notranslate nohighlight">\(T\)</span> periods, and <span class="math notranslate nohighlight">\(R_d\)</span> is the discretely compounded annual rate for <span class="math notranslate nohighlight">\(T\)</span> periods when compounded <span class="math notranslate nohighlight">\(d\)</span> times per year. The conversion of continuously and discretely compounded rates requires that the same values are realized in <span class="math notranslate nohighlight">\(T\)</span> periods, shown below:</p>
+<div class="math notranslate nohighlight">
+\[\Large e^{R_c\times T}  =  (1 + \frac{R_d}{d})^{d\times T}\]</div>
+<p><span class="math notranslate nohighlight">\(e\)</span> is Euler’s number and is the limit of <span class="math notranslate nohighlight">\((1+\frac{1}{d})^{d}\)</span> as <span class="math notranslate nohighlight">\(d\)</span> approaches infinity or continuously compounds. The necessary condition is expressed as an annualized interest rate by taking the <span class="math notranslate nohighlight">\(T\)</span> root of both sides of the equation:</p>
+<div class="math notranslate nohighlight">
+\[\Large e^{R_c} = (1 + \frac{R_d}{d})^{d}\]</div>
+<p>Taking natural logs of the previous equation derives continuously compounded rates from discretely compounded rates:</p>
+<div class="math notranslate nohighlight">
+\[\Large R_c = d\times ln(1 + \frac{R_d}{d})\]</div>
+<p>Finally, discretely compounded rates can be derived from continuously compounded rates by dividing both sides by the compounding frequency, or</p>
+<div class="math notranslate nohighlight">
+\[\Large \frac{R_c}{d} = ln(1 + \frac{R_d}{d})\]</div>
+<p>and raising Euler’s number, <span class="math notranslate nohighlight">\(e\)</span>, to both sides of the equation:</p>
+<div class="math notranslate nohighlight">
+\[\Large R_d = d\times (e^\frac{R_c}{d} - 1)\]</div>
+<p>For instances in which rate conversion is necessary, the above methods are useful knowledge; for this chapter, however, we’ll focus on continuously compounded rates.
+</span></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -436,12 +504,21 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Chapter_Highlights.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Basic Bond Concepts and the Term Structure of Interest Rates</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="Interacting%20With%20Jupyter%20Books.html"
+       href="Numpy_And_Pandas.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Working with Jupyter Books</p>
+        <p class="prev-next-title">NumPy and Pandas</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -461,10 +538,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-basic-concepts-of-fixed-income">Volume: Basic Concepts of Fixed Income</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-present-value-of-a-bond"><span style="font-family:Franklin Gothic Medium', sans-serif;">The present value of a bond</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coupon-bonds-and-zero-coupon-bonds"><span style="font-family:Franklin Gothic Medium', sans-serif;">Coupon bonds and zero-coupon bonds</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arbitrage-and-the-value-of-the-bond"><span style="font-family:Franklin Gothic Medium', sans-serif;">Arbitrage and the value of the bond</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-and-discrete-compounding"><span style="font-family:Franklin Gothic Medium', sans-serif;">Continuous and discrete compounding</span></a></li>
 </ul>
   </nav></div>
 
