@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Working with Jupyter Books &#8212; Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</title>
+    <title>Summarizing Convexity and Interest Rate Risk &#8212; Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</title>
   
   
   
@@ -59,13 +59,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Interacting With Jupyter Books';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter_Eight_Summary';</script>
     <script src="_static/open_new_tab.js?v=9fade34f"></script>
-    <link rel="canonical" href="https://patrickjhess.github.io/Vol-3-Chap-7/Interacting With Jupyter Books.html" />
+    <link rel="canonical" href="https://patrickjhess.github.io/Vol-3-Chap-7/Chapter_Eight_Summary.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Convexity And Interest Rate Risk" href="Chapter_Eight_Highlights.html" />
-    <link rel="prev" title="Financial Python" href="intro.html" />
+    <link rel="next" title="Functions Imported by Chapter Eight." href="imported_functions_Eight.html" />
+    <link rel="prev" title="Convexity measures movement and magnifitude but not dicretion." href="Define_Convexity.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,16 +178,16 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Working with Jupyter Books</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Interacting%20With%20Jupyter%20Books.html">Working with Jupyter Books</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Concepts of Fixed Income: Chapter Eight</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter_Eight_Highlights.html"><em><strong>Convexity And Interest Rate Risk</strong></em></a><ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Eight_Highlights.html"><em><strong>Convexity And Interest Rate Risk</strong></em></a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Define_Convexity.html">Convexity measures movement and magnifitude but not dicretion.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter_Eight_Summary.html"><em><strong>Summarizing Convexity and Interest Rate Risk</strong></em></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><em><strong>Summarizing Convexity and Interest Rate Risk</strong></em></a></li>
 <li class="toctree-l2"><a class="reference internal" href="imported_functions_Eight.html"><em><strong>Functions Imported by Chapter Eight.</strong></em></a></li>
-</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Hub &amp; Other Chapters Of Basic Concepts Of Fixed Income</span></p>
@@ -242,7 +242,7 @@
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/PatrickJHess/Vol-3-Chap-7/issues/new?title=Issue%20on%20page%20%2FInteracting With Jupyter Books.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/PatrickJHess/Vol-3-Chap-7/issues/new?title=Issue%20on%20page%20%2FChapter_Eight_Summary.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -268,7 +268,7 @@
       
       
       
-      <li><a href="_sources/Interacting With Jupyter Books.md" target="_blank"
+      <li><a href="_sources/Chapter_Eight_Summary.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -350,7 +350,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Working with Jupyter Books</h1>
+    <h1>Summarizing Convexity and Interest Rate Risk</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -364,59 +364,84 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="working-with-jupyter-books">
-<h1>Working with Jupyter Books<a class="headerlink" href="#working-with-jupyter-books" title="Link to this heading">#</a></h1>
-<p>This and other chapters of <em>Basic Concepts of Fixed Income</em>, contain two types of documents:</p>
-<ol class="arabic simple">
-<li><p><strong>Markdown documents (<em>.md</em>):</strong></p>
-<ul class="simple">
-<li><p>What you are currently reading.</p></li>
-<li><p>Contain no executable code.</p></li>
-<li><p>Can be downloaded as a Markdown file (<em>.md</em>) or a PDF file (<em>.pdf</em>).</p></li>
-</ul>
-</li>
-<li><p><strong>Notebook documents (<em>.ipynb</em>):</strong></p>
-<ul class="simple">
-<li><p>HTML Representations of Jupyter notebooks.</p></li>
-<li><p>Can be downloaded as a notebook (<em>.ipynb</em>) or a PDF file (<em>.pdf</em>).</p></li>
-<li><p>Have interactive capabilities.</p></li>
-<li><p>In a notebook like <em>Calculating and Graphing the Term Structure of Interest Rates</em>, icons are available in the upper-right corner for launching and downloading the notebook.</p></li>
-</ul>
-</li>
-</ol>
-<p>Notebook Launch Options</p>
-<p>The launch icon provides three interactive options for notebook documents:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="summarizing-convexity-and-interest-rate-risk">
+<h1><em><strong>Summarizing Convexity and Interest Rate Risk</strong></em><a class="headerlink" href="#summarizing-convexity-and-interest-rate-risk" title="Link to this heading">#</a></h1>
+<p>Duration is derived from the first derivative of the present value function with respect to the yield to maturity and is only accurate for small changes in interest rates. Convexity is derived from the second derivative of the present value function with respect to the yield to maturity and attenuates the predicted losses of duration and amplifies the predicted gains (curvature of a convex function versus the linear approximation).</p>
+<p>It’s correct to relate volatility of interest rates to convexity.  The chapter explores  trades expressing views on volatility but are agnostic on directional changes of interest rates.  The risk of  convexity trades, but not their expected gain, depends upon how changes in interest rates affect the term structure.  The results for parallel shifts in interest rates are never less than zero; changes in the slope and shape of the term structure produces more volatility results often returning negative payoffs.</p>
+<p>The following table summarizes the results from simulating parallel and non-parallel changes in interest rates.  Expected payoffs are positively related to convexity; volatility depends upon how interest rates change are expressed.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Option</p></th>
-<th class="head"><p>Description</p></th>
-<th class="head"><p>Interactive Features</p></th>
-<th class="head"><p>Note</p></th>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head"><p>Long Thirty Short Twenty</p></th>
+<th class="head"><p></p></th>
+<th class="head"><p>Long Thirty Short Ten</p></th>
+<th class="head"><p></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Binder</strong></p></td>
-<td><p>Launches in a new browser tab (typically within a minute) and runs remotely. Supports up to 100 simultaneous users.</p></td>
-<td><p>Execute existing cells, add or modify cells, and download the notebook.</p></td>
-<td><p>The notebook will not be saved or available if saved in this mode.</p></td>
+<tr class="row-even"><td class="text-left"><p><strong>Duration</strong></p></td>
+<td><p>0</p></td>
+<td><p></p></td>
+<td><p>0</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Colab</strong></p></td>
-<td><p>Offers the quickest and easiest access, not requiring Binder. A Google Drive is unnecessary for launching.</p></td>
-<td><p>Execute cells or make a copy.</p></td>
-<td><p>You must sign in to a Google account to execute cells or make a copy. You can download the notebook without signing into a Google account.</p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>Convexity</strong></p></td>
+<td><p>98.07</p></td>
+<td><p></p></td>
+<td><p>219.12</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Live Code</strong></p></td>
-<td><p>Requires a Binder launch and is ideal for demonstrations.</p></td>
-<td><p>Run code in existing cells, and alter code in existing cells.</p></td>
-<td><p>You cannot add cells or save results in this mode.</p></td>
+<tr class="row-even"><td class="text-left"><p><strong>Simulation Type</strong></p></td>
+<td><p>Parallel</p></td>
+<td><p>Non-Parallel</p></td>
+<td><p>Parallel</p></td>
+<td><p>Non-Parallel</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Mean</strong></p></td>
+<td><p>0.165</p></td>
+<td><p>0.173</p></td>
+<td><p>0.368</p></td>
+<td><p>0.39</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Standard Deviation</strong></p></td>
+<td><p>0.151</p></td>
+<td><p>3.326</p></td>
+<td><p>0.334</p></td>
+<td><p>3.327</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Minimum Value</strong></p></td>
+<td><p>0</p></td>
+<td><p>-9.117</p></td>
+<td><p>0</p></td>
+<td><p>-8.236</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>25%  Percentile</strong></p></td>
+<td><p>0.031</p></td>
+<td><p>-2.164</p></td>
+<td><p>0.068</p></td>
+<td><p>-1.981</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>50% Percentile</strong></p></td>
+<td><p>0.122</p></td>
+<td><p>0.180</p></td>
+<td><p>0.273</p></td>
+<td><p>0.380</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>75% Percentile</strong></p></td>
+<td><p>0.273</p></td>
+<td><p>2.506</p></td>
+<td><p>0.613</p></td>
+<td><p>2.752</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Maximum Value</strong></p></td>
+<td><p>0.577</p></td>
+<td><p>10.213</p></td>
+<td><p>1.243</p></td>
+<td><p>10.526</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Additional Interactive Feature</p>
-<p><strong>Copying code:</strong> Any code cell or code block can be copied to the clipboard by moving the cursor to its upper-right corner.</p>
-<p>Summary</p>
-<p>Jupyter books effectively combine Markdown and notebooks to highlight financial concepts with real-world applications.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -450,20 +475,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="Define_Convexity.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Financial Python</p>
+        <p class="prev-next-title">Convexity measures movement and magnifitude but not dicretion.</p>
       </div>
     </a>
     <a class="right-next"
-       href="Chapter_Eight_Highlights.html"
+       href="imported_functions_Eight.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><em><strong>Convexity And Interest Rate Risk</strong></em></p>
+        <p class="prev-next-title"><em><strong>Functions Imported by Chapter Eight.</strong></em></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

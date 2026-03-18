@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Financial Python &#8212; Basic Concepts Of Fixed Income: Basic Bond Concepts and the Term Structure of Interest Rates</title>
+    <title>Financial Python &#8212; Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</title>
   
   
   
@@ -63,7 +63,7 @@
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <script src="_static/open_new_tab.js?v=9fade34f"></script>
-    <link rel="canonical" href="https://patrickjhess.github.io/Vol-3-Chap-1/intro.html" />
+    <link rel="canonical" href="https://patrickjhess.github.io/Vol-3-Chap-7/intro.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Working with Jupyter Books" href="Interacting%20With%20Jupyter%20Books.html" />
@@ -156,7 +156,7 @@
   
   
   
-    <p class="title logo__title">Basic Concepts Of Fixed Income: Basic Bond Concepts and the Term Structure of Interest Rates</p>
+    <p class="title logo__title">Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -184,25 +184,27 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Interacting%20With%20Jupyter%20Books.html">Working with Jupyter Books</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Concepts of Fixed Income: Chapter One</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Concepts of Fixed Income: Chapter Eight</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter_Highlights.html">Basic Bond Concepts and the Term Structure of Interest Rates</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Bond%20Pricing.html">Introduction to Bond Pricing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Numpy_And_Pandas.html">NumPy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates.html">Calculating and Graphing the Term Structure of Interest Rates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter_Summary.html">Python, Pandas, NumPy, and Financial Insights</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imported_functions.html">Functions Imported by the Chapter.</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter_Eight_Highlights.html"><em><strong>Convexity And Interest Rate Risk</strong></em></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Define_Convexity.html">Convexity measures movement and magnifitude but not dicretion.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Illustrating_The_Effects_With_Parallel_Shifts_In_Yields_To_Maturity.html">Convexity And Parallel Shifts in Yields to Maturity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Changes_In_Par_Yields_Between_1993_And_2025.html">Volatility and Corrleation of Par Yields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Changing_Slope_And_Shape_Of_Term_Structure.html">Changing Slope and Shape of Term Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter_Eight_Summary.html"><em><strong>Summarizing Convexity and Interest Rate Risk</strong></em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="imported_functions_Eight.html"><em><strong>Functions Imported by Chapter Eight.</strong></em></a></li>
 </ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Hub &amp; Other Chapters Of Basic Concepts Of Fixed Income</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Volume-Three-Hub/">Hub For Basic Concepts Of Fixed Income</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-1/">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-2-Chap-3/">Chapters Two and Three: Accrued Interest and Bond Pay Data</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-4/">Chapters Four: Bootstrapping The Term Structure With Coupon Bonds</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-5/">Chapter Five: Par Yields</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-5/">Chapter Five: Yield To Maturity</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-6/">Chapter Six: Yield To Maturity</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-7/">Chapter Seven: Measuring Interest Rate Risk With Duration</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-7/">Chapter Seven: Measuring Interest Risk With Duration</a></li>
 </ul>
 
     </div>
@@ -246,7 +248,7 @@
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/PatrickJHess/Vol-3-Chap-1/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/PatrickJHess/Vol-3-Chap-7/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -367,7 +369,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-basic-concepts-of-fixed-income">Volume: Basic Concepts of Fixed Income</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-eight-convexity-captures-movements-and-magnitude">Chapter Eight: Convexity Captures Movements and Magnitude</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leapfroggging-into-the-chapter">Leapfroggging into the chapter</a></li>
 </ul>
 </li>
 </ul>
@@ -385,17 +388,18 @@ document.write(`
 <h1>Financial Python<a class="headerlink" href="#financial-python" title="Link to this heading">#</a></h1>
 <section id="volume-basic-concepts-of-fixed-income">
 <h2>Volume: Basic Concepts of Fixed Income<a class="headerlink" href="#volume-basic-concepts-of-fixed-income" title="Link to this heading">#</a></h2>
-<section id="chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates">
-<h3>Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates<a class="headerlink" href="#chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates" title="Link to this heading">#</a></h3>
-<p>Bond pricing is founded on two core principles:</p>
-<ol class="arabic simple">
-<li><p><strong>The Arbitrage Principle:</strong> This principle asserts that the value of bonds making multiple payments (like coupons) is equal to the value of a portfolio of single-payment bonds, known as zero-coupon bonds. This portfolio is structured to replicate the payment schedule of the multi-payment bond.</p></li>
-<li><p><strong>The Present Value Principle:</strong> This principle states that the price of a single-payment bond is determined by its present value factor.</p></li>
-</ol>
-<p>These principles form the basis for pricing all financial instruments. Understanding the present value factors embedded in these prices is crucial, as their description offers significant insight into the state of financial markets.</p>
-<p>This chapter initiates our study of bond pricing and the term structure of interest rates-the description of the underlying present value factors. Two fundamental concepts will be introduced: spot rates of interest and forward rates of interest. These are central to the valuation of financial instruments and derivatives.</p>
-<p>To illustrate these concepts, we will calculate spot and forward rates using U.S. Treasury Bills data from two distinct dates. The data will be sourced from a dedicated data library for this volume and external URLs. The results will be presented graphically to highlight two contrasting market conditions: one where inflation is expected to rise and another where it is expected to moderate.</p>
-<p>Subsequent chapters will build upon these bond pricing principles and the term structure to provide a deeper analysis of financial instrument pricing and the term structure itself.</p>
+<section id="chapter-eight-convexity-captures-movements-and-magnitude">
+<h3>Chapter Eight: Convexity Captures Movements and Magnitude<a class="headerlink" href="#chapter-eight-convexity-captures-movements-and-magnitude" title="Link to this heading">#</a></h3>
+<p>Chapter Seven introduces duration as the primary measure of interest rate risk for bonds. It’s natural to draw parallels between duration and the Capital Asset Pricing Model’s (CAPM) beta, it’s important to recognize a key difference: beta is a parameter of an equilibrium model, offering insights beyond mere empirical observation. Duration is less profound; it is a powerful mathematical tool but does not offer predictions about expected bond returns. It is, however, exceedingly useful math.<span class="math notranslate nohighlight">\(^{1}\)</span></p>
+<p>This chapter builds upon this “useful math” by incorporating the second derivative of the bond’s present value formula to define bond convexity, a concept mentioned briefly in Chapter Seven. Duration is directional; convexity corrects the directrion of duration.  Duration-bets bet on a direction; convexity-bets bet on movement.</p>
+<p><strong>Parallel Versus Non-Parallel Changes In The Term Structure</strong></p>
+<p>Convexity, a mathematical concept, predicts bond relative price changes when the term structure shifts in a parallel manner. Variations in the slope and shape of the term structure cause actual bond relative prices to diverge from these predictions. Data from the U.S. Treasury documents that the shape and slope of the term structure varies over time.  The chapter presents simulations of convexity trades with changes in the slope and shape of the term structure.   Results that  are perfectly predictable with parallel shifts, demonstrate significant variability with non-parallel changes in the term structure.</p>
+</section>
+<section id="leapfroggging-into-the-chapter">
+<h3>Leapfroggging into the chapter<a class="headerlink" href="#leapfroggging-into-the-chapter" title="Link to this heading">#</a></h3>
+<p>Like other chapters, there are no required dependencies between this and previous chapters. If you are unfamiliar with the material, you will benefit from reviewing previous chapters but you can begin here. As needed, the previously developed functions used in this chapter are imported from  a custom module. These functions are sufficient for you to benefit from the chapter.</p>
+<hr class="docutils" />
+<p><span class="math notranslate nohighlight">\(^{1}\)</span>Of course beta can be viewed as a useful statistical relation and not a parameter of an equilibrium.  That view is in the spirit of much of total risk or factor investing. Beta and the CAPM are covered in more depth in the <em>Asset Pricing</em> volume.</p>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -410,7 +414,7 @@ document.write(`
     {
         requestKernel: true,
         binderOptions: {
-            repo: "patrickjhess/Vol-3-Chap-1",
+            repo: "patrickjhess/Vol-3-Chap-7",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -462,7 +466,8 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-basic-concepts-of-fixed-income">Volume: Basic Concepts of Fixed Income</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-one-basic-bond-concepts-and-the-term-structure-of-interest-rates">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-eight-convexity-captures-movements-and-magnitude">Chapter Eight: Convexity Captures Movements and Magnitude</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leapfroggging-into-the-chapter">Leapfroggging into the chapter</a></li>
 </ul>
 </li>
 </ul>
@@ -489,7 +494,7 @@ By Financial Python
 
   <p class="copyright">
     
-      © Copyright 2025 by the University of Virginia Darden School Foundation, Charlottesville, VA..
+      © Copyright 2026, Arbitrage Partners.
       <br/>
     
   </p>

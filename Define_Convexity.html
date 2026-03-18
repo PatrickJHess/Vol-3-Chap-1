@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Basic Bond Concepts and the Term Structure of Interest Rates &#8212; Basic Concepts Of Fixed Income: Basic Bond Concepts and the Term Structure of Interest Rates</title>
+    <title>Convexity measures movement and magnifitude but not dicretion. &#8212; Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b47fed4d" />
@@ -61,13 +61,13 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter_Highlights';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Define_Convexity';</script>
     <script src="_static/open_new_tab.js?v=9fade34f"></script>
-    <link rel="canonical" href="https://patrickjhess.github.io/Vol-3-Chap-1/Chapter_Highlights.html" />
+    <link rel="canonical" href="https://patrickjhess.github.io/Vol-3-Chap-7/Define_Convexity.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction to Bond Pricing" href="Bond%20Pricing.html" />
-    <link rel="prev" title="Working with Jupyter Books" href="Interacting%20With%20Jupyter%20Books.html" />
+    <link rel="next" title="Summarizing Convexity and Interest Rate Risk" href="Chapter_Eight_Summary.html" />
+    <link rel="prev" title="Convexity And Interest Rate Risk" href="Chapter_Eight_Highlights.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -155,7 +155,7 @@
   
   
   
-    <p class="title logo__title">Basic Concepts Of Fixed Income: Basic Bond Concepts and the Term Structure of Interest Rates</p>
+    <p class="title logo__title">Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -183,25 +183,24 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Interacting%20With%20Jupyter%20Books.html">Working with Jupyter Books</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Concepts of Fixed Income: Chapter One</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Concepts of Fixed Income: Chapter Eight</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Basic Bond Concepts and the Term Structure of Interest Rates</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Bond%20Pricing.html">Introduction to Bond Pricing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Numpy_And_Pandas.html">NumPy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates.html">Calculating and Graphing the Term Structure of Interest Rates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter_Summary.html">Python, Pandas, NumPy, and Financial Insights</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imported_functions.html">Functions Imported by the Chapter.</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Eight_Highlights.html"><em><strong>Convexity And Interest Rate Risk</strong></em></a><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Convexity measures movement and magnifitude but not dicretion.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter_Eight_Summary.html"><em><strong>Summarizing Convexity and Interest Rate Risk</strong></em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="imported_functions_Eight.html"><em><strong>Functions Imported by Chapter Eight.</strong></em></a></li>
 </ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Hub &amp; Other Chapters Of Basic Concepts Of Fixed Income</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Volume-Three-Hub/">Hub For Basic Concepts Of Fixed Income</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-1/">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-2-Chap-3/">Chapters Two and Three: Accrued Interest and Bond Pay Data</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-4/">Chapters Four: Bootstrapping The Term Structure With Coupon Bonds</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-5/">Chapter Five: Par Yields</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-5/">Chapter Five: Yield To Maturity</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-6/">Chapter Six: Yield To Maturity</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-7/">Chapter Seven: Measuring Interest Rate Risk With Duration</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-7/">Chapter Seven: Measuring Interest Risk With Duration</a></li>
 </ul>
 
     </div>
@@ -245,7 +244,7 @@
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/PatrickJHess/Vol-3-Chap-1/issues/new?title=Issue%20on%20page%20%2FChapter_Highlights.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/PatrickJHess/Vol-3-Chap-7/issues/new?title=Issue%20on%20page%20%2FDefine_Convexity.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -271,7 +270,7 @@
       
       
       
-      <li><a href="_sources/Chapter_Highlights.md" target="_blank"
+      <li><a href="_sources/Define_Convexity.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -355,7 +354,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Basic Bond Concepts and the Term Structure of Interest Rates</h1>
+    <h1>Convexity measures movement and magnifitude but not dicretion.</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -365,7 +364,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duration-revisited">Duration revisited</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-convexity-via-taylor-series-expansion">Introducing Convexity via Taylor Series Expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-convexity-formula">The Convexity Formula</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convexity-and-duration-predict-bond-price-changes">Convexity and Duration Predict Bond Price Changes.</a></li>
 </ul>
             </nav>
         </div>
@@ -377,61 +379,69 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="basic-bond-concepts-and-the-term-structure-of-interest-rates">
-<h1>Basic Bond Concepts and the Term Structure of Interest Rates<a class="headerlink" href="#basic-bond-concepts-and-the-term-structure-of-interest-rates" title="Link to this heading">#</a></h1>
-<p><strong>This Jupyter Book is Chapter One of the volume Basic Concepts of Fixed Income</strong>.</p>
-<p>Chapter One introduces the foundational principles of bond pricing. A primary focus of this chapter is calculating the term structure of interest rates, an essential gauge of financial market health, using data from US Treasury Bills (T-bills).</p>
-<p><strong>Highlights of the chapter are:</strong></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="convexity-measures-movement-and-magnifitude-but-not-dicretion">
+<h1>Convexity measures movement and magnifitude but not dicretion.<a class="headerlink" href="#convexity-measures-movement-and-magnifitude-but-not-dicretion" title="Link to this heading">#</a></h1>
+<section id="duration-revisited">
+<h2>Duration revisited<a class="headerlink" href="#duration-revisited" title="Link to this heading">#</a></h2>
+<p>As a refresher, a bond’s duration is defined as the negative of its first derivative with respect to its yield to maturity (<span class="math notranslate nohighlight">\(\text{ytm}\)</span>), divided by the bond’s value. Duration forms the basis of the first-order Taylor series approximation for changes in bond values due to changes in <span class="math notranslate nohighlight">\(\text{ytm}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\text{Change in Value} \approx -\Delta \text{ytm} \times \text{Modified Duration}\]</div>
+<p>In terms of the mathematical components:</p>
+<div class="math notranslate nohighlight">
+\[V(\text{ytm}+\Delta \text{ytm})-V(\text{ytm})\approx -\Delta \text{ytm}\times\sum_{i=1}^{N}t_i\times Cash\ Flow_{t_i} \times e^{-\text{ytm}\times t_i}\]</div>
+</section>
+<section id="introducing-convexity-via-taylor-series-expansion">
+<h2>Introducing Convexity via Taylor Series Expansion<a class="headerlink" href="#introducing-convexity-via-taylor-series-expansion" title="Link to this heading">#</a></h2>
+<p>The general form of a Taylor series expansion is:</p>
+<div class="math notranslate nohighlight">
+\[f(x+\Delta x)\approx \sum\_{i=1}^{N}\frac{d^{i}f(x)}{dx^{i}}\times\frac{1}{i\!}\Delta x^{i}\]</div>
+<p>Convexity is defined using the second-order Taylor series expansion:</p>
+<div class="math notranslate nohighlight">
+\[f(x+\Delta x)\thickapprox f(x)+\frac{df(x)}{dx}\times\Delta x+\frac{1}{2}\frac{d^{2}f(x)}{dx^{2}}\times\Delta x^{2}\]</div>
+<p>Applying this second-order expansion to the present value formula yields a more accurate estimate of the change in bond value:</p>
+<div class="math notranslate nohighlight">
+\[V(\text{ytm}+\Delta \text{ytm})-V(\text{ytm})\approx -\Delta \text{ytm}\times\sum_{i=1}^{N}t_i\times Cash\ Flow_{t_i} \times e^{-\text{ytm}\times t_i}+ \frac{\Delta \text{ytm}^{2}}{2}\times\sum_{i=1}^{N}t_i^{2}\times Cash\ Flow_{t_i} \times e^{-\text{ytm}\times t_i}\]</div>
+</section>
+<section id="the-convexity-formula">
+<h2>The Convexity Formula<a class="headerlink" href="#the-convexity-formula" title="Link to this heading">#</a></h2>
+<p>Mirroring the definition of duration, convexity is calculated by dividing the bond’s second derivative with respect to <span class="math notranslate nohighlight">\(\text{ytm}\)</span> by the bond’s value:</p>
+<div class="math notranslate nohighlight">
+\[Convexity =\frac{\sum_{i=1}^{N}t_i^{2}\times Cash\ Flow_{t_i} \times e^{-\text{ytm}\times t_i}}{V(\text{ytm})}\]</div>
+<br>
+</section>
+<section id="convexity-and-duration-predict-bond-price-changes">
+<h2>Convexity and Duration Predict Bond Price Changes.<a class="headerlink" href="#convexity-and-duration-predict-bond-price-changes" title="Link to this heading">#</a></h2>
+<p>The change in bond price (<span class="math notranslate nohighlight">\(\Delta V\)</span>) can be predicted using a second-order Taylor expansion that incorporates both duration and convexity, as shown below:</p>
+<br>
+<div class="math notranslate nohighlight">
+\[\Delta V \approx (Duration \times -\Delta \text{ytm} + \frac{1}{2} \times Convexity \times \Delta \text{ytm}^{2}) \times V(\text{ytm})\]</div>
+<br>
+<p>The change in yield to maturity (<span class="math notranslate nohighlight">\(\Delta \text{ytm}\)</span>) can be broken down into its expected value (<span class="math notranslate nohighlight">\(E(\Delta \text{ytm})\)</span>) and its deviation from that expected value:</p>
+<br>
+<div class="math notranslate nohighlight">
+\[\Delta \text{ytm} = (\Delta \text{ytm} - E(\Delta \text{ytm}) + E(\Delta \text{ytm})\]</div>
+<br>
+<p>The squared change in yield to maturity is:</p>
+<br>
+<div class="math notranslate nohighlight">
+\[\Delta \text{ytm}^{2} = (\Delta \text{ytm} - E(\Delta \text{ytm})^{2} + E(\Delta \text{ytm})^{2}+2 \times (\Delta \text{ytm} - E(\Delta \text{ytm}) \times E(\Delta \text{ytm})\]</div>
+<br>
+<p>Consequently, the expected value of the squared change in yield to maturity is:</p>
+<br>
+<div class="math notranslate nohighlight">
+\[E(\Delta \text{ytm}^{2}) = \sigma_{\Delta \text{ytm}}^{2}+E(\Delta \text{ytm})^{2}\]</div>
+<br>
+<p>Substituting the expected values into the Taylor expansion, the expected change in the bond’s value is:</p>
+<br>
+<div class="math notranslate nohighlight">
+\[E(\Delta V) =(Duration \times -E(\Delta \text{ytm})+ \frac{1}{2} \times Convexity \times (\sigma_{\Delta \text{ytm}}^{2}+E(\Delta \text{ytm})^{2}) \times V(\text{ytm})\]</div>
+<br>
+<p>The second-order Taylor expansion reveals two primary effects on the expected bond price changes:</p>
+<br>
 <ul class="simple">
-<li><p><em><strong>Financial concepts</strong></em></p>
-<ul>
-<li><p><em>Basic bond pricing</em></p></li>
-<li><p><em>Defining the term structure of interest rates</em></p></li>
-<li><p><em>Calculating and graphing the term structure of interest rates</em></p></li>
-<li><p><em>The term structure and the state of financial markets</em></p></li>
+<li><p><span class="math notranslate nohighlight">\(\qquad\textbf{Direction:}\quad   -Duration\times E(\Delta \text{ytm})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\qquad\textbf{Volatility:}\quad  \frac{1}{2}\times Convexity\times (\sigma^{2}_{\Delta \text{ytm}}+E(\Delta \text{ytm})^2)\)</span></p></li>
 </ul>
-</li>
-<li><p><em><strong>Python concepts</strong></em></p>
-<ul>
-<li><p><em>NumPy arrays</em></p></li>
-<li><p><em>Pandas DataFrames</em></p></li>
-<li><p><em>Accessing data with a URL address</em></p></li>
-<li><p><em>Custom modules</em></p></li>
-</ul>
-</li>
-</ul>
-<section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
-<p>This chapter’s examples and discussions rely on the <strong>Pandas</strong> and <strong>NumPy</strong> libraries.</p>
-<ul class="simple">
-<li><p><strong>Pandas</strong> is introduced in <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_Pandas.html#a-quick-introduction-to-pandas"><em>A Quick Introduction to Pandas</em></a>.</p></li>
-<li><p><strong>NumPy</strong> is introduced in <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/An_Introduction_To_NumPy.html#a-quick-introduction-to-numpy"><em>A Quick Introduction to NumPy</em></a>.</p></li>
-<li><p>The <em>NumPy and Pandas</em> notebook in this chapter provides examples of using these libraries in relation to the <em>Calculating and Graphing the Term Structure of Interest Rates</em> notebook.</p></li>
-<li><p>Additional relevant Python concepts can be found in the introductory volume, <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/intro.html"><em>Background Material: An Introduction to Python for Financial Python</em></a>, that relate to this and other chapters of <em>Basic Concepts of Fixed Income</em>.</p></li>
-</ul>
-<p><strong>The chapter includes five sections:</strong></p>
-<ol class="arabic simple">
-<li><p><em>Introduction to Bond Pricing</em> covers some  basic concepts.</p></li>
-<li><p>The  Jupyter notebook <em>NumPy and Pandas</em> introduces and illustrates the modules.</p></li>
-<li><p>The  Jupyter notebook <em>Calculating and Graphing the Term Structure of Interest Rates</em> uses NumPy and Pandas to:</p>
-<ul class="simple">
-<li><p>download data from DropBox that is used to calculate and graph the term structure on September 15, 2022.</p></li>
-<li><p>download data from the U.S. Treasury that is used to calculate and graph the term structure on September 30, 2025</p></li>
-<li><p>an exercise asking you to calculate and plot spot and forward rates with data downloaded from the US Treasury.</p></li>
-</ul>
-</li>
-<li><p><em>Python, Pandas, NumPy, and Financial Insights</em> summarizes the financial concepts and results.</p></li>
-<li><p><em>Functions Imported by the Chapter</em> describes the functions imported from DropBox (<em>module_basic_concepts_fixed_income</em>).</p></li>
-</ol>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Bond%20Pricing.html">Introduction to Bond Pricing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Numpy_And_Pandas.html">NumPy and Pandas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates.html">Calculating and Graphing the Term Structure of Interest Rates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter_Summary.html">Python, Pandas, NumPy, and Financial Insights</a></li>
-<li class="toctree-l1"><a class="reference internal" href="imported_functions.html">Functions Imported by the Chapter.</a></li>
-</ul>
-</div>
 </section>
 </section>
 
@@ -439,7 +449,7 @@ document.write(`
     {
         requestKernel: true,
         binderOptions: {
-            repo: "patrickjhess/Vol-3-Chap-1",
+            repo: "patrickjhess/Vol-3-Chap-7",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -466,20 +476,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Interacting%20With%20Jupyter%20Books.html"
+       href="Chapter_Eight_Highlights.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Working with Jupyter Books</p>
+        <p class="prev-next-title"><em><strong>Convexity And Interest Rate Risk</strong></em></p>
       </div>
     </a>
     <a class="right-next"
-       href="Bond%20Pricing.html"
+       href="Chapter_Eight_Summary.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction to Bond Pricing</p>
+        <p class="prev-next-title"><em><strong>Summarizing Convexity and Interest Rate Risk</strong></em></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -499,7 +509,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duration-revisited">Duration revisited</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-convexity-via-taylor-series-expansion">Introducing Convexity via Taylor Series Expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-convexity-formula">The Convexity Formula</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convexity-and-duration-predict-bond-price-changes">Convexity and Duration Predict Bond Price Changes.</a></li>
 </ul>
   </nav></div>
 
@@ -524,7 +537,7 @@ By Financial Python
 
   <p class="copyright">
     
-      © Copyright 2025 by the University of Virginia Darden School Foundation, Charlottesville, VA..
+      © Copyright 2026, Arbitrage Partners.
       <br/>
     
   </p>
