@@ -2,22 +2,18 @@
 
 ## Volume: Basic Concepts of Fixed Income
 
-### Chapter Eight: Convexity Captures Movements and Magnitude
+### Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates
+  
 
-Chapter Seven introduces duration as the primary measure of interest rate risk for bonds. It's natural to draw parallels between duration and the Capital Asset Pricing Model's (CAPM) beta, it's important to recognize a key difference: beta is a parameter of an equilibrium model, offering insights beyond mere empirical observation. Duration is less profound; it is a powerful mathematical tool but does not offer predictions about expected bond returns. It is, however, exceedingly useful math.$^{1}$
+Bond pricing is founded on two core principles:
 
-This chapter builds upon this "useful math" by incorporating the second derivative of the bond's present value formula to define bond convexity, a concept mentioned briefly in Chapter Seven. Duration is directional; convexity corrects the directrion of duration.  Duration-bets bet on a direction; convexity-bets bet on movement.
+1. **The Arbitrage Principle:** This principle asserts that the value of bonds making multiple payments (like coupons) is equal to the value of a portfolio of single-payment bonds, known as zero-coupon bonds. This portfolio is structured to replicate the payment schedule of the multi-payment bond.  
+2. **The Present Value Principle:** This principle states that the price of a single-payment bond is determined by its present value factor.
 
+These principles form the basis for pricing all financial instruments. Understanding the present value factors embedded in these prices is crucial, as their description offers significant insight into the state of financial markets.
 
-**Parallel Versus Non-Parallel Changes In The Term Structure**
+This chapter initiates our study of bond pricing and the term structure of interest rates-the description of the underlying present value factors. Two fundamental concepts will be introduced: spot rates of interest and forward rates of interest. These are central to the valuation of financial instruments and derivatives.
 
-Convexity, a mathematical concept, predicts bond relative price changes when the term structure shifts in a parallel manner. Variations in the slope and shape of the term structure cause actual bond relative prices to diverge from these predictions. Data from the U.S. Treasury documents that the shape and slope of the term structure varies over time.  The chapter presents simulations of convexity trades with changes in the slope and shape of the term structure.   Results that  are perfectly predictable with parallel shifts, demonstrate significant variability with non-parallel changes in the term structure.
+To illustrate these concepts, we will calculate spot and forward rates using U.S. Treasury Bills data from two distinct dates. The data will be sourced from a dedicated data library for this volume and external URLs. The results will be presented graphically to highlight two contrasting market conditions: one where inflation is expected to rise and another where it is expected to moderate.
 
-### Leapfroggging into the chapter
-
-Like other chapters, there are no required dependencies between this and previous chapters. If you are unfamiliar with the material, you will benefit from reviewing previous chapters but you can begin here. As needed, the previously developed functions used in this chapter are imported from  a custom module. These functions are sufficient for you to benefit from the chapter.
-
-
----
-$^{1}$Of course beta can be viewed as a useful statistical relation and not a parameter of an equilibrium.  That view is in the spirit of much of total risk or factor investing. Beta and the CAPM are covered in more depth in the *Asset Pricing* volume.
-
+Subsequent chapters will build upon these bond pricing principles and the term structure to provide a deeper analysis of financial instrument pricing and the term structure itself.

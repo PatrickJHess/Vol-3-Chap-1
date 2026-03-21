@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Functions Imported by Chapter Eight. &#8212; Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</title>
+    <title>Python, Pandas, NumPy, and Financial Insights &#8212; Basic Concepts Of Fixed Income: Basic Bond Concepts and the Term Structure of Interest Rates</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b47fed4d" />
@@ -59,12 +59,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'imported_functions_Eight';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter_Summary';</script>
     <script src="_static/open_new_tab.js?v=9fade34f"></script>
-    <link rel="canonical" href="https://patrickjhess.github.io/Vol-3-Chap-7/imported_functions_Eight.html" />
+    <link rel="canonical" href="https://patrickjhess.github.io/Vol-3-Chap-1/Chapter_Summary.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Summarizing Convexity and Interest Rate Risk" href="Chapter_Eight_Summary.html" />
+    <link rel="next" title="Functions Imported by the Chapter." href="imported_functions.html" />
+    <link rel="prev" title="Calculating and Graphing the Term Structure of Interest Rates" href="Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,7 +153,7 @@
   
   
   
-    <p class="title logo__title">Basic Concepts of Fixed Income: Bootstrapping the Term Structure with a Few Hundred Bonds</p>
+    <p class="title logo__title">Basic Concepts Of Fixed Income: Basic Bond Concepts and the Term Structure of Interest Rates</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -180,24 +181,25 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Interacting%20With%20Jupyter%20Books.html">Working with Jupyter Books</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Concepts of Fixed Income: Chapter Eight</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Concepts of Fixed Income: Chapter One</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Eight_Highlights.html"><em><strong>Convexity And Interest Rate Risk</strong></em></a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Define_Convexity.html">Convexity measures movement and magnifitude but not dicretion.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter_Eight_Summary.html"><em><strong>Summarizing Convexity and Interest Rate Risk</strong></em></a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><em><strong>Functions Imported by Chapter Eight.</strong></em></a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter_Highlights.html">Basic Bond Concepts and the Term Structure of Interest Rates</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Bond%20Pricing.html">Introduction to Bond Pricing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Numpy_And_Pandas.html">NumPy and Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates.html">Calculating and Graphing the Term Structure of Interest Rates</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Python, Pandas, NumPy, and Financial Insights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imported_functions.html">Functions Imported by the Chapter.</a></li>
 </ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Hub &amp; Other Chapters Of Basic Concepts Of Fixed Income</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Volume-Three-Hub/">Hub For Basic Concepts Of Fixed Income</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-1/">Chapter One: Basic Bond Concepts and the Term Structure of Interest Rates</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-2-Chap-3/">Chapters Two and Three: Accrued Interest and Bond Pay Data</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-4/">Chapters Four: Bootstrapping The Term Structure With Coupon Bonds</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-5/">Chapter Five: Yield To Maturity</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-5/">Chapter Five: Par Yields</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-6/">Chapter Six: Yield To Maturity</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-7/">Chapter Seven: Measuring Interest Risk With Duration</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://patrickjhess.github.io/Vol-3-Chap-7/">Chapter Seven: Measuring Interest Rate Risk With Duration</a></li>
 </ul>
 
     </div>
@@ -241,7 +243,7 @@
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/PatrickJHess/Vol-3-Chap-7/issues/new?title=Issue%20on%20page%20%2Fimported_functions_Eight.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/PatrickJHess/Vol-3-Chap-1/issues/new?title=Issue%20on%20page%20%2FChapter_Summary.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -267,7 +269,7 @@
       
       
       
-      <li><a href="_sources/imported_functions_Eight.md" target="_blank"
+      <li><a href="_sources/Chapter_Summary.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -338,7 +340,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -349,11 +353,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Functions Imported by Chapter Eight.</h1>
+    <h1>Python, Pandas, NumPy, and Financial Insights</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-key-points"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Summarizing key points</span></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -363,22 +375,50 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="functions-imported-by-chapter-eight">
-<h1><em><strong>Functions Imported by Chapter Eight.</strong></em><a class="headerlink" href="#functions-imported-by-chapter-eight" title="Link to this heading">#</a></h1>
-<p>Chapter Eight  notebooks imports the helper functions:</p>
-<p><a class="reference external" href="https://patrickjhess.github.io/Imported-Functions/bond_pay_data.html#bond-pay-data-helper-function">bond_pay_data</a>.</p>
-<p><a class="reference external" href="https://patrickjhess.github.io/Imported-Functions/bond_pv.html#bond-pv-helper-function">bond_pv</a>.</p>
-<p><a class="reference external" href="https://patrickjhess.github.io/Imported-Functions/calc_duration.html#calc-duration-helper-function">calc_duration</a>.</p>
-<p><a class="reference internal" href="#(https://patrickjhess.github.io/Imported-Functions/create_payoff_matrix.html)"><span class="xref myst">one_y_axus</span></a></p>
-<p>In addition, it develops the function <a class="reference external" href="https://patrickjhess.github.io/Imported-Functions/calc_duration.html#calc-duration-helper-function">calc_convexity</a>.</p>
-<p>These functions are part of a module downloaded from DropBox. These and other functions within the <a class="reference external" href="https://patrickjhess.github.io/Imported-Functions/intro.html#functions-imported-by-the-volume-basic-concepts-of-fixed-income">module</a> are intended to shift focus from coding to financial concepts.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="python-pandas-numpy-and-financial-insights">
+<h1>Python, Pandas, NumPy, and Financial Insights<a class="headerlink" href="#python-pandas-numpy-and-financial-insights" title="Link to this heading">#</a></h1>
+<p><span style="font-family: 'Garamond', serif;
+    font-size: 14px;
+    text-indent: 0.25in;
+    line-height: 1.5;"></p>
+<p>In this chapter, we used Pandas and NumPy to explore different ways of calculating the term structure of interest rates for September 15, 2022, and September 30, 2025. These term structures reveal an economy in transition. On September 15, 2022, rates were increasing with maturity and could be expected to continue rising. By September 30, 2025, however, the pattern had shifted. Although the overall level of rates was higher on September 30, 2025, the term structure showed a slight downward slope. These differences indicate two different economic states: one in which inflation was expected to increase (September 2022) and one in which it wasn’t (September 2025). Calibrating the term structure of interest rates this way has highlighted Python’s rich ecosystem of libraries and methods, and more importantly, shown us the language’s utility for finance.</p>
+</span>
+<section id="summarizing-key-points">
+<h2><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Summarizing key points</span><a class="headerlink" href="#summarizing-key-points" title="Link to this heading">#</a></h2>
+<p><span style="
+    font-family: 'Garamond', serif;
+    font-size: 14px;
+    line-height: 2;"></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>The present value function describes all bonds as a portfolio of zero-coupon bonds.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Data was accessed directly from the Treasury as a CSV file and assigned to a Pandas Dataframe.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>The term structure of interest rates describes the behavior of spot and forward interest rates</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>The term structure of interest rates was calculated with T-bills for September 2022.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>The term structure was graphed for September 15, 2022, and September 30, 2025.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</span>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "patrickjhess/Vol-3-Chap-7",
+            repo: "patrickjhess/Vol-3-Chap-1",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -405,13 +445,22 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Chapter_Eight_Summary.html"
+       href="Calculating_And_Graphing_The_Term_Structure_Of_Interest_Rates.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><em><strong>Summarizing Convexity and Interest Rate Risk</strong></em></p>
+        <p class="prev-next-title">Calculating and Graphing the Term Structure of Interest Rates</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="imported_functions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Functions Imported by the Chapter.</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -419,6 +468,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-key-points"><span style="text-align:center;font-family:Franklin Gothic Medium', sans-serif;margin-top: 1.0em;margin-bottom: 0.5em;ont-style: italic;">Summarizing key points</span></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
@@ -439,7 +503,7 @@ By Financial Python
 
   <p class="copyright">
     
-      © Copyright 2026, Arbitrage Partners.
+      © Copyright 2025 by the University of Virginia Darden School Foundation, Charlottesville, VA..
       <br/>
     
   </p>
